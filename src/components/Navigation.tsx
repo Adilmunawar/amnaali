@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -49,7 +48,6 @@ export const Navigation = () => {
                 alt="ARS Logo" 
                 className="w-14 h-14 object-contain filter drop-shadow-xl relative z-10"
                 whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.8 }}
                 animate={{
                   y: [0, -3, 0],
                   filter: [
