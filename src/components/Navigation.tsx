@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -23,7 +24,7 @@ export const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Enhanced Logo */}
+          {/* Enhanced Logo - Made Much Larger */}
           <motion.div
             whileHover={{ scale: 1.1, rotate: 5 }}
             transition={{ type: "spring", stiffness: 400 }}
@@ -46,7 +47,7 @@ export const Navigation = () => {
               <motion.img 
                 src="/lovable-uploads/716d8093-d916-47af-ab5a-cc51a036653f.png" 
                 alt="ARS Logo" 
-                className="w-14 h-14 object-contain filter drop-shadow-xl relative z-10"
+                className="w-20 h-20 object-contain filter drop-shadow-xl relative z-10"
                 whileHover={{ rotate: 360 }}
                 animate={{
                   y: [0, -3, 0],
@@ -64,7 +65,7 @@ export const Navigation = () => {
               />
             </motion.div>
             <motion.div 
-              className="text-3xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-500 bg-clip-text text-transparent"
+              className="text-4xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-500 bg-clip-text text-transparent"
               animate={{
                 backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
               }}

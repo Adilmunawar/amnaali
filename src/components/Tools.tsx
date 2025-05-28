@@ -9,11 +9,11 @@ export const Tools = () => {
       icon: Palette,
       color: "from-pink-500 to-rose-500",
       tools: [
-        { name: "Adobe Photoshop", image: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" },
-        { name: "Adobe Illustrator", image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" },
-        { name: "Figma", image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" },
-        { name: "Canva Pro", image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg" },
-        { name: "Adobe InDesign", image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg" }
+        { name: "Adobe Photoshop", image: "https://cdn.worldvectorlogo.com/logos/photoshop-cc-4.svg" },
+        { name: "Adobe Illustrator", image: "https://cdn.worldvectorlogo.com/logos/adobe-illustrator-cc-2019.svg" },
+        { name: "Figma", image: "https://cdn.worldvectorlogo.com/logos/figma-5.svg" },
+        { name: "Canva Pro", image: "https://cdn.worldvectorlogo.com/logos/canva-1.svg" },
+        { name: "Adobe InDesign", image: "https://cdn.worldvectorlogo.com/logos/adobe-indesign-cc.svg" }
       ]
     },
     {
@@ -21,11 +21,11 @@ export const Tools = () => {
       icon: Search,
       color: "from-green-500 to-emerald-500",
       tools: [
-        { name: "Google Analytics", image: "https://www.google.com/analytics/static/img/analytics-logo.png" },
-        { name: "SEMrush", image: "https://www.semrush.com/favicon.ico" },
-        { name: "Ahrefs", image: "https://ahrefs.com/favicon.ico" },
-        { name: "Google Search Console", image: "https://ssl.gstatic.com/s2/oz/images/faviconfetcher/favicon_search_console_512.png" },
-        { name: "Yoast SEO", image: "https://yoast.com/app/uploads/2020/05/Yoast_Icon_LargePNG-300x300.png" }
+        { name: "Google Analytics", image: "https://cdn.worldvectorlogo.com/logos/google-analytics-4.svg" },
+        { name: "SEMrush", image: "https://cdn.worldvectorlogo.com/logos/semrush-1.svg" },
+        { name: "Ahrefs", image: "https://seeklogo.com/images/A/ahrefs-logo-6B89F73527-seeklogo.com.png" },
+        { name: "Search Console", image: "https://cdn.worldvectorlogo.com/logos/google-icon.svg" },
+        { name: "Yoast SEO", image: "https://cdn.worldvectorlogo.com/logos/yoast-1.svg" }
       ]
     },
     {
@@ -33,11 +33,11 @@ export const Tools = () => {
       icon: TrendingUp,
       color: "from-purple-500 to-violet-500",
       tools: [
-        { name: "Google Ads", image: "https://www.google.com/ads/images/icons/google-ads-icon.svg" },
-        { name: "Facebook Ads", image: "https://static.xx.fbcdn.net/rsrc.php/v3/yV/r/B8BxsscfVBr.png" },
-        { name: "Mailchimp", image: "https://mailchimp.com/release/plums/cxp/images/apple-touch-icon-192.png" },
-        { name: "Hootsuite", image: "https://hootsuite.com/uploads/images/layout/brand/hootsuite-logo-colour.svg" },
-        { name: "Buffer", image: "https://buffer.com/static/icons/icon-192x192.png" }
+        { name: "Google Ads", image: "https://cdn.worldvectorlogo.com/logos/google-ads-1.svg" },
+        { name: "Facebook Ads", image: "https://cdn.worldvectorlogo.com/logos/facebook-3.svg" },
+        { name: "Mailchimp", image: "https://cdn.worldvectorlogo.com/logos/mailchimp-freddie.svg" },
+        { name: "Hootsuite", image: "https://cdn.worldvectorlogo.com/logos/hootsuite-1.svg" },
+        { name: "Buffer", image: "https://cdn.worldvectorlogo.com/logos/buffer.svg" }
       ]
     },
     {
@@ -45,18 +45,18 @@ export const Tools = () => {
       icon: Zap,
       color: "from-cyan-500 to-teal-500",
       tools: [
-        { name: "Notion", image: "https://www.notion.so/images/favicon.ico" },
-        { name: "Slack", image: "https://slack.com/favicon.ico" },
-        { name: "Trello", image: "https://trello.com/favicon.ico" },
-        { name: "Adobe Creative Suite", image: "https://www.adobe.com/favicon.ico" },
-        { name: "Google Workspace", image: "https://workspace.google.com/favicon.ico" }
+        { name: "Notion", image: "https://cdn.worldvectorlogo.com/logos/notion-logo-1.svg" },
+        { name: "Slack", image: "https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg" },
+        { name: "Trello", image: "https://cdn.worldvectorlogo.com/logos/trello.svg" },
+        { name: "Adobe Creative", image: "https://cdn.worldvectorlogo.com/logos/adobe-2.svg" },
+        { name: "Google Workspace", image: "https://cdn.worldvectorlogo.com/logos/google-workspace.svg" }
       ]
     }
   ];
 
   return (
     <section id="tools" className="py-20 bg-gradient-to-br from-white via-purple-50 to-pink-50 relative overflow-hidden">
-      {/* Enhanced Logo Integration */}
+      {/* Enhanced Logo Integration - Made Much Larger */}
       <motion.div
         initial={{ opacity: 0, scale: 0.3, rotate: -180 }}
         whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -66,7 +66,7 @@ export const Tools = () => {
       >
         <motion.div 
           className="relative"
-          whileHover={{ scale: 1.2, rotate: 15 }}
+          whileHover={{ scale: 1.3, rotate: 15 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
           <motion.div
@@ -85,7 +85,7 @@ export const Tools = () => {
           <motion.img 
             src="/lovable-uploads/716d8093-d916-47af-ab5a-cc51a036653f.png" 
             alt="ARS Logo" 
-            className="w-20 h-20 object-contain relative z-10 filter drop-shadow-xl"
+            className="w-32 h-32 object-contain relative z-10 filter drop-shadow-xl"
             animate={{ 
               y: [0, -8, 0],
               filter: [
@@ -196,30 +196,6 @@ export const Tools = () => {
                           background: "linear-gradient(135deg, #ffffff, #f3e8ff, #fce7f3)" 
                         }}
                       >
-                        {/* Animated sparkles on hover */}
-                        <div className="absolute inset-0 opacity-0 group-hover/tool:opacity-100 transition-opacity duration-300">
-                          {[...Array(6)].map((_, i) => (
-                            <motion.div
-                              key={i}
-                              className="absolute w-1 h-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"
-                              initial={{ 
-                                x: Math.random() * 60,
-                                y: Math.random() * 60,
-                                scale: 0
-                              }}
-                              animate={{
-                                scale: [0, 1, 0],
-                                rotate: [0, 180, 360]
-                              }}
-                              transition={{
-                                duration: 1,
-                                repeat: Infinity,
-                                delay: i * 0.1
-                              }}
-                            />
-                          ))}
-                        </div>
-
                         <motion.div
                           className="relative z-10"
                           animate={{
@@ -252,7 +228,6 @@ export const Tools = () => {
                           </motion.p>
                         </motion.div>
 
-                        {/* Hover glow effect */}
                         <motion.div
                           className="absolute inset-0 rounded-xl opacity-0 group-hover/tool:opacity-100 transition-opacity duration-300"
                           style={{
