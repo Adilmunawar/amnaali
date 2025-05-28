@@ -1,6 +1,5 @@
-
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ExternalLink, Linkedin, Instagram, Facebook, Palette, Users } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink, Linkedin, Instagram, Facebook, Users } from "lucide-react";
 
 export const Contact = () => {
   const socialLinks = [
@@ -10,15 +9,8 @@ export const Contact = () => {
       icon: Linkedin,
       color: "from-blue-600 to-blue-800",
       hoverColor: "hover:from-blue-700 hover:to-blue-900",
-      description: "Professional Network"
-    },
-    {
-      name: "Behance",
-      url: "https://behance.net/amnaali82",
-      icon: Palette,
-      color: "from-blue-500 to-purple-600",
-      hoverColor: "hover:from-blue-600 hover:to-purple-700",
-      description: "Design Portfolio"
+      description: "Professional Network",
+      gradient: "bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700"
     },
     {
       name: "Instagram",
@@ -26,7 +18,8 @@ export const Contact = () => {
       icon: Instagram,
       color: "from-pink-500 to-purple-600",
       hoverColor: "hover:from-pink-600 hover:to-purple-700",
-      description: "Creative Showcase"
+      description: "Creative Showcase",
+      gradient: "bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-600"
     },
     {
       name: "Facebook",
@@ -34,7 +27,8 @@ export const Contact = () => {
       icon: Facebook,
       color: "from-blue-600 to-blue-800",
       hoverColor: "hover:from-blue-700 hover:to-blue-900",
-      description: "Social Updates"
+      description: "Social Updates",
+      gradient: "bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800"
     },
     {
       name: "Threads",
@@ -42,7 +36,8 @@ export const Contact = () => {
       icon: Users,
       color: "from-gray-700 to-black",
       hoverColor: "hover:from-gray-800 hover:to-gray-900",
-      description: "Community"
+      description: "Community",
+      gradient: "bg-gradient-to-br from-gray-800 via-black to-gray-900"
     },
     {
       name: "WhatsApp",
@@ -50,7 +45,8 @@ export const Contact = () => {
       icon: Phone,
       color: "from-green-500 to-green-700",
       hoverColor: "hover:from-green-600 hover:to-green-800",
-      description: "Direct Message"
+      description: "Direct Message",
+      gradient: "bg-gradient-to-br from-green-500 via-green-600 to-green-700"
     }
   ];
 
@@ -87,6 +83,53 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-cyan-50 relative overflow-hidden">
+      {/* Enhanced Logo Display */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5, y: -50 }}
+        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 1, type: "spring", stiffness: 100 }}
+        viewport={{ once: true }}
+        className="absolute top-10 left-1/2 transform -translate-x-1/2 z-20"
+      >
+        <motion.div 
+          className="relative"
+          whileHover={{ scale: 1.1, rotate: 5 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-r from-purple-400/30 to-pink-400/30 rounded-full blur-2xl"
+            animate={{ 
+              scale: [1, 1.3, 1],
+              opacity: [0.3, 0.7, 0.3],
+              rotate: [0, 180, 360]
+            }}
+            transition={{ 
+              duration: 4, 
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.img 
+            src="/lovable-uploads/716d8093-d916-47af-ab5a-cc51a036653f.png" 
+            alt="ARS Logo" 
+            className="w-24 h-24 object-contain relative z-10 filter drop-shadow-2xl"
+            animate={{ 
+              y: [0, -5, 0],
+              filter: [
+                "drop-shadow(0 10px 20px rgba(168, 85, 247, 0.4))",
+                "drop-shadow(0 15px 30px rgba(236, 72, 153, 0.6))",
+                "drop-shadow(0 10px 20px rgba(168, 85, 247, 0.4))"
+              ]
+            }}
+            transition={{ 
+              duration: 3, 
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+        </motion.div>
+      </motion.div>
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {[...Array(30)].map((_, i) => (
@@ -112,7 +155,7 @@ export const Contact = () => {
         ))}
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10 pt-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -214,7 +257,7 @@ export const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Contact Info & Enhanced Social Links */}
+          {/* Contact Info & Advanced Animated Social Links */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -258,13 +301,13 @@ export const Contact = () => {
               </div>
             </motion.div>
 
-            {/* Enhanced Animated Social Links */}
+            {/* Ultra Advanced Animated Social Links */}
             <motion.div
               variants={itemVariants}
               className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-purple-200/50 shadow-lg shadow-purple-200/20"
             >
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Connect With Me</h3>
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 gap-6">
                 {socialLinks.map((social, index) => {
                   const IconComponent = social.icon;
                   return (
@@ -279,35 +322,144 @@ export const Contact = () => {
                       viewport={{ once: true }}
                       whileHover={{ 
                         scale: 1.05, 
-                        y: -3,
-                        boxShadow: "0 15px 35px rgba(168, 85, 247, 0.4)"
+                        y: -5,
+                        boxShadow: "0 25px 50px rgba(168, 85, 247, 0.4)"
                       }}
-                      className={`bg-gradient-to-r ${social.color} ${social.hoverColor} p-4 rounded-xl text-white flex items-center gap-4 transition-all duration-300 group relative overflow-hidden`}
+                      className="relative group overflow-hidden rounded-2xl p-6 text-white transition-all duration-500"
                     >
+                      {/* Animated Background */}
                       <motion.div 
-                        className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"
-                      />
-                      <motion.div
-                        whileHover={{ 
-                          rotate: [0, -15, 15, -15, 0],
-                          scale: [1, 1.1, 1.2, 1.1, 1]
+                        className={`absolute inset-0 ${social.gradient}`}
+                        animate={{
+                          background: [
+                            social.gradient.replace('bg-gradient-to-br', 'linear-gradient(45deg'),
+                            social.gradient.replace('bg-gradient-to-br', 'linear-gradient(135deg'),
+                            social.gradient.replace('bg-gradient-to-br', 'linear-gradient(225deg'),
+                            social.gradient.replace('bg-gradient-to-br', 'linear-gradient(315deg'),
+                            social.gradient.replace('bg-gradient-to-br', 'linear-gradient(45deg')
+                          ]
                         }}
-                        transition={{ duration: 0.6 }}
-                        className="relative z-10 p-2 bg-white/20 rounded-lg"
-                      >
-                        <IconComponent className="w-6 h-6" />
-                      </motion.div>
-                      <div className="flex-1 relative z-10">
-                        <p className="font-bold text-lg">{social.name}</p>
-                        <p className="text-sm opacity-90">{social.description}</p>
+                        transition={{ 
+                          duration: 4, 
+                          repeat: Infinity,
+                          ease: "linear"
+                        }}
+                      />
+                      
+                      {/* Floating Particles */}
+                      <div className="absolute inset-0">
+                        {[...Array(8)].map((_, i) => (
+                          <motion.div
+                            key={i}
+                            className="absolute w-1 h-1 bg-white/30 rounded-full"
+                            initial={{ 
+                              x: Math.random() * 200,
+                              y: Math.random() * 60,
+                              opacity: 0
+                            }}
+                            animate={{
+                              y: [null, -20, 60],
+                              opacity: [0, 0.8, 0],
+                              scale: [0, 1, 0]
+                            }}
+                            transition={{
+                              duration: Math.random() * 3 + 2,
+                              repeat: Infinity,
+                              delay: Math.random() * 2,
+                              ease: "easeInOut"
+                            }}
+                          />
+                        ))}
                       </div>
+
+                      {/* Glow Effect */}
                       <motion.div
-                        className="relative z-10"
-                        whileHover={{ rotate: 45, scale: 1.2 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <ExternalLink className="w-5 h-5 opacity-70" />
-                      </motion.div>
+                        className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        animate={{
+                          background: [
+                            "radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 70%)",
+                            "radial-gradient(circle at 80% 50%, rgba(255,255,255,0.1) 0%, transparent 70%)",
+                            "radial-gradient(circle at 50% 20%, rgba(255,255,255,0.1) 0%, transparent 70%)",
+                            "radial-gradient(circle at 50% 80%, rgba(255,255,255,0.1) 0%, transparent 70%)",
+                            "radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 70%)"
+                          ]
+                        }}
+                        transition={{
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                      />
+
+                      <div className="relative z-10 flex items-center gap-4">
+                        {/* Ultra Animated Icon */}
+                        <motion.div
+                          className="relative"
+                          whileHover={{ 
+                            rotate: [0, -10, 10, -10, 0],
+                            scale: [1, 1.2, 1.1, 1.2, 1]
+                          }}
+                          transition={{ duration: 0.6 }}
+                        >
+                          <motion.div
+                            className="absolute inset-0 bg-white/20 rounded-lg blur-md"
+                            animate={{ 
+                              scale: [1, 1.3, 1],
+                              opacity: [0.3, 0.7, 0.3]
+                            }}
+                            transition={{ 
+                              duration: 2, 
+                              repeat: Infinity,
+                              ease: "easeInOut"
+                            }}
+                          />
+                          <motion.div 
+                            className="relative p-3 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
+                            animate={{
+                              boxShadow: [
+                                "0 0 10px rgba(255,255,255,0.3)",
+                                "0 0 20px rgba(255,255,255,0.5)",
+                                "0 0 10px rgba(255,255,255,0.3)"
+                              ]
+                            }}
+                            transition={{
+                              duration: 2,
+                              repeat: Infinity,
+                              ease: "easeInOut"
+                            }}
+                          >
+                            <IconComponent className="w-6 h-6" />
+                          </motion.div>
+                        </motion.div>
+
+                        <div className="flex-1">
+                          <motion.p 
+                            className="font-bold text-lg"
+                            whileHover={{ x: 5 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                          >
+                            {social.name}
+                          </motion.p>
+                          <motion.p 
+                            className="text-sm opacity-90"
+                            initial={{ opacity: 0.7 }}
+                            whileHover={{ opacity: 1 }}
+                          >
+                            {social.description}
+                          </motion.p>
+                        </div>
+
+                        <motion.div
+                          whileHover={{ 
+                            rotate: 45, 
+                            scale: 1.3,
+                            x: 5
+                          }}
+                          transition={{ type: "spring", stiffness: 300 }}
+                        >
+                          <ExternalLink className="w-5 h-5 opacity-70" />
+                        </motion.div>
+                      </div>
                     </motion.a>
                   );
                 })}

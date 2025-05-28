@@ -24,20 +24,60 @@ export const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Enhanced Logo */}
           <motion.div
-            whileHover={{ scale: 1.05, rotate: 5 }}
+            whileHover={{ scale: 1.1, rotate: 5 }}
             transition={{ type: "spring", stiffness: 400 }}
-            className="flex items-center space-x-3"
+            className="flex items-center space-x-4 relative"
           >
-            <img 
-              src="/lovable-uploads/716d8093-d916-47af-ab5a-cc51a036653f.png" 
-              alt="ARS Logo" 
-              className="w-10 h-10 object-contain filter drop-shadow-lg"
-            />
-            <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-500 bg-clip-text text-transparent">
+            <motion.div className="relative">
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-purple-400/30 to-pink-400/30 rounded-full blur-lg"
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  opacity: [0.3, 0.6, 0.3],
+                  rotate: [0, 360]
+                }}
+                transition={{ 
+                  duration: 4, 
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+              />
+              <motion.img 
+                src="/lovable-uploads/716d8093-d916-47af-ab5a-cc51a036653f.png" 
+                alt="ARS Logo" 
+                className="w-14 h-14 object-contain filter drop-shadow-xl relative z-10"
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.8 }}
+                animate={{
+                  y: [0, -3, 0],
+                  filter: [
+                    "drop-shadow(0 4px 8px rgba(168, 85, 247, 0.3))",
+                    "drop-shadow(0 6px 12px rgba(236, 72, 153, 0.5))",
+                    "drop-shadow(0 4px 8px rgba(168, 85, 247, 0.3))"
+                  ]
+                }}
+                transition={{ 
+                  duration: 3, 
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+            </motion.div>
+            <motion.div 
+              className="text-3xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-500 bg-clip-text text-transparent"
+              animate={{
+                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            >
               ARS Ltd.
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Desktop Navigation */}
