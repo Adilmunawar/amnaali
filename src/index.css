@@ -100,123 +100,145 @@
 }
 
 @layer utilities {
-  /* Custom Animations */
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+  /* Performance Optimized Animations */
+  @keyframes optimizedFloat {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -10px, 0); }
   }
 
-  @keyframes glow {
-    0%, 100% { box-shadow: 0 0 5px rgba(34, 211, 238, 0.5); }
-    50% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.8), 0 0 30px rgba(34, 211, 238, 0.6); }
-  }
-
-  @keyframes pulse-glow {
+  @keyframes optimizedGlow {
     0%, 100% { 
-      transform: scale(1);
+      box-shadow: 0 0 5px rgba(34, 211, 238, 0.5);
+      transform: scale3d(1, 1, 1);
+    }
+    50% { 
+      box-shadow: 0 0 20px rgba(34, 211, 238, 0.8), 0 0 30px rgba(34, 211, 238, 0.6);
+      transform: scale3d(1.02, 1.02, 1);
+    }
+  }
+
+  @keyframes optimizedPulse {
+    0%, 100% { 
+      transform: scale3d(1, 1, 1);
       opacity: 1;
     }
     50% { 
-      transform: scale(1.05);
+      transform: scale3d(1.05, 1.05, 1);
       opacity: 0.8;
     }
   }
 
-  @keyframes slideInFromLeft {
+  @keyframes optimizedSlideInLeft {
     0% {
-      transform: translateX(-100%);
+      transform: translate3d(-100%, 0, 0);
       opacity: 0;
     }
     100% {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
       opacity: 1;
     }
   }
 
-  @keyframes slideInFromRight {
+  @keyframes optimizedSlideInRight {
     0% {
-      transform: translateX(100%);
+      transform: translate3d(100%, 0, 0);
       opacity: 0;
     }
     100% {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
       opacity: 1;
     }
   }
 
-  @keyframes fadeInUp {
+  @keyframes optimizedFadeInUp {
     0% {
-      transform: translateY(30px);
+      transform: translate3d(0, 30px, 0);
       opacity: 0;
     }
     100% {
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
       opacity: 1;
     }
   }
 
-  @keyframes scaleIn {
+  @keyframes optimizedScaleIn {
     0% {
-      transform: scale(0.8);
+      transform: scale3d(0.8, 0.8, 1);
       opacity: 0;
     }
     100% {
-      transform: scale(1);
+      transform: scale3d(1, 1, 1);
       opacity: 1;
     }
   }
 
-  /* Animation Classes */
+  /* Optimized Animation Classes */
   .animate-float {
-    animation: float 3s ease-in-out infinite;
+    animation: optimizedFloat 3s ease-in-out infinite;
+    will-change: transform;
   }
 
   .animate-glow {
-    animation: glow 2s ease-in-out infinite;
+    animation: optimizedGlow 2s ease-in-out infinite;
+    will-change: box-shadow, transform;
   }
 
   .animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
+    animation: optimizedPulse 2s ease-in-out infinite;
+    will-change: transform, opacity;
   }
 
   .animate-slide-in-left {
-    animation: slideInFromLeft 0.8s ease-out;
+    animation: optimizedSlideInLeft 0.8s ease-out;
+    will-change: transform, opacity;
   }
 
   .animate-slide-in-right {
-    animation: slideInFromRight 0.8s ease-out;
+    animation: optimizedSlideInRight 0.8s ease-out;
+    will-change: transform, opacity;
   }
 
   .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out;
+    animation: optimizedFadeInUp 0.8s ease-out;
+    will-change: transform, opacity;
   }
 
   .animate-scale-in {
-    animation: scaleIn 0.6s ease-out;
+    animation: optimizedScaleIn 0.6s ease-out;
+    will-change: transform, opacity;
   }
 
-  /* Glass Morphism Effect */
+  /* Enhanced Glass Morphism Effect */
   .glass {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   }
 
   .glass-dark {
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
 
-  /* Gradient Text */
+  /* Enhanced Gradient Text */
   .gradient-text {
     background: linear-gradient(135deg, #22d3ee, #a855f7, #ec4899);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease infinite;
   }
 
-  /* Neon Button Effect */
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Enhanced Neon Button Effect */
   .neon-button {
     position: relative;
     background: linear-gradient(135deg, #22d3ee, #a855f7);
@@ -225,8 +247,9 @@
     padding: 12px 30px;
     color: white;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
+    will-change: transform, box-shadow;
   }
 
   .neon-button::before {
@@ -236,8 +259,8 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .neon-button:hover::before {
@@ -245,31 +268,21 @@
   }
 
   .neon-button:hover {
-    box-shadow: 0 0 30px rgba(34, 211, 238, 0.5);
-    transform: translateY(-2px);
+    box-shadow: 0 0 40px rgba(34, 211, 238, 0.6);
+    transform: translateY(-3px) scale(1.02);
   }
 
-  /* Particle Background */
-  .particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
+  /* Performance Optimizations */
+  .optimized-transform {
+    transform: translateZ(0);
+    will-change: transform;
   }
 
-  .particle {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: #22d3ee;
-    border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
+  .optimized-opacity {
+    will-change: opacity;
   }
 
-  /* Responsive Text Sizing */
+  /* Responsive Text Sizing - Enhanced */
   .responsive-text-xs { font-size: clamp(0.75rem, 2vw, 0.875rem); }
   .responsive-text-sm { font-size: clamp(0.875rem, 2.5vw, 1rem); }
   .responsive-text-base { font-size: clamp(1rem, 3vw, 1.125rem); }
@@ -281,12 +294,13 @@
   .responsive-text-5xl { font-size: clamp(3rem, 8vw, 4rem); }
   .responsive-text-6xl { font-size: clamp(3.75rem, 10vw, 5rem); }
 
-  /* Smooth Scrolling */
+  /* Smooth Scrolling Enhancement */
   .smooth-scroll {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
   }
 
-  /* Hide Scrollbar */
+  /* Enhanced Scrollbar Hiding */
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -295,12 +309,30 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  /* Accessibility Improvements */
+  .focus-visible:focus-visible {
+    outline: 3px solid rgba(34, 211, 238, 0.8);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
-/* Custom Fonts */
+/* Enhanced Custom Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Performance Optimizations */
+/* Global Performance Optimizations */
 * {
   box-sizing: border-box;
 }
@@ -308,16 +340,19 @@
 img {
   max-width: 100%;
   height: auto;
+  loading: lazy;
 }
 
-/* Focus Styles for Accessibility */
-*:focus {
-  outline: 2px solid #22d3ee;
+/* Enhanced Focus Styles for Accessibility */
+*:focus-visible {
+  outline: 3px solid rgba(34, 211, 238, 0.8);
   outline-offset: 2px;
+  border-radius: 4px;
 }
 
-button:focus,
-a:focus {
-  outline: 2px solid #22d3ee;
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(34, 211, 238, 0.8);
   outline-offset: 2px;
+  border-radius: 4px;
 }

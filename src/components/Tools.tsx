@@ -9,11 +9,11 @@ export const Tools = () => {
       icon: Palette,
       color: "from-pink-500 to-rose-500",
       tools: [
-        { name: "Adobe Photoshop", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" },
-        { name: "Adobe Illustrator", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" },
-        { name: "Figma", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-        { name: "Sketch", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg" },
-        { name: "Adobe XD", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" }
+        { name: "Adobe Creative Suite", icon: "🎨" },
+        { name: "Figma", icon: "🔧" },
+        { name: "Canva Pro", icon: "✨" },
+        { name: "Adobe XD", icon: "🎯" },
+        { name: "Sketch", icon: "📐" }
       ]
     },
     {
@@ -21,42 +21,72 @@ export const Tools = () => {
       icon: Search,
       color: "from-green-500 to-emerald-500",
       tools: [
-        { name: "Google Analytics", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
-        { name: "WordPress", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" },
-        { name: "Google Search", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
-        { name: "Chrome DevTools", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg" },
-        { name: "Firefox", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg" }
+        { name: "Google Analytics", icon: "📊" },
+        { name: "SEMrush", icon: "🔍" },
+        { name: "Ahrefs", icon: "📈" },
+        { name: "Google Search Console", icon: "🌐" },
+        { name: "Moz Pro", icon: "📉" }
       ]
     },
     {
-      category: "Marketing",
+      category: "Marketing Platforms",
       icon: TrendingUp,
       color: "from-purple-500 to-violet-500",
       tools: [
-        { name: "Facebook", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" },
-        { name: "Twitter", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" },
-        { name: "LinkedIn", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" },
-        { name: "Google Ads", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
-        { name: "YouTube", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" }
+        { name: "Facebook Ads Manager", icon: "📱" },
+        { name: "Google Ads", icon: "🎯" },
+        { name: "LinkedIn Campaign Manager", icon: "💼" },
+        { name: "Twitter Ads", icon: "🐦" },
+        { name: "TikTok Ads Manager", icon: "🎵" }
       ]
     },
     {
-      category: "Productivity",
+      category: "Productivity Suite",
       icon: Zap,
       color: "from-cyan-500 to-teal-500",
       tools: [
-        { name: "Slack", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" },
-        { name: "GitHub", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-        { name: "VS Code", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-        { name: "Docker", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-        { name: "Google Drive", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" }
+        { name: "Slack", icon: "💬" },
+        { name: "Trello", icon: "📋" },
+        { name: "Asana", icon: "✅" },
+        { name: "Notion", icon: "📝" },
+        { name: "Monday.com", icon: "🗓️" }
       ]
     }
   ];
 
   return (
     <section id="tools" className="py-20 bg-gradient-to-br from-white via-purple-50 to-pink-50 relative overflow-hidden">
-      {/* Enhanced Logo Integration - Made Much Larger */}
+      {/* Enhanced floating elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="absolute top-1/4 right-1/4 w-48 h-48 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-2xl"
+          animate={{
+            x: [0, 30, -30, 0],
+            y: [0, -20, 20, 0],
+            scale: [1, 1.2, 0.8, 1],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 left-1/4 w-56 h-56 bg-gradient-to-r from-cyan-400/20 to-teal-400/20 rounded-full blur-2xl"
+          animate={{
+            x: [0, -25, 25, 0],
+            y: [0, 15, -15, 0],
+            scale: [1, 0.9, 1.1, 1],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      </div>
+
+      {/* Enhanced Logo Integration */}
       <motion.div
         initial={{ opacity: 0, scale: 0.3, rotate: -180 }}
         whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -103,7 +133,7 @@ export const Tools = () => {
         </motion.div>
       </motion.div>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -170,12 +200,12 @@ export const Tools = () => {
                   {category.category}
                 </h3>
                 
-                <div className="grid grid-cols-3 gap-4 relative z-10">
+                <div className="grid grid-cols-1 gap-4 relative z-10">
                   {category.tools.map((tool, toolIndex) => (
                     <motion.div
                       key={tool.name}
-                      initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
-                      whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                      initial={{ opacity: 0, scale: 0.5, x: -50 }}
+                      whileInView={{ opacity: 1, scale: 1, x: 0 }}
                       transition={{ 
                         delay: index * 0.1 + toolIndex * 0.05,
                         type: "spring",
@@ -183,23 +213,22 @@ export const Tools = () => {
                       }}
                       viewport={{ once: true }}
                       whileHover={{ 
-                        scale: 1.1, 
-                        y: -5,
-                        rotate: [0, -5, 5, 0],
-                        boxShadow: "0 10px 25px rgba(168, 85, 247, 0.3)"
+                        scale: 1.05, 
+                        x: 10,
+                        boxShadow: "0 5px 15px rgba(168, 85, 247, 0.2)"
                       }}
                       className="group/tool relative"
                     >
                       <motion.div
-                        className="bg-gradient-to-br from-white to-purple-50 rounded-xl p-4 border border-purple-100 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden"
+                        className="bg-gradient-to-br from-white to-purple-50 rounded-xl p-4 border border-purple-100 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden flex items-center gap-4"
                         whileHover={{ 
                           background: "linear-gradient(135deg, #ffffff, #f3e8ff, #fce7f3)" 
                         }}
                       >
                         <motion.div
-                          className="relative z-10"
+                          className="text-2xl"
                           animate={{
-                            y: [0, -2, 0]
+                            rotate: [0, 10, -10, 0]
                           }}
                           transition={{
                             duration: 2,
@@ -207,29 +236,15 @@ export const Tools = () => {
                             ease: "easeInOut"
                           }}
                         >
-                          <motion.img
-                            src={tool.image}
-                            alt={tool.name}
-                            className="w-12 h-12 mx-auto mb-3 object-contain filter drop-shadow-lg"
-                            whileHover={{ 
-                              rotate: [0, 360],
-                              filter: "drop-shadow(0 8px 16px rgba(168, 85, 247, 0.4))"
-                            }}
-                            transition={{ duration: 0.6 }}
-                            onError={(e) => {
-                              console.log(`Failed to load image for ${tool.name}:`, e.currentTarget.src);
-                              // Fallback to a generic icon
-                              e.currentTarget.style.display = 'none';
-                              e.currentTarget.nextElementSibling?.classList.add('mt-6');
-                            }}
-                          />
-                          <motion.p 
-                            className="text-xs font-semibold text-gray-700 text-center leading-tight group-hover/tool:text-purple-600 transition-colors"
-                            whileHover={{ scale: 1.05 }}
-                          >
-                            {tool.name}
-                          </motion.p>
+                          {tool.icon}
                         </motion.div>
+                        
+                        <motion.p 
+                          className="text-sm font-semibold text-gray-700 group-hover/tool:text-purple-600 transition-colors flex-1"
+                          whileHover={{ x: 5 }}
+                        >
+                          {tool.name}
+                        </motion.p>
 
                         <motion.div
                           className="absolute inset-0 rounded-xl opacity-0 group-hover/tool:opacity-100 transition-opacity duration-300"

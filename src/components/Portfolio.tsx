@@ -9,66 +9,66 @@ export const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Creative Brand Identity Design",
+      title: "Luxury Brand Identity Design",
       category: "design",
       image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      description: "Complete visual identity system with modern branding elements and color psychology for luxury brands"
+      description: "Complete visual identity system with sophisticated branding elements and color psychology for luxury fashion brands"
     },
     {
       id: 2,
-      title: "Digital Marketing Campaign Visuals",
+      title: "Social Media Campaign Visuals",
       category: "marketing",
       image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      description: "Engaging social media campaign designs with high conversion rates and brand storytelling"
+      description: "Engaging social media campaign designs with high conversion rates and compelling brand storytelling"
     },
     {
       id: 3,
-      title: "SEO Analytics Dashboard Design",
+      title: "SEO Performance Dashboard",
       category: "seo",
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      description: "Beautiful data visualization dashboard showing traffic growth and keyword performance metrics"
+      description: "Analytics dashboard design showcasing traffic growth, keyword performance, and ROI metrics"
     },
     {
       id: 4,
-      title: "Product Design & Packaging",
+      title: "Premium Product Packaging",
       category: "design",
       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2126&q=80",
-      description: "Innovative product packaging design with sustainable materials and eye-catching visuals"
+      description: "Innovative premium product packaging design with sustainable materials and compelling visual appeal"
     },
     {
       id: 5,
-      title: "Social Media Strategy & Content",
+      title: "Integrated Marketing Campaign",
       category: "marketing",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2139&q=80",
-      description: "Comprehensive social media content strategy with engagement optimization and brand consistency"
+      description: "Multi-channel marketing campaign with brand consistency across all touchpoints and platforms"
     },
     {
       id: 6,
-      title: "Website Design & User Experience",
+      title: "Corporate Brand Guidelines",
       category: "design",
       image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2064&q=80",
-      description: "Modern website design focusing on user experience and conversion optimization"
+      description: "Comprehensive brand guidelines and design systems for corporate identity and consistency"
     },
     {
       id: 7,
-      title: "Content Marketing Visuals",
+      title: "Content Marketing Strategy",
       category: "marketing",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      description: "Creative content marketing materials including infographics, banners, and promotional designs"
+      description: "Strategic content marketing materials including infographics, presentations, and promotional designs"
     },
     {
       id: 8,
-      title: "Brand Photography Direction",
+      title: "Event Branding & Collateral",
       category: "design",
       image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      description: "Professional brand photography direction and visual storytelling for corporate clients"
+      description: "Complete event branding package with signage, promotional materials, and digital assets"
     },
     {
       id: 9,
-      title: "Google Ads Campaign Design",
+      title: "PPC Campaign Optimization",
       category: "seo",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80",
-      description: "High-converting Google Ads designs with A/B testing and performance optimization strategies"
+      description: "High-converting PPC campaign designs with A/B testing and performance optimization strategies"
     }
   ];
 
@@ -84,8 +84,38 @@ export const Portfolio = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="portfolio" className="py-20 bg-gradient-to-br from-slate-900 via-purple-800 to-slate-900 relative overflow-hidden">
-      {/* Floating Logo - Made Much Larger */}
+    <section id="portfolio" className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      {/* Enhanced floating elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-full blur-3xl"
+          animate={{
+            x: [0, 50, -50, 0],
+            y: [0, -30, 30, 0],
+            scale: [1, 1.2, 0.8, 1],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-full blur-3xl"
+          animate={{
+            x: [0, -40, 40, 0],
+            y: [0, 25, -25, 0],
+            scale: [1, 0.9, 1.1, 1],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      </div>
+
+      {/* Enhanced Logo - Positioned strategically */}
       <motion.div
         initial={{ opacity: 0, x: -200, rotate: -360 }}
         whileInView={{ opacity: 1, x: 0, rotate: 0 }}
@@ -132,7 +162,7 @@ export const Portfolio = () => {
         </motion.div>
       </motion.div>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -140,12 +170,23 @@ export const Portfolio = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+          <motion.h2 
+            className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"
+            whileInView={{ scale: [0.9, 1.05, 1] }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             My Creative Portfolio
-          </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-gray-400 max-w-3xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             Explore my latest creative projects showcasing innovative design, strategic marketing, and measurable results.
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* Enhanced Filter Buttons */}
@@ -211,7 +252,7 @@ export const Portfolio = () => {
                 <motion.img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-120"
+                  className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
                   whileHover={{ scale: 1.1 }}
                 />
                 
