@@ -9,11 +9,11 @@ export const Tools = () => {
       icon: Palette,
       color: "from-pink-500 to-rose-500",
       tools: [
-        { name: "Adobe Photoshop", image: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" },
-        { name: "Adobe Illustrator", image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" },
-        { name: "Figma", image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" },
-        { name: "Canva Pro", image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg" },
-        { name: "Adobe InDesign", image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg" }
+        { name: "Adobe Photoshop", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" },
+        { name: "Adobe Illustrator", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" },
+        { name: "Figma", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+        { name: "Sketch", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg" },
+        { name: "Adobe XD", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" }
       ]
     },
     {
@@ -21,11 +21,11 @@ export const Tools = () => {
       icon: Search,
       color: "from-green-500 to-emerald-500",
       tools: [
-        { name: "Google Analytics", image: "https://upload.wikimedia.org/wikipedia/commons/7/77/GAnalytics.svg" },
-        { name: "SEMrush", image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/SEMrush_logo.svg" },
-        { name: "Ahrefs", image: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Ahrefs_logo.svg" },
-        { name: "Search Console", image: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" },
-        { name: "Yoast SEO", image: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Yoast_Logo_Small.svg" }
+        { name: "Google Analytics", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
+        { name: "WordPress", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" },
+        { name: "Google Search", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
+        { name: "Chrome DevTools", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg" },
+        { name: "Firefox", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg" }
       ]
     },
     {
@@ -33,11 +33,11 @@ export const Tools = () => {
       icon: TrendingUp,
       color: "from-purple-500 to-violet-500",
       tools: [
-        { name: "Google Ads", image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg" },
-        { name: "Facebook Ads", image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" },
-        { name: "LinkedIn", image: "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" },
-        { name: "Pinterest", image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" },
-        { name: "Instagram", image: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" }
+        { name: "Facebook", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" },
+        { name: "Twitter", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" },
+        { name: "LinkedIn", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" },
+        { name: "Google Ads", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
+        { name: "YouTube", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" }
       ]
     },
     {
@@ -45,11 +45,11 @@ export const Tools = () => {
       icon: Zap,
       color: "from-cyan-500 to-teal-500",
       tools: [
-        { name: "Notion", image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" },
-        { name: "Slack", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" },
-        { name: "Asana", image: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Asana_logo.svg" },
-        { name: "Adobe Creative", image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.svg" },
-        { name: "Google Workspace", image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Workspace_Logo.svg" }
+        { name: "Slack", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" },
+        { name: "GitHub", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+        { name: "VS Code", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+        { name: "Docker", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+        { name: "Google Drive", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" }
       ]
     }
   ];
