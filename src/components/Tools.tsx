@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Palette, Search, TrendingUp, Zap } from "lucide-react";
 
@@ -34,9 +35,9 @@ export const Tools = () => {
       tools: [
         { name: "Google Ads", image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg" },
         { name: "Facebook Ads", image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" },
-        { name: "Mailchimp", image: "https://upload.wikimedia.org/wikipedia/commons/2/27/Mailchimp_Logo.svg" },
-        { name: "Hootsuite", image: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Hootsuite_Logo.svg" },
-        { name: "Buffer", image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Buffer_logo.svg" }
+        { name: "LinkedIn", image: "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" },
+        { name: "Pinterest", image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" },
+        { name: "Instagram", image: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" }
       ]
     },
     {
@@ -46,7 +47,7 @@ export const Tools = () => {
       tools: [
         { name: "Notion", image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" },
         { name: "Slack", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" },
-        { name: "Trello", image: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Trello-logo-blue.svg" },
+        { name: "Asana", image: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Asana_logo.svg" },
         { name: "Adobe Creative", image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.svg" },
         { name: "Google Workspace", image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Workspace_Logo.svg" }
       ]
