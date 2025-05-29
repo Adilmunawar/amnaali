@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Palette, Search, TrendingUp, Zap } from "lucide-react";
 
@@ -9,11 +8,11 @@ export const Tools = () => {
       icon: Palette,
       color: "from-pink-500 to-rose-500",
       tools: [
-        { name: "Adobe Photoshop", image: "https://cdn.worldvectorlogo.com/logos/photoshop-cc-4.svg" },
-        { name: "Adobe Illustrator", image: "https://cdn.worldvectorlogo.com/logos/adobe-illustrator-cc-2019.svg" },
-        { name: "Figma", image: "https://cdn.worldvectorlogo.com/logos/figma-5.svg" },
-        { name: "Canva Pro", image: "https://cdn.worldvectorlogo.com/logos/canva-1.svg" },
-        { name: "Adobe InDesign", image: "https://cdn.worldvectorlogo.com/logos/adobe-indesign-cc.svg" }
+        { name: "Adobe Photoshop", image: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" },
+        { name: "Adobe Illustrator", image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" },
+        { name: "Figma", image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" },
+        { name: "Canva Pro", image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg" },
+        { name: "Adobe InDesign", image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg" }
       ]
     },
     {
@@ -21,11 +20,11 @@ export const Tools = () => {
       icon: Search,
       color: "from-green-500 to-emerald-500",
       tools: [
-        { name: "Google Analytics", image: "https://cdn.worldvectorlogo.com/logos/google-analytics-4.svg" },
-        { name: "SEMrush", image: "https://cdn.worldvectorlogo.com/logos/semrush-1.svg" },
-        { name: "Ahrefs", image: "https://seeklogo.com/images/A/ahrefs-logo-6B89F73527-seeklogo.com.png" },
-        { name: "Search Console", image: "https://cdn.worldvectorlogo.com/logos/google-icon.svg" },
-        { name: "Yoast SEO", image: "https://cdn.worldvectorlogo.com/logos/yoast-1.svg" }
+        { name: "Google Analytics", image: "https://upload.wikimedia.org/wikipedia/commons/7/77/GAnalytics.svg" },
+        { name: "SEMrush", image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/SEMrush_logo.svg" },
+        { name: "Ahrefs", image: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Ahrefs_logo.svg" },
+        { name: "Search Console", image: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" },
+        { name: "Yoast SEO", image: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Yoast_Logo_Small.svg" }
       ]
     },
     {
@@ -33,11 +32,11 @@ export const Tools = () => {
       icon: TrendingUp,
       color: "from-purple-500 to-violet-500",
       tools: [
-        { name: "Google Ads", image: "https://cdn.worldvectorlogo.com/logos/google-ads-1.svg" },
-        { name: "Facebook Ads", image: "https://cdn.worldvectorlogo.com/logos/facebook-3.svg" },
-        { name: "Mailchimp", image: "https://cdn.worldvectorlogo.com/logos/mailchimp-freddie.svg" },
-        { name: "Hootsuite", image: "https://cdn.worldvectorlogo.com/logos/hootsuite-1.svg" },
-        { name: "Buffer", image: "https://cdn.worldvectorlogo.com/logos/buffer.svg" }
+        { name: "Google Ads", image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg" },
+        { name: "Facebook Ads", image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" },
+        { name: "Mailchimp", image: "https://upload.wikimedia.org/wikipedia/commons/2/27/Mailchimp_Logo.svg" },
+        { name: "Hootsuite", image: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Hootsuite_Logo.svg" },
+        { name: "Buffer", image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Buffer_logo.svg" }
       ]
     },
     {
@@ -45,11 +44,11 @@ export const Tools = () => {
       icon: Zap,
       color: "from-cyan-500 to-teal-500",
       tools: [
-        { name: "Notion", image: "https://cdn.worldvectorlogo.com/logos/notion-logo-1.svg" },
-        { name: "Slack", image: "https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg" },
-        { name: "Trello", image: "https://cdn.worldvectorlogo.com/logos/trello.svg" },
-        { name: "Adobe Creative", image: "https://cdn.worldvectorlogo.com/logos/adobe-2.svg" },
-        { name: "Google Workspace", image: "https://cdn.worldvectorlogo.com/logos/google-workspace.svg" }
+        { name: "Notion", image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" },
+        { name: "Slack", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" },
+        { name: "Trello", image: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Trello-logo-blue.svg" },
+        { name: "Adobe Creative", image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.svg" },
+        { name: "Google Workspace", image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Workspace_Logo.svg" }
       ]
     }
   ];
@@ -217,7 +216,10 @@ export const Tools = () => {
                             }}
                             transition={{ duration: 0.6 }}
                             onError={(e) => {
+                              console.log(`Failed to load image for ${tool.name}:`, e.currentTarget.src);
+                              // Fallback to a generic icon
                               e.currentTarget.style.display = 'none';
+                              e.currentTarget.nextElementSibling?.classList.add('mt-6');
                             }}
                           />
                           <motion.p 
