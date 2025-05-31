@@ -23,37 +23,44 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-violet-600/20 via-fuchsia-500/20 to-cyan-400/20" />
         
         {/* Animated Orbs */}
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full blur-3xl opacity-30"
-            style={{
-              background: `linear-gradient(45deg, 
-                ${i % 3 === 0 ? '#8b5cf6, #06b6d4' : i % 3 === 1 ? '#ec4899, #f59e0b' : '#10b981, #3b82f6'})`,
-              width: `${200 + i * 100}px`,
-              height: `${200 + i * 100}px`,
-            }}
-            initial={{ 
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-              scale: 0
-            }}
-            animate={{
-              x: [null, Math.random() * window.innerWidth],
-              y: [null, Math.random() * window.innerHeight],
-              scale: [0, 1, 0.5, 1],
-              rotate: [0, 360]
-            }}
-            transition={{
-              duration: 20 + i * 5,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-          />
-        ))}
+        {[...Array(6)].map((_, i) => {
+          const getGradient = (index: number) => {
+            if (index % 3 === 0) return '#8b5cf6, #06b6d4';
+            if (index % 3 === 1) return '#ec4899, #f59e0b';
+            return '#10b981, #3b82f6';
+          };
+
+          return (
+            <motion.div
+              key={i}
+              className="absolute rounded-full blur-3xl opacity-30"
+              style={{
+                background: `linear-gradient(45deg, ${getGradient(i)})`,
+                width: `${200 + i * 100}px`,
+                height: `${200 + i * 100}px`,
+              }}
+              initial={{ 
+                x: Math.random() * window.innerWidth,
+                y: Math.random() * window.innerHeight,
+                scale: 0
+              }}
+              animate={{
+                x: [null, Math.random() * window.innerWidth],
+                y: [null, Math.random() * window.innerHeight],
+                scale: [0, 1, 0.5, 1],
+                rotate: [0, 360]
+              }}
+              transition={{
+                duration: 20 + i * 5,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            />
+          );
+        })}
 
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3csvg width="60" height="60" xmlns="http://www.w3.org/2000/svg"%3e%3cdefs%3e%3cpattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"%3e%3cpath d="m 60 0 l 0 60 l -60 0 l 0 -60 z" fill="none" stroke="%23a855f7" stroke-width="1" opacity="0.1"/%3e%3c/pattern%3e%3c/defs%3e%3crect width="100%25" height="100%25" fill="url(%23grid)"/%3e%3c/svg%3e')] opacity-20" />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3csvg width=\"60\" height=\"60\" xmlns=\"http://www.w3.org/2000/svg\"%3e%3cdefs%3e%3cpattern id=\"grid\" width=\"60\" height=\"60\" patternUnits=\"userSpaceOnUse\"%3e%3cpath d=\"m 60 0 l 0 60 l -60 0 l 0 -60 z\" fill=\"none\" stroke=\"%23a855f7\" stroke-width=\"1\" opacity=\"0.1\"/%3e%3c/pattern%3e%3c/defs%3e%3crect width=\"100%25\" height=\"100%25\" fill=\"url(%23grid)\"/%3e%3c/svg%3e')] opacity-20" />
       </div>
 
       {/* Floating Geometric Shapes */}
