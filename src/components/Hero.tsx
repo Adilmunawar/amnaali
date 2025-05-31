@@ -231,19 +231,7 @@ export const Hero = () => {
       duration: 1,
       delay: 2.5
     }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <motion.div animate={{
-        y: [0, 15, 0],
-        scale: [1, 1.1, 1]
-      }} transition={{
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }} className="text-purple-400 cursor-pointer p-4 bg-gray-800/50 rounded-full backdrop-blur-sm border border-purple-500/30 hover:border-purple-500/60 transition-colors duration-300" onClick={() => window.scrollTo({
-        top: window.innerHeight,
-        behavior: 'smooth'
-      })}>
-          <ArrowDown className="w-6 h-6" />
-        </motion.div>
+        
       </motion.div>
     </section>;
 };
