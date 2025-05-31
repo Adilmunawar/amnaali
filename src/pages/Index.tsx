@@ -11,7 +11,7 @@ import { CreativeCursor } from "@/components/CreativeCursor";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-cyan-50 relative">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 relative">
       <CreativeCursor />
       <Navigation />
       <main>

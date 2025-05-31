@@ -11,17 +11,17 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 text-white py-16 overflow-hidden">
-      {/* Simplified Background Animation */}
+    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white py-16 overflow-hidden">
+      {/* Enhanced Background Animation */}
       <div className="absolute inset-0">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(15)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute rounded-full"
             style={{
-              width: Math.random() * 3 + 1,
-              height: Math.random() * 3 + 1,
-              background: `linear-gradient(45deg, #10b981, #06b6d4)`
+              width: Math.random() * 4 + 2,
+              height: Math.random() * 4 + 2,
+              background: `linear-gradient(45deg, #06b6d4, #8b5cf6, #ec4899)`
             }}
             initial={{
               x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
@@ -30,10 +30,10 @@ export const Footer = () => {
             }}
             animate={{
               y: [null, -50, (typeof window !== 'undefined' ? window.innerHeight : 800) + 50],
-              opacity: [0, 0.6, 0],
+              opacity: [0, 0.8, 0],
             }}
             transition={{
-              duration: Math.random() * 4 + 3,
+              duration: Math.random() * 5 + 4,
               repeat: Infinity,
               delay: Math.random() * 3,
               ease: "easeInOut"
@@ -54,13 +54,26 @@ export const Footer = () => {
             className="space-y-4"
           >
             <motion.div className="flex items-center space-x-3">
-              <Sparkles className="w-8 h-8 text-emerald-400" />
-              <div className="text-xl font-bold text-white">
+              <div className="relative">
+                <Sparkles className="w-8 h-8 text-cyan-400" />
+                <motion.div
+                  className="absolute inset-0 w-8 h-8 bg-cyan-400 rounded-full blur-lg opacity-30"
+                  animate={{
+                    scale: [1, 1.3, 1],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+              </div>
+              <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Amna Ali
               </div>
             </motion.div>
-            <motion.p className="text-slate-300 leading-relaxed">
-              Creative professional crafting digital experiences that transform brands through innovative design and strategic excellence.
+            <motion.p className="text-gray-300 leading-relaxed">
+              Creating exceptional digital experiences through innovative design and strategic excellence that transforms brands and captivates audiences.
             </motion.p>
           </motion.div>
 
@@ -71,8 +84,8 @@ export const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-semibold mb-4 text-emerald-400 flex items-center gap-2">
-              <Sparkles className="w-4 h-4" />
+            <h3 className="text-lg font-semibold mb-4 text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-cyan-400" />
               Quick Links
             </h3>
             <div className="space-y-2">
@@ -85,7 +98,7 @@ export const Footer = () => {
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true }}
                   whileHover={{ x: 5 }}
-                  className="block text-slate-300 hover:text-emerald-400 transition-colors duration-200"
+                  className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200"
                 >
                   {link}
                 </motion.a>
@@ -100,11 +113,11 @@ export const Footer = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-semibold mb-4 text-emerald-400 flex items-center gap-2">
-              <Heart className="w-4 h-4" />
+            <h3 className="text-lg font-semibold mb-4 text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text flex items-center gap-2">
+              <Heart className="w-4 h-4 text-purple-400" />
               Get In Touch
             </h3>
-            <div className="space-y-3 text-slate-300">
+            <div className="space-y-3 text-gray-300">
               {[
                 { icon: "📧", text: "contact@amnali.com" },
                 { icon: "📱", text: "+92 324 8406582" },
@@ -116,7 +129,7 @@ export const Footer = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-center gap-3"
+                  className="flex items-center gap-3 hover:text-purple-400 transition-colors duration-200"
                 >
                   <span className="text-lg">{item.icon}</span>
                   {item.text}
@@ -132,16 +145,16 @@ export const Footer = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
-          className="text-center py-8 border-t border-slate-700/50"
+          className="text-center py-8 border-t border-purple-500/20"
         >
           <motion.div className="space-y-3">
-            <motion.p className="text-slate-400 text-lg font-medium">
+            <motion.p className="text-gray-400 text-lg font-medium">
               Crafted with{" "}
-              <Heart className="inline w-4 h-4 text-emerald-400 mx-1" />
+              <Heart className="inline w-4 h-4 text-purple-400 mx-1" />
               by{" "}
-              <span className="text-emerald-400 font-semibold">Amna Ali</span>
+              <span className="text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text font-semibold">Amna Ali</span>
             </motion.p>
-            <motion.p className="text-sm text-slate-500">
+            <motion.p className="text-sm text-gray-500">
               © 2024 Amna Ali. All rights reserved.
             </motion.p>
           </motion.div>
@@ -154,7 +167,7 @@ export const Footer = () => {
           animate={{ opacity: 1, scale: 1 }}
           whileHover={{ scale: 1.1, y: -3 }}
           whileTap={{ scale: 0.9 }}
-          className="fixed bottom-8 right-8 bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-3 rounded-full shadow-lg z-50"
+          className="fixed bottom-8 right-8 bg-gradient-to-r from-cyan-600 to-purple-600 text-white p-3 rounded-full shadow-lg z-50 border border-purple-500/30"
         >
           <ArrowUp className="w-5 h-5" />
         </motion.button>
