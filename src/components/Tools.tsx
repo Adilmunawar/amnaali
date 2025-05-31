@@ -9,249 +9,211 @@ export const Tools = () => {
       icon: Palette,
       color: "from-pink-500 to-rose-500",
       tools: [
-        { name: "Adobe Creative Suite", icon: "🎨" },
-        { name: "Figma", icon: "🔧" },
-        { name: "Canva Pro", icon: "✨" },
-        { name: "Adobe XD", icon: "🎯" },
-        { name: "Sketch", icon: "📐" }
+        { 
+          name: "Adobe Creative Suite", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Creative_Cloud_rainbow_icon.svg",
+          description: "Complete creative toolkit"
+        },
+        { 
+          name: "Figma", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+          description: "Collaborative design platform"
+        },
+        { 
+          name: "Canva Pro", 
+          icon: "https://upload.wikimedia.org/wikipedia/en/1/15/Canva_icon_2021.svg",
+          description: "Professional design tool"
+        },
+        { 
+          name: "Adobe XD", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg",
+          description: "UX/UI design and prototyping"
+        }
       ]
     },
     {
       category: "SEO & Analytics",
       icon: Search,
-      color: "from-green-500 to-emerald-500",
+      color: "from-emerald-500 to-teal-500",
       tools: [
-        { name: "Google Analytics", icon: "📊" },
-        { name: "SEMrush", icon: "🔍" },
-        { name: "Ahrefs", icon: "📈" },
-        { name: "Google Search Console", icon: "🌐" },
-        { name: "Moz Pro", icon: "📉" }
+        { 
+          name: "Google Analytics", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/7/77/GAnalytics.svg",
+          description: "Web analytics platform"
+        },
+        { 
+          name: "SEMrush", 
+          icon: "https://cdn.worldvectorlogo.com/logos/semrush-1.svg",
+          description: "SEO and marketing toolkit"
+        },
+        { 
+          name: "Ahrefs", 
+          icon: "https://cdn.worldvectorlogo.com/logos/ahrefs-1.svg",
+          description: "SEO toolset"
+        },
+        { 
+          name: "Google Search Console", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/f/f8/Google_Search_Console_Logo_2015-2020.svg",
+          description: "Search performance monitoring"
+        }
       ]
     },
     {
       category: "Marketing Platforms",
       icon: TrendingUp,
-      color: "from-purple-500 to-violet-500",
+      color: "from-blue-500 to-cyan-500",
       tools: [
-        { name: "Facebook Ads Manager", icon: "📱" },
-        { name: "Google Ads", icon: "🎯" },
-        { name: "LinkedIn Campaign Manager", icon: "💼" },
-        { name: "Twitter Ads", icon: "🐦" },
-        { name: "TikTok Ads Manager", icon: "🎵" }
+        { 
+          name: "Facebook Ads Manager", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png",
+          description: "Social media advertising"
+        },
+        { 
+          name: "Google Ads", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg",
+          description: "Search and display advertising"
+        },
+        { 
+          name: "LinkedIn Campaign Manager", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
+          description: "Professional network advertising"
+        },
+        { 
+          name: "HubSpot", 
+          icon: "https://cdn.worldvectorlogo.com/logos/hubspot-4.svg",
+          description: "Inbound marketing platform"
+        }
       ]
     },
     {
       category: "Productivity Suite",
       icon: Zap,
-      color: "from-cyan-500 to-teal-500",
+      color: "from-violet-500 to-purple-500",
       tools: [
-        { name: "Slack", icon: "💬" },
-        { name: "Trello", icon: "📋" },
-        { name: "Asana", icon: "✅" },
-        { name: "Notion", icon: "📝" },
-        { name: "Monday.com", icon: "🗓️" }
+        { 
+          name: "Slack", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg",
+          description: "Team communication"
+        },
+        { 
+          name: "Trello", 
+          icon: "https://cdn.worldvectorlogo.com/logos/trello.svg",
+          description: "Project management"
+        },
+        { 
+          name: "Asana", 
+          icon: "https://cdn.worldvectorlogo.com/logos/asana-logo.svg",
+          description: "Work management platform"
+        },
+        { 
+          name: "Notion", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
+          description: "All-in-one workspace"
+        }
       ]
     }
   ];
 
   return (
-    <section id="tools" className="py-20 bg-gradient-to-br from-white via-purple-50 to-pink-50 relative overflow-hidden">
-      {/* Enhanced floating elements */}
+    <section id="tools" className="py-20 bg-gradient-to-br from-slate-50 via-slate-100 to-emerald-50 relative overflow-hidden">
+      {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-1/4 right-1/4 w-48 h-48 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-2xl"
+          className="absolute top-1/4 right-1/4 w-32 h-32 bg-gradient-to-r from-emerald-400/10 to-teal-400/10 rounded-full blur-3xl"
           animate={{
-            x: [0, 30, -30, 0],
-            y: [0, -20, 20, 0],
-            scale: [1, 1.2, 0.8, 1],
+            x: [0, 20, -20, 0],
+            y: [0, -10, 10, 0],
           }}
           transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 left-1/4 w-56 h-56 bg-gradient-to-r from-cyan-400/20 to-teal-400/20 rounded-full blur-2xl"
-          animate={{
-            x: [0, -25, 25, 0],
-            y: [0, 15, -15, 0],
-            scale: [1, 0.9, 1.1, 1],
-          }}
-          transition={{
-            duration: 18,
+            duration: 12,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         />
       </div>
 
-      {/* Enhanced Logo Integration */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.3, rotate: -180 }}
-        whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-        transition={{ duration: 1.2, type: "spring", stiffness: 100 }}
-        viewport={{ once: true }}
-        className="absolute top-10 right-10 z-10"
-      >
-        <motion.div 
-          className="relative"
-          whileHover={{ scale: 1.3, rotate: 15 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl"
-            animate={{ 
-              scale: [1, 1.5, 1],
-              opacity: [0.2, 0.5, 0.2],
-              rotate: [0, 360]
-            }}
-            transition={{ 
-              duration: 6, 
-              repeat: Infinity,
-              ease: "linear"
-            }}
-          />
-          <motion.img 
-            src="/lovable-uploads/716d8093-d916-47af-ab5a-cc51a036653f.png" 
-            alt="ARS Logo" 
-            className="w-32 h-32 object-contain relative z-10 filter drop-shadow-xl"
-            animate={{ 
-              y: [0, -8, 0],
-              filter: [
-                "drop-shadow(0 8px 16px rgba(168, 85, 247, 0.3))",
-                "drop-shadow(0 12px 24px rgba(236, 72, 153, 0.5))",
-                "drop-shadow(0 8px 16px rgba(168, 85, 247, 0.3))"
-              ]
-            }}
-            transition={{ 
-              duration: 4, 
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-        </motion.div>
-      </motion.div>
-
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, type: "spring", stiffness: 100 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
           <motion.h2 
-            className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-500 bg-clip-text text-transparent"
-            whileInView={{ scale: [0.9, 1.05, 1] }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 via-emerald-600 to-teal-600 bg-clip-text text-transparent"
           >
-            My Professional Toolkit
+            Professional Toolkit
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-xl text-slate-600 max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             viewport={{ once: true }}
           >
-            Cutting-edge tools and technologies that power my creative and strategic solutions
+            Industry-leading tools and technologies that power my creative solutions
           </motion.p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {tools.map((category, index) => {
             const IconComponent = category.icon;
             return (
               <motion.div
                 key={category.category}
-                initial={{ opacity: 0, y: 50, rotateX: 45 }}
-                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  duration: 0.8, 
-                  delay: index * 0.1,
-                  type: "spring",
-                  stiffness: 100
+                  duration: 0.6, 
+                  delay: index * 0.1
                 }}
                 viewport={{ once: true }}
-                whileHover={{ 
-                  y: -10, 
-                  scale: 1.02,
-                  boxShadow: "0 25px 50px rgba(168, 85, 247, 0.3)"
-                }}
-                className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-purple-200/50 shadow-lg shadow-purple-500/10 group relative overflow-hidden"
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/50 shadow-lg group"
               >
-                {/* Animated Background */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-pink-50/50 opacity-0 group-hover:opacity-100"
-                  transition={{ duration: 0.3 }}
-                />
-                
-                <motion.div
-                  whileHover={{ rotate: 360, scale: 1.1 }}
-                  transition={{ duration: 0.6 }}
-                  className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${category.color} rounded-full mb-6 group-hover:shadow-lg transition-all duration-300 relative z-10`}
+                  className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
-                  <IconComponent className="w-8 h-8 text-white" />
+                  <IconComponent className="w-6 h-6 text-white" />
                 </motion.div>
                 
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 group-hover:text-purple-600 transition-colors relative z-10">
+                <h3 className="text-2xl font-bold text-slate-800 mb-6">
                   {category.category}
                 </h3>
                 
-                <div className="grid grid-cols-1 gap-4 relative z-10">
+                <div className="grid grid-cols-1 gap-4">
                   {category.tools.map((tool, toolIndex) => (
                     <motion.div
                       key={tool.name}
-                      initial={{ opacity: 0, scale: 0.5, x: -50 }}
-                      whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
                       transition={{ 
-                        delay: index * 0.1 + toolIndex * 0.05,
-                        type: "spring",
-                        stiffness: 200
+                        delay: index * 0.1 + toolIndex * 0.05
                       }}
                       viewport={{ once: true }}
-                      whileHover={{ 
-                        scale: 1.05, 
-                        x: 10,
-                        boxShadow: "0 5px 15px rgba(168, 85, 247, 0.2)"
-                      }}
-                      className="group/tool relative"
+                      className="group/tool"
                     >
                       <motion.div
-                        className="bg-gradient-to-br from-white to-purple-50 rounded-xl p-4 border border-purple-100 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden flex items-center gap-4"
-                        whileHover={{ 
-                          background: "linear-gradient(135deg, #ffffff, #f3e8ff, #fce7f3)" 
-                        }}
+                        className="bg-gradient-to-r from-slate-50 to-white rounded-xl p-4 border border-slate-200/50 hover:shadow-md transition-all duration-300 cursor-pointer flex items-center gap-4"
+                        whileHover={{ y: -2 }}
                       >
-                        <motion.div
-                          className="text-2xl"
-                          animate={{
-                            rotate: [0, 10, -10, 0]
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            ease: "easeInOut"
-                          }}
-                        >
-                          {tool.icon}
-                        </motion.div>
+                        <div className="w-10 h-10 bg-white rounded-lg shadow-sm flex items-center justify-center overflow-hidden">
+                          <img 
+                            src={tool.icon} 
+                            alt={tool.name}
+                            className="w-6 h-6 object-contain"
+                            onError={(e) => {
+                              e.currentTarget.style.display = 'none';
+                            }}
+                          />
+                        </div>
                         
-                        <motion.p 
-                          className="text-sm font-semibold text-gray-700 group-hover/tool:text-purple-600 transition-colors flex-1"
-                          whileHover={{ x: 5 }}
-                        >
-                          {tool.name}
-                        </motion.p>
-
-                        <motion.div
-                          className="absolute inset-0 rounded-xl opacity-0 group-hover/tool:opacity-100 transition-opacity duration-300"
-                          style={{
-                            background: "radial-gradient(circle at center, rgba(168, 85, 247, 0.1) 0%, transparent 70%)"
-                          }}
-                        />
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-slate-800 group-hover/tool:text-emerald-600 transition-colors">
+                            {tool.name}
+                          </h4>
+                          <p className="text-sm text-slate-500">{tool.description}</p>
+                        </div>
                       </motion.div>
                     </motion.div>
                   ))}
