@@ -10,14 +10,46 @@ export const Tools = () => {
       borderColor: "border-purple-400",
       icon: Palette,
       skills: [
-        { name: "Photoshop", color: "bg-blue-600" },
-        { name: "Illustrator", color: "bg-orange-600" },
-        { name: "InDesign", color: "bg-pink-600" },
-        { name: "Figma", color: "bg-purple-600" },
-        { name: "Canva", color: "bg-cyan-500" },
-        { name: "Sketch", color: "bg-orange-500" },
-        { name: "After Effects", color: "bg-purple-700" },
-        { name: "Premiere Pro", color: "bg-indigo-600" }
+        { 
+          name: "Photoshop", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg",
+          color: "bg-blue-600" 
+        },
+        { 
+          name: "Illustrator", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-line.svg",
+          color: "bg-orange-600" 
+        },
+        { 
+          name: "InDesign", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg",
+          color: "bg-pink-600" 
+        },
+        { 
+          name: "Figma", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+          color: "bg-purple-600" 
+        },
+        { 
+          name: "Canva", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
+          color: "bg-cyan-500" 
+        },
+        { 
+          name: "Sketch", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg",
+          color: "bg-orange-500" 
+        },
+        { 
+          name: "After Effects", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg",
+          color: "bg-purple-700" 
+        },
+        { 
+          name: "Premiere Pro", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg",
+          color: "bg-indigo-600" 
+        }
       ]
     },
     {
@@ -26,14 +58,46 @@ export const Tools = () => {
       borderColor: "border-emerald-400",
       icon: TrendingUp,
       skills: [
-        { name: "Google Ads", color: "bg-green-600" },
-        { name: "Facebook Ads", color: "bg-blue-700" },
-        { name: "Instagram Marketing", color: "bg-pink-500" },
-        { name: "LinkedIn Ads", color: "bg-blue-800" },
-        { name: "SEO", color: "bg-yellow-600" },
-        { name: "Analytics", color: "bg-orange-600" },
-        { name: "Email Marketing", color: "bg-red-600" },
-        { name: "Content Strategy", color: "bg-purple-600" }
+        { 
+          name: "Google Ads", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+          color: "bg-green-600" 
+        },
+        { 
+          name: "Facebook", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
+          color: "bg-blue-700" 
+        },
+        { 
+          name: "Instagram", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg",
+          color: "bg-pink-500" 
+        },
+        { 
+          name: "LinkedIn", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
+          color: "bg-blue-800" 
+        },
+        { 
+          name: "Analytics", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googleanalytics/googleanalytics-original.svg",
+          color: "bg-orange-600" 
+        },
+        { 
+          name: "SEO", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+          color: "bg-yellow-600" 
+        },
+        { 
+          name: "Email Marketing", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg",
+          color: "bg-red-600" 
+        },
+        { 
+          name: "Content Strategy", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg",
+          color: "bg-purple-600" 
+        }
       ]
     },
     {
@@ -42,14 +106,46 @@ export const Tools = () => {
       borderColor: "border-cyan-400",
       icon: Target,
       skills: [
-        { name: "Brand Identity", color: "bg-indigo-600" },
-        { name: "Logo Design", color: "bg-purple-600" },
-        { name: "Typography", color: "bg-gray-700" },
-        { name: "Color Theory", color: "bg-pink-600" },
-        { name: "Brand Guidelines", color: "bg-teal-600" },
-        { name: "Market Research", color: "bg-orange-600" },
-        { name: "Competitor Analysis", color: "bg-red-600" },
-        { name: "Brand Positioning", color: "bg-blue-600" }
+        { 
+          name: "Brand Identity", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png",
+          color: "bg-indigo-600" 
+        },
+        { 
+          name: "Logo Design", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-line.svg",
+          color: "bg-purple-600" 
+        },
+        { 
+          name: "Typography", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg",
+          color: "bg-gray-700" 
+        },
+        { 
+          name: "Color Theory", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg",
+          color: "bg-pink-600" 
+        },
+        { 
+          name: "Guidelines", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+          color: "bg-teal-600" 
+        },
+        { 
+          name: "Research", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googleanalytics/googleanalytics-original.svg",
+          color: "bg-orange-600" 
+        },
+        { 
+          name: "Analysis", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg",
+          color: "bg-red-600" 
+        },
+        { 
+          name: "Positioning", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg",
+          color: "bg-blue-600" 
+        }
       ]
     },
     {
@@ -58,14 +154,46 @@ export const Tools = () => {
       borderColor: "border-pink-400",
       icon: Users,
       skills: [
-        { name: "Content Creation", color: "bg-purple-600" },
-        { name: "Social Strategy", color: "bg-pink-600" },
-        { name: "Community Management", color: "bg-blue-600" },
-        { name: "Influencer Marketing", color: "bg-orange-600" },
-        { name: "Social Analytics", color: "bg-green-600" },
-        { name: "Paid Social", color: "bg-red-600" },
-        { name: "Video Marketing", color: "bg-indigo-600" },
-        { name: "Story Design", color: "bg-teal-600" }
+        { 
+          name: "Content Creation", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
+          color: "bg-purple-600" 
+        },
+        { 
+          name: "Strategy", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg",
+          color: "bg-pink-600" 
+        },
+        { 
+          name: "Community", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
+          color: "bg-blue-600" 
+        },
+        { 
+          name: "Influencer", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg",
+          color: "bg-orange-600" 
+        },
+        { 
+          name: "Analytics", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googleanalytics/googleanalytics-original.svg",
+          color: "bg-green-600" 
+        },
+        { 
+          name: "Paid Social", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
+          color: "bg-red-600" 
+        },
+        { 
+          name: "Video", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg",
+          color: "bg-indigo-600" 
+        },
+        { 
+          name: "Stories", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg",
+          color: "bg-teal-600" 
+        }
       ]
     }
   ];
@@ -226,47 +354,91 @@ export const Tools = () => {
                       }}
                       viewport={{ once: true }}
                       whileHover={{ 
-                        scale: 1.1, 
-                        y: -8,
-                        rotateY: 10,
-                        transition: { duration: 0.2 }
+                        scale: 1.15, 
+                        y: -12,
+                        rotateY: 15,
+                        rotateX: 10,
+                        transition: { duration: 0.3 }
                       }}
                       className="group/skill relative"
+                      style={{ transformStyle: "preserve-3d" }}
                     >
                       <motion.div 
-                        className={`${skill.color} rounded-2xl p-4 aspect-square flex items-center justify-center text-white transition-all duration-300 cursor-pointer relative overflow-hidden`}
+                        className={`${skill.color} rounded-2xl p-6 aspect-square flex items-center justify-center text-white transition-all duration-300 cursor-pointer relative overflow-hidden backdrop-blur-sm border border-white/10`}
                         whileHover={{
-                          boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
+                          boxShadow: "0 25px 50px rgba(0,0,0,0.4)",
+                          borderColor: "rgba(255,255,255,0.3)"
                         }}
                       >
-                        {/* Skill Icon Background Effect */}
+                        {/* Icon */}
+                        <motion.img
+                          src={skill.icon}
+                          alt={skill.name}
+                          className="w-10 h-10 object-contain filter brightness-0 invert drop-shadow-lg relative z-10"
+                          whileHover={{
+                            scale: 1.2,
+                            rotate: 360,
+                            filter: "brightness(0) invert(1) drop-shadow(0 0 20px rgba(255,255,255,0.8))"
+                          }}
+                          transition={{
+                            duration: 0.6,
+                            ease: "easeInOut"
+                          }}
+                        />
+                        
+                        {/* Background Effects */}
                         <motion.div
-                          className="absolute inset-0 bg-white opacity-0 group-hover/skill:opacity-10"
+                          className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover/skill:opacity-100 rounded-2xl"
                           animate={{
-                            scale: [1, 1.2, 1],
+                            scale: [1, 1.1, 1],
                             rotate: [0, 180, 360]
                           }}
                           transition={{
-                            duration: 3,
+                            duration: 4,
                             repeat: Infinity,
                             ease: "linear"
                           }}
                         />
                         
-                        <motion.div 
-                          className="text-sm font-bold text-center leading-tight z-10 relative"
-                          animate={{
-                            y: [0, -2, 0]
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                            delay: index * 0.1
-                          }}
+                        {/* Floating Particles */}
+                        <motion.div
+                          className="absolute inset-0 opacity-0 group-hover/skill:opacity-100"
+                          initial={{ opacity: 0 }}
+                          whileHover={{ opacity: 1 }}
                         >
-                          {skill.name}
+                          {[...Array(3)].map((_, i) => (
+                            <motion.div
+                              key={i}
+                              className="absolute w-1 h-1 bg-white rounded-full"
+                              style={{
+                                left: `${20 + i * 20}%`,
+                                top: `${10 + i * 15}%`,
+                              }}
+                              animate={{
+                                y: [-10, -30, -10],
+                                opacity: [0, 1, 0],
+                                scale: [0.5, 1, 0.5]
+                              }}
+                              transition={{
+                                duration: 2,
+                                repeat: Infinity,
+                                delay: i * 0.3,
+                                ease: "easeInOut"
+                              }}
+                            />
+                          ))}
                         </motion.div>
+                      </motion.div>
+                      
+                      {/* Tooltip */}
+                      <motion.div
+                        className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black/90 text-white px-3 py-1 rounded-lg text-sm font-medium opacity-0 group-hover/skill:opacity-100 pointer-events-none z-20 backdrop-blur-sm border border-white/20"
+                        initial={{ opacity: 0, y: 10, scale: 0.8 }}
+                        whileHover={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {skill.name}
+                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/90"></div>
                       </motion.div>
                     </motion.div>
                   ))}
