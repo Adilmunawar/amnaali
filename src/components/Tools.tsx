@@ -33,10 +33,10 @@ export const Tools = () => {
       color: "from-purple-500 to-violet-500",
       tools: [
         { name: "Google Ads", image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg" },
-        { name: "Facebook Ads", image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" },
-        { name: "Mailchimp", image: "https://upload.wikimedia.org/wikipedia/commons/2/27/Mailchimp_Logo.svg" },
-        { name: "Hootsuite", image: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Hootsuite_Logo.svg" },
-        { name: "Buffer", image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Buffer_logo.svg" }
+        { name: "Meta Ads", image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo_%28cropped%29.svg" },
+        { name: "LinkedIn", image: "https://upload.wikimedia.org/wikipedia/commons/4/43/Linkedin-web-vt.png" },
+        { name: "Hootsuite", image: "https://upload.wikimedia.org/wikipedia/commons/2/28/Hootsuite_logo.png" },
+        { name: "Pinterest", image: "https://upload.wikimedia.org/wikipedia/commons/4/4d/Pinterest.svg" }
       ]
     },
     {
@@ -46,7 +46,7 @@ export const Tools = () => {
       tools: [
         { name: "Notion", image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" },
         { name: "Slack", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" },
-        { name: "Trello", image: "https://upload.wikimedia.org/wikipedia/commons/1/17/Antu_trello.svg" },
+        { name: "Trello", image: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Trello-logo-blue.svg" },
         { name: "Adobe Express", image: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Adobe_Express_logo.png" },
         { name: "Google Workspace", image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_Apps_Script.svg" }
       ]
