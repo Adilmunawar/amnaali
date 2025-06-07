@@ -12,12 +12,12 @@ export const Tools = () => {
       skills: [
         { 
           name: "Photoshop", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg",
           color: "bg-blue-600" 
         },
         { 
           name: "Illustrator", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-line.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg",
           color: "bg-orange-600" 
         },
         { 
@@ -27,27 +27,27 @@ export const Tools = () => {
         },
         { 
           name: "Figma", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
           color: "bg-purple-600" 
         },
         { 
           name: "Canva", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg",
           color: "bg-cyan-500" 
         },
         { 
           name: "Sketch", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg",
           color: "bg-orange-500" 
         },
         { 
           name: "After Effects", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg",
           color: "bg-purple-700" 
         },
         { 
           name: "Premiere Pro", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg",
           color: "bg-indigo-600" 
         }
       ]
@@ -60,12 +60,12 @@ export const Tools = () => {
       skills: [
         { 
           name: "Google Ads", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg",
           color: "bg-green-600" 
         },
         { 
           name: "Facebook", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png",
           color: "bg-blue-700" 
         },
         { 
@@ -75,17 +75,17 @@ export const Tools = () => {
         },
         { 
           name: "LinkedIn", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
           color: "bg-blue-800" 
         },
         { 
           name: "Analytics", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googleanalytics/googleanalytics-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/7/77/Google_Analytics_logo.svg",
           color: "bg-orange-600" 
         },
         { 
           name: "SEO", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/5/53/Google_Search_Console_icon.svg",
           color: "bg-yellow-600" 
         },
         { 
@@ -94,8 +94,8 @@ export const Tools = () => {
           color: "bg-red-600" 
         },
         { 
-          name: "Content Strategy", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg",
+          name: "WordPress", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg",
           color: "bg-purple-600" 
         }
       ]
@@ -108,12 +108,12 @@ export const Tools = () => {
       skills: [
         { 
           name: "Brand Identity", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg",
           color: "bg-indigo-600" 
         },
         { 
           name: "Logo Design", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-line.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg",
           color: "bg-purple-600" 
         },
         { 
@@ -123,17 +123,17 @@ export const Tools = () => {
         },
         { 
           name: "Color Theory", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
           color: "bg-pink-600" 
         },
         { 
           name: "Guidelines", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg",
           color: "bg-teal-600" 
         },
         { 
           name: "Research", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googleanalytics/googleanalytics-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/7/77/Google_Analytics_logo.svg",
           color: "bg-orange-600" 
         },
         { 
@@ -143,7 +143,7 @@ export const Tools = () => {
         },
         { 
           name: "Positioning", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/1/19/Trello_logo.svg",
           color: "bg-blue-600" 
         }
       ]
@@ -156,17 +156,17 @@ export const Tools = () => {
       skills: [
         { 
           name: "Content Creation", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg",
           color: "bg-purple-600" 
         },
         { 
           name: "Strategy", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/1/19/Trello_logo.svg",
           color: "bg-pink-600" 
         },
         { 
           name: "Community", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg",
           color: "bg-blue-600" 
         },
         { 
@@ -176,17 +176,17 @@ export const Tools = () => {
         },
         { 
           name: "Analytics", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googleanalytics/googleanalytics-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/7/77/Google_Analytics_logo.svg",
           color: "bg-green-600" 
         },
         { 
           name: "Paid Social", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png",
           color: "bg-red-600" 
         },
         { 
           name: "Video", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg",
           color: "bg-indigo-600" 
         },
         { 
@@ -374,15 +374,18 @@ export const Tools = () => {
                         <motion.img
                           src={skill.icon}
                           alt={skill.name}
-                          className="w-10 h-10 object-contain filter brightness-0 invert drop-shadow-lg relative z-10"
+                          className="w-10 h-10 object-contain relative z-10"
                           whileHover={{
                             scale: 1.2,
-                            rotate: 360,
-                            filter: "brightness(0) invert(1) drop-shadow(0 0 20px rgba(255,255,255,0.8))"
+                            rotate: 360
                           }}
                           transition={{
                             duration: 0.6,
                             ease: "easeInOut"
+                          }}
+                          onError={(e) => {
+                            // Fallback for broken images
+                            e.currentTarget.style.display = 'none';
                           }}
                         />
                         
