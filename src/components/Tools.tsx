@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Palette, TrendingUp, Users, Target } from "lucide-react";
 
@@ -136,7 +135,7 @@ export const Tools = () => {
 
   return (
     <section id="tools" className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 relative overflow-hidden">
-      {/* Animated Background Elements */}
+      {/* Keep existing background animations */}
       <div className="absolute inset-0">
         <motion.div 
           className="absolute top-20 left-20 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl"
@@ -221,8 +220,8 @@ export const Tools = () => {
             return (
               <motion.div
                 key={category.title}
-                initial={{ opacity: 0, y: 60, rotateX: -15 }}
-                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
                 className="relative group"
@@ -230,52 +229,25 @@ export const Tools = () => {
                 {/* Main Card */}
                 <motion.div
                   whileHover={{ 
-                    y: -15,
-                    scale: 1.02,
-                    rotateY: 5,
-                    transition: { duration: 0.4 }
+                    y: -8,
+                    scale: 1.01,
+                    transition: { duration: 0.3 }
                   }}
-                  className={`${category.bgGradient} backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-white/30 transition-all duration-500 relative overflow-hidden`}
-                  style={{ transformStyle: "preserve-3d" }}
+                  className={`${category.bgGradient} backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-white/20 transition-all duration-500 relative overflow-hidden`}
                 >
-                  {/* Floating Background Orb */}
-                  <motion.div
-                    className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r ${category.color} opacity-20 rounded-full blur-2xl`}
-                    animate={{
-                      scale: [1, 1.3, 1],
-                      rotate: [0, 180, 360]
-                    }}
-                    transition={{
-                      duration: 15,
-                      repeat: Infinity,
-                      ease: "linear"
-                    }}
-                  />
-
                   {/* Category Header */}
                   <div className="flex items-center gap-6 mb-8 relative z-10">
                     <motion.div 
-                      className={`p-4 rounded-2xl bg-gradient-to-r ${category.color} shadow-2xl`}
+                      className={`p-4 rounded-2xl bg-gradient-to-r ${category.color} shadow-lg`}
                       whileHover={{ 
-                        scale: 1.2, 
-                        rotate: 360,
-                        transition: { duration: 0.6 }
-                      }}
-                      animate={{
-                        y: [0, -8, 0],
-                      }}
-                      transition={{
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                        delay: categoryIndex * 0.8
+                        scale: 1.1,
+                        transition: { duration: 0.3 }
                       }}
                     >
-                      <IconComponent className="w-8 h-8 text-white drop-shadow-lg" />
+                      <IconComponent className="w-8 h-8 text-white" />
                     </motion.div>
                     <motion.h3 
                       className={`text-2xl font-bold bg-gradient-to-r ${category.color} bg-clip-text text-transparent`}
-                      whileHover={{ scale: 1.05 }}
                     >
                       {category.title}
                     </motion.h3>
@@ -286,58 +258,36 @@ export const Tools = () => {
                     {category.skills.map((skill, index) => (
                       <motion.div
                         key={skill.name}
-                        initial={{ opacity: 0, scale: 0.3, y: 30 }}
-                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ 
-                          duration: 0.6, 
-                          delay: categoryIndex * 0.1 + index * 0.1,
-                          type: "spring",
-                          stiffness: 200
+                          duration: 0.5, 
+                          delay: categoryIndex * 0.1 + index * 0.05,
                         }}
                         viewport={{ once: true }}
                         whileHover={{ 
-                          scale: 1.3, 
-                          y: -20,
-                          rotateY: 15,
-                          rotateX: 10,
-                          transition: { duration: 0.3 }
+                          scale: 1.05, 
+                          y: -5,
+                          transition: { duration: 0.2 }
                         }}
                         className="group/tool relative"
-                        style={{ transformStyle: "preserve-3d" }}
                       >
                         <motion.div 
-                          className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 aspect-square flex items-center justify-center transition-all duration-500 cursor-pointer relative overflow-hidden border border-white/10 hover:border-white/30 hover:bg-white/10"
+                          className="bg-white rounded-xl p-4 aspect-square flex items-center justify-center transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl border border-gray-100"
                           whileHover={{
-                            boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
+                            boxShadow: "0 10px 25px rgba(0,0,0,0.15)",
                           }}
                         >
-                          {/* Animated Background */}
-                          <motion.div
-                            className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover/tool:opacity-100 rounded-2xl"
-                            animate={{
-                              scale: [1, 1.1, 1],
-                              rotate: [0, 180, 360]
-                            }}
-                            transition={{
-                              duration: 8,
-                              repeat: Infinity,
-                              ease: "linear"
-                            }}
-                          />
-                          
                           {/* Icon */}
                           <motion.img
                             src={skill.icon}
                             alt={skill.name}
-                            className="w-12 h-12 object-contain relative z-10 drop-shadow-2xl filter brightness-110"
+                            className="w-10 h-10 object-contain"
                             whileHover={{
-                              scale: 1.3,
-                              rotate: [0, -10, 10, 0],
-                              filter: "brightness(1.3) saturate(1.2)"
+                              scale: 1.1,
                             }}
                             transition={{
-                              duration: 0.6,
-                              ease: "easeInOut"
+                              duration: 0.2,
                             }}
                             onError={(e) => {
                               const target = e.currentTarget;
@@ -345,58 +295,21 @@ export const Tools = () => {
                               const parent = target.parentElement;
                               if (parent && !parent.querySelector('.fallback-icon')) {
                                 const fallback = document.createElement('div');
-                                fallback.className = 'fallback-icon w-12 h-12 bg-gradient-to-br from-white/20 to-white/5 rounded-xl flex items-center justify-center text-white font-bold text-lg border border-white/20';
+                                fallback.className = 'fallback-icon w-10 h-10 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center text-gray-600 font-bold text-sm';
                                 fallback.textContent = skill.name.slice(0, 2).toUpperCase();
                                 parent.appendChild(fallback);
                               }
                             }}
                           />
-                          
-                          {/* Floating Particles on Hover */}
-                          <motion.div
-                            className="absolute inset-0 opacity-0 group-hover/tool:opacity-100"
-                            initial={{ opacity: 0 }}
-                            whileHover={{ opacity: 1 }}
-                          >
-                            {[...Array(4)].map((_, i) => (
-                              <motion.div
-                                key={i}
-                                className="absolute w-1 h-1 bg-white rounded-full"
-                                style={{
-                                  left: `${15 + i * 20}%`,
-                                  top: `${10 + i * 15}%`,
-                                }}
-                                animate={{
-                                  y: [-15, -40, -15],
-                                  opacity: [0, 1, 0],
-                                  scale: [0.5, 1.2, 0.5]
-                                }}
-                                transition={{
-                                  duration: 2.5,
-                                  repeat: Infinity,
-                                  delay: i * 0.4,
-                                  ease: "easeInOut"
-                                }}
-                              />
-                            ))}
-                          </motion.div>
-
-                          {/* Glow Effect */}
-                          <motion.div
-                            className="absolute inset-0 rounded-2xl opacity-0 group-hover/tool:opacity-100"
-                            animate={{
-                              boxShadow: [
-                                "0 0 0 rgba(255,255,255,0)",
-                                "0 0 30px rgba(255,255,255,0.2)",
-                                "0 0 0 rgba(255,255,255,0)"
-                              ]
-                            }}
-                            transition={{
-                              duration: 2,
-                              repeat: Infinity,
-                              ease: "easeInOut"
-                            }}
-                          />
+                        </motion.div>
+                        
+                        {/* Tooltip */}
+                        <motion.div
+                          className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover/tool:opacity-100 transition-opacity duration-200 whitespace-nowrap z-20"
+                          initial={{ opacity: 0, y: 5 }}
+                          whileHover={{ opacity: 1, y: 0 }}
+                        >
+                          {skill.name}
                         </motion.div>
                       </motion.div>
                     ))}
