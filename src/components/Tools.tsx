@@ -46,8 +46,8 @@ export const Tools = () => {
       tools: [
         { name: "Notion", image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" },
         { name: "Slack", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" },
-        { name: "Trello", image: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Trello-logo-blue.svg" },
-        { name: "Adobe Creative", image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.svg" },
+        { name: "Trello", image: "https://upload.wikimedia.org/wikipedia/commons/1/17/Antu_trello.svg" },
+        { name: "Adobe Express", image: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Adobe_Express_logo.png" },
         { name: "Google Workspace", image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_Apps_Script.svg" }
       ]
     }
