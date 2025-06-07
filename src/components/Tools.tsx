@@ -48,7 +48,7 @@ export const Tools = () => {
         { name: "Slack", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" },
         { name: "Trello", image: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Trello-logo-blue.svg" },
         { name: "Adobe Creative", image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.svg" },
-        { name: "Google Workspace", image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Workspace_Logo.svg" }
+        { name: "Google Workspace", image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_Apps_Script.svg" }
       ]
     }
   ];
