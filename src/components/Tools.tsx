@@ -1,320 +1,245 @@
 import { motion } from "framer-motion";
-import { Palette, TrendingUp, Users, Target } from "lucide-react";
+import { Palette, Search, TrendingUp, Zap } from "lucide-react";
 
 export const Tools = () => {
-  const skillCategories = [
+  const tools = [
     {
-      title: "Design Tools",
-      color: "from-purple-500 to-pink-500",
-      bgGradient: "bg-gradient-to-br from-purple-500/20 to-pink-500/20",
+      category: "Design Tools",
       icon: Palette,
-      skills: [
-        { 
-          name: "Adobe Illustrator", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg",
-        },
-        { 
-          name: "Adobe Photoshop", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg",
-        },
-        { 
-          name: "Figma", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
-        },
-        { 
-          name: "Canva", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg",
-        },
-        { 
-          name: "Sketch", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg",
-        },
-        { 
-          name: "Adobe XD", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg",
-        }
-      ]
-    },
-    {
-      title: "Marketing Platforms",
-      color: "from-emerald-500 to-teal-500",
-      bgGradient: "bg-gradient-to-br from-emerald-500/20 to-teal-500/20",
-      icon: TrendingUp,
-      skills: [
-        { 
-          name: "Meta Business", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg",
-        },
-        { 
-          name: "Google Ads", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg",
-        },
-        { 
-          name: "Pinterest Business", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png",
-        },
-        { 
-          name: "LinkedIn Campaign Manager", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
-        },
-        { 
-          name: "TikTok Ads", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/3/34/Ionicons_logo-tiktok.svg",
-        },
-        { 
-          name: "Snapchat Ads", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/c/ce/Snapchat_ghost_icon.svg",
-        }
-      ]
-    },
-    {
-      title: "Analytics & Strategy",
-      color: "from-cyan-500 to-blue-500",
-      bgGradient: "bg-gradient-to-br from-cyan-500/20 to-blue-500/20",
-      icon: Target,
-      skills: [
-        { 
-          name: "Google Analytics", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/7/77/Google_Analytics_logo.svg",
-        },
-        { 
-          name: "Google Tag Manager", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/9/9c/Google_Tag_Manager_Icon.svg",
-        },
-        { 
-          name: "Miro", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Miro_Logo.svg/512px-Miro_Logo.svg.png",
-        },
-        { 
-          name: "Notion", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
-        },
-        { 
-          name: "Airtable", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Airtable_Logo.svg",
-        },
-        { 
-          name: "Hotjar", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Hotjar-logo.svg",
-        }
-      ]
-    },
-    {
-      title: "Social Platforms",
       color: "from-pink-500 to-rose-500",
-      bgGradient: "bg-gradient-to-br from-pink-500/20 to-rose-500/20",
-      icon: Users,
-      skills: [
-        { 
-          name: "Instagram", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg",
-        },
-        { 
-          name: "YouTube", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg",
-        },
-        { 
-          name: "Facebook", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
-        },
-        { 
-          name: "Twitter", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg",
-        },
-        { 
-          name: "TikTok", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/3/34/Ionicons_logo-tiktok.svg",
-        },
-        { 
-          name: "Discord", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/1/19/Discord_logo.svg",
-        }
+      tools: [
+        { name: "Adobe Photoshop", image: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" },
+        { name: "Adobe Illustrator", image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" },
+        { name: "Figma", image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" },
+        { name: "Canva Pro", image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg" },
+        { name: "Adobe InDesign", image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg" }
+      ]
+    },
+    {
+      category: "SEO & Analytics",
+      icon: Search,
+      color: "from-green-500 to-emerald-500",
+      tools: [
+        { name: "Google Analytics", image: "https://upload.wikimedia.org/wikipedia/commons/7/77/GAnalytics.svg" },
+        { name: "SEMrush", image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/SEMrush_logo.svg" },
+        { name: "Ahrefs", image: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Ahrefs_logo.svg" },
+        { name: "Search Console", image: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" },
+        { name: "Yoast SEO", image: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Yoast_Logo_Small.svg" }
+      ]
+    },
+    {
+      category: "Marketing",
+      icon: TrendingUp,
+      color: "from-purple-500 to-violet-500",
+      tools: [
+        { name: "Google Ads", image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg" },
+        { name: "Facebook Ads", image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" },
+        { name: "Mailchimp", image: "https://upload.wikimedia.org/wikipedia/commons/2/27/Mailchimp_Logo.svg" },
+        { name: "Hootsuite", image: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Hootsuite_Logo.svg" },
+        { name: "Buffer", image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Buffer_logo.svg" }
+      ]
+    },
+    {
+      category: "Productivity",
+      icon: Zap,
+      color: "from-cyan-500 to-teal-500",
+      tools: [
+        { name: "Notion", image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" },
+        { name: "Slack", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" },
+        { name: "Trello", image: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Trello-logo-blue.svg" },
+        { name: "Adobe Creative", image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.svg" },
+        { name: "Google Workspace", image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Workspace_Logo.svg" }
       ]
     }
   ];
 
   return (
-    <section id="tools" className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 relative overflow-hidden">
-      {/* Keep existing background animations */}
-      <div className="absolute inset-0">
+    <section id="tools" className="py-20 bg-gradient-to-br from-white via-purple-50 to-pink-50 relative overflow-hidden">
+      {/* Enhanced Logo Integration - Made Much Larger */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.3, rotate: -180 }}
+        whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+        transition={{ duration: 1.2, type: "spring", stiffness: 100 }}
+        viewport={{ once: true }}
+        className="absolute top-10 right-10 z-10"
+      >
         <motion.div 
-          className="absolute top-20 left-20 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            x: [0, 100, 0],
-            y: [0, -50, 0]
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"
-          animate={{
-            scale: [1.1, 1, 1.1],
-            x: [0, -80, 0],
-            y: [0, 40, 0]
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500/3 rounded-full blur-2xl"
-          animate={{
-            rotate: [0, 360],
-            scale: [0.8, 1.3, 0.8]
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-20"
+          className="relative"
+          whileHover={{ scale: 1.3, rotate: 15 }}
+          transition={{ type: "spring", stiffness: 300 }}
         >
-          <motion.h2 
-            className="text-6xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
-            animate={{
-              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl"
+            animate={{ 
+              scale: [1, 1.5, 1],
+              opacity: [0.2, 0.5, 0.2],
+              rotate: [0, 360]
             }}
-            transition={{
-              duration: 8,
+            transition={{ 
+              duration: 6, 
               repeat: Infinity,
               ease: "linear"
             }}
-          >
-            Professional Tools
-          </motion.h2>
-          <motion.div
-            className="w-32 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto rounded-full"
-            animate={{
-              scaleX: [1, 1.5, 1],
-              opacity: [0.7, 1, 0.7]
+          />
+          <motion.img 
+            src="/lovable-uploads/716d8093-d916-47af-ab5a-cc51a036653f.png" 
+            alt="ARS Logo" 
+            className="w-32 h-32 object-contain relative z-10 filter drop-shadow-xl"
+            animate={{ 
+              y: [0, -8, 0],
+              filter: [
+                "drop-shadow(0 8px 16px rgba(168, 85, 247, 0.3))",
+                "drop-shadow(0 12px 24px rgba(236, 72, 153, 0.5))",
+                "drop-shadow(0 8px 16px rgba(168, 85, 247, 0.3))"
+              ]
             }}
-            transition={{
-              duration: 3,
+            transition={{ 
+              duration: 4, 
               repeat: Infinity,
               ease: "easeInOut"
             }}
           />
         </motion.div>
+      </motion.div>
 
-        {/* Tools Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
-          {skillCategories.map((category, categoryIndex) => {
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, type: "spring", stiffness: 100 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <motion.h2 
+            className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-500 bg-clip-text text-transparent"
+            whileInView={{ scale: [0.9, 1.05, 1] }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            My Professional Toolkit
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            Cutting-edge tools and technologies that power my creative and strategic solutions
+          </motion.p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {tools.map((category, index) => {
             const IconComponent = category.icon;
             return (
               <motion.div
-                key={category.title}
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
+                key={category.category}
+                initial={{ opacity: 0, y: 50, rotateX: 45 }}
+                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: index * 0.1,
+                  type: "spring",
+                  stiffness: 100
+                }}
                 viewport={{ once: true }}
-                className="relative group"
+                whileHover={{ 
+                  y: -10, 
+                  scale: 1.02,
+                  boxShadow: "0 25px 50px rgba(168, 85, 247, 0.3)"
+                }}
+                className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-purple-200/50 shadow-lg shadow-purple-500/10 group relative overflow-hidden"
               >
-                {/* Main Card */}
+                {/* Animated Background */}
                 <motion.div
-                  whileHover={{ 
-                    y: -8,
-                    scale: 1.01,
-                    transition: { duration: 0.3 }
-                  }}
-                  className={`${category.bgGradient} backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-white/20 transition-all duration-500 relative overflow-hidden`}
+                  className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-pink-50/50 opacity-0 group-hover:opacity-100"
+                  transition={{ duration: 0.3 }}
+                />
+                
+                <motion.div
+                  whileHover={{ rotate: 360, scale: 1.1 }}
+                  transition={{ duration: 0.6 }}
+                  className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${category.color} rounded-full mb-6 group-hover:shadow-lg transition-all duration-300 relative z-10`}
                 >
-                  {/* Category Header */}
-                  <div className="flex items-center gap-6 mb-8 relative z-10">
-                    <motion.div 
-                      className={`p-4 rounded-2xl bg-gradient-to-r ${category.color} shadow-lg`}
-                      whileHover={{ 
-                        scale: 1.1,
-                        transition: { duration: 0.3 }
+                  <IconComponent className="w-8 h-8 text-white" />
+                </motion.div>
+                
+                <h3 className="text-2xl font-bold text-gray-800 mb-6 group-hover:text-purple-600 transition-colors relative z-10">
+                  {category.category}
+                </h3>
+                
+                <div className="grid grid-cols-3 gap-4 relative z-10">
+                  {category.tools.map((tool, toolIndex) => (
+                    <motion.div
+                      key={tool.name}
+                      initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
+                      whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                      transition={{ 
+                        delay: index * 0.1 + toolIndex * 0.05,
+                        type: "spring",
+                        stiffness: 200
                       }}
+                      viewport={{ once: true }}
+                      whileHover={{ 
+                        scale: 1.1, 
+                        y: -5,
+                        rotate: [0, -5, 5, 0],
+                        boxShadow: "0 10px 25px rgba(168, 85, 247, 0.3)"
+                      }}
+                      className="group/tool relative"
                     >
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </motion.div>
-                    <motion.h3 
-                      className={`text-2xl font-bold bg-gradient-to-r ${category.color} bg-clip-text text-transparent`}
-                    >
-                      {category.title}
-                    </motion.h3>
-                  </div>
-
-                  {/* Tools Icons Grid */}
-                  <div className="grid grid-cols-3 gap-6">
-                    {category.skills.map((skill, index) => (
                       <motion.div
-                        key={skill.name}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ 
-                          duration: 0.5, 
-                          delay: categoryIndex * 0.1 + index * 0.05,
-                        }}
-                        viewport={{ once: true }}
+                        className="bg-gradient-to-br from-white to-purple-50 rounded-xl p-4 border border-purple-100 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden"
                         whileHover={{ 
-                          scale: 1.05, 
-                          y: -5,
-                          transition: { duration: 0.2 }
+                          background: "linear-gradient(135deg, #ffffff, #f3e8ff, #fce7f3)" 
                         }}
-                        className="group/tool relative"
                       >
-                        <motion.div 
-                          className="bg-white rounded-xl p-4 aspect-square flex items-center justify-center transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl border border-gray-100"
-                          whileHover={{
-                            boxShadow: "0 10px 25px rgba(0,0,0,0.15)",
+                        <motion.div
+                          className="relative z-10"
+                          animate={{
+                            y: [0, -2, 0]
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
                           }}
                         >
-                          {/* Icon */}
                           <motion.img
-                            src={skill.icon}
-                            alt={skill.name}
-                            className="w-10 h-10 object-contain"
-                            whileHover={{
-                              scale: 1.1,
+                            src={tool.image}
+                            alt={tool.name}
+                            className="w-12 h-12 mx-auto mb-3 object-contain filter drop-shadow-lg"
+                            whileHover={{ 
+                              rotate: [0, 360],
+                              filter: "drop-shadow(0 8px 16px rgba(168, 85, 247, 0.4))"
                             }}
-                            transition={{
-                              duration: 0.2,
-                            }}
+                            transition={{ duration: 0.6 }}
                             onError={(e) => {
-                              const target = e.currentTarget;
-                              target.style.display = 'none';
-                              const parent = target.parentElement;
-                              if (parent && !parent.querySelector('.fallback-icon')) {
-                                const fallback = document.createElement('div');
-                                fallback.className = 'fallback-icon w-10 h-10 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center text-gray-600 font-bold text-sm';
-                                fallback.textContent = skill.name.slice(0, 2).toUpperCase();
-                                parent.appendChild(fallback);
-                              }
+                              console.log(`Failed to load image for ${tool.name}:`, e.currentTarget.src);
+                              // Fallback to a generic icon
+                              e.currentTarget.style.display = 'none';
+                              e.currentTarget.nextElementSibling?.classList.add('mt-6');
                             }}
                           />
+                          <motion.p 
+                            className="text-xs font-semibold text-gray-700 text-center leading-tight group-hover/tool:text-purple-600 transition-colors"
+                            whileHover={{ scale: 1.05 }}
+                          >
+                            {tool.name}
+                          </motion.p>
                         </motion.div>
-                        
-                        {/* Tooltip */}
+
                         <motion.div
-                          className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover/tool:opacity-100 transition-opacity duration-200 whitespace-nowrap z-20"
-                          initial={{ opacity: 0, y: 5 }}
-                          whileHover={{ opacity: 1, y: 0 }}
-                        >
-                          {skill.name}
-                        </motion.div>
+                          className="absolute inset-0 rounded-xl opacity-0 group-hover/tool:opacity-100 transition-opacity duration-300"
+                          style={{
+                            background: "radial-gradient(circle at center, rgba(168, 85, 247, 0.1) 0%, transparent 70%)"
+                          }}
+                        />
                       </motion.div>
-                    ))}
-                  </div>
-                </motion.div>
+                    </motion.div>
+                  ))}
+                </div>
               </motion.div>
             );
           })}
