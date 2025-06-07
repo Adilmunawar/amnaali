@@ -1,5 +1,7 @@
+
 import { motion } from "framer-motion";
 import { Award, Zap, Target, Users, Palette, TrendingUp, Brain, Rocket, Lightbulb } from "lucide-react";
+
 export const About = () => {
   const skills = [{
     name: "Creative Design",
@@ -26,6 +28,7 @@ export const About = () => {
     icon: Rocket,
     description: "Cutting-edge digital solutions for modern challenges"
   }];
+
   const achievements = [{
     icon: Award,
     number: "250+",
@@ -47,67 +50,78 @@ export const About = () => {
     label: "Years Mastery",
     color: "from-fuchsia-400 to-pink-600"
   }];
-  return <section id="about" className="py-32 bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 relative overflow-hidden">
+
+  return (
+    <section id="about" className="py-32 bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 relative overflow-hidden">
       {/* Advanced Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-violet-900/20 via-transparent to-transparent" />
         
         {/* Animated Mesh Pattern */}
         <motion.div className="absolute inset-0 opacity-10" animate={{
-        backgroundPosition: ["0% 0%", "100% 100%"]
-      }} transition={{
-        duration: 20,
-        repeat: Infinity,
-        ease: "linear"
-      }} style={{
-        backgroundImage: `url("data:image/svg+xml,%3csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cpattern id='grid' width='60' height='60' patternUnits='userSpaceOnUse'%3e%3cpath d='m 60 0 l 0 60 l -60 0 l 0 -60 z' fill='none' stroke='%23a855f7' stroke-width='1'/%3e%3c/pattern%3e%3c/defs%3e%3crect width='100%25' height='100%25' fill='url(%23grid)'/%3e%3c/svg%3e")`,
-        backgroundSize: "60px 60px"
-      }} />
+          backgroundPosition: ["0% 0%", "100% 100%"]
+        }} transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "linear"
+        }} style={{
+          backgroundImage: `url("data:image/svg+xml,%3csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cpattern id='grid' width='60' height='60' patternUnits='userSpaceOnUse'%3e%3cpath d='m 60 0 l 0 60 l -60 0 l 0 -60 z' fill='none' stroke='%23a855f7' stroke-width='1'/%3e%3c/pattern%3e%3c/defs%3e%3crect width='100%25' height='100%25' fill='url(%23grid)'/%3e%3c/svg%3e")`,
+          backgroundSize: "60px 60px"
+        }} />
 
         {/* Floating Orbs */}
-        {[...Array(8)].map((_, i) => <motion.div key={`orb-${i}`} className="absolute rounded-full blur-2xl" style={{
-        background: `linear-gradient(45deg, 
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={`orb-${i}`}
+            className="absolute rounded-full blur-2xl"
+            style={{
+              background: `linear-gradient(45deg, 
                 ${i % 2 === 0 ? '#8b5cf6, #06b6d4' : '#ec4899, #10b981'})`,
-        width: `${150 + i * 50}px`,
-        height: `${150 + i * 50}px`,
-        opacity: 0.1
-      }} initial={{
-        x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
-        y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800)
-      }} animate={{
-        x: [null, Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200)],
-        y: [null, Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800)],
-        scale: [1, 1.5, 1],
-        rotate: [0, 360]
-      }} transition={{
-        duration: 15 + i * 3,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }} />)}
+              width: `${150 + i * 50}px`,
+              height: `${150 + i * 50}px`,
+              opacity: 0.1
+            }}
+            initial={{
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800)
+            }}
+            animate={{
+              x: [null, Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200)],
+              y: [null, Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800)],
+              scale: [1, 1.5, 1],
+              rotate: [0, 360]
+            }}
+            transition={{
+              duration: 15 + i * 3,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+        ))}
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div initial={{
-        opacity: 0,
-        y: 80
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 1.2,
-        type: "spring",
-        stiffness: 60
-      }} viewport={{
-        once: true
-      }} className="text-center mb-20">
-          <motion.h2 className="text-7xl md:text-8xl font-black mb-8 relative" whileInView={{
-          scale: [0.8, 1.05, 1]
+          opacity: 0,
+          y: 80
+        }} whileInView={{
+          opacity: 1,
+          y: 0
         }} transition={{
-          duration: 1.5
+          duration: 1.2,
+          type: "spring",
+          stiffness: 60
         }} viewport={{
           once: true
-        }}>
+        }} className="text-center mb-20">
+          <motion.h2 className="text-7xl md:text-8xl font-black mb-8 relative" whileInView={{
+            scale: [0.8, 1.05, 1]
+          }} transition={{
+            duration: 1.5
+          }} viewport={{
+            once: true
+          }}>
             <span className="absolute inset-0 bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent blur-sm">
               About Me
             </span>
@@ -117,17 +131,17 @@ export const About = () => {
           </motion.h2>
           
           <motion.p className="text-2xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed" initial={{
-          opacity: 0,
-          scale: 0.8
-        }} whileInView={{
-          opacity: 1,
-          scale: 1
-        }} transition={{
-          duration: 1,
-          delay: 0.3
-        }} viewport={{
-          once: true
-        }}>
+            opacity: 0,
+            scale: 0.8
+          }} whileInView={{
+            opacity: 1,
+            scale: 1
+          }} transition={{
+            duration: 1,
+            delay: 0.3
+          }} viewport={{
+            once: true
+          }}>
             Pioneering the future of digital experiences through innovative design thinking and strategic excellence
           </motion.p>
         </motion.div>
@@ -135,30 +149,30 @@ export const About = () => {
         <div className="grid lg:grid-cols-2 gap-20 items-center mb-24">
           {/* Profile Section */}
           <motion.div initial={{
-          opacity: 0,
-          x: -100
-        }} whileInView={{
-          opacity: 1,
-          x: 0
-        }} transition={{
-          duration: 1.2,
-          type: "spring",
-          stiffness: 80
-        }} viewport={{
-          once: true
-        }} className="space-y-8">
+            opacity: 0,
+            x: -100
+          }} whileInView={{
+            opacity: 1,
+            x: 0
+          }} transition={{
+            duration: 1.2,
+            type: "spring",
+            stiffness: 80
+          }} viewport={{
+            once: true
+          }} className="space-y-8">
             <motion.div className="relative bg-gradient-to-br from-white/5 via-white/10 to-white/5 backdrop-blur-2xl rounded-3xl p-10 border border-white/10 group overflow-hidden" whileHover={{
-            scale: 1.02,
-            boxShadow: "0 40px 80px -20px rgba(139, 92, 246, 0.3)"
-          }}>
+              scale: 1.02,
+              boxShadow: "0 40px 80px -20px rgba(139, 92, 246, 0.3)"
+            }}>
               <motion.div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-fuchsia-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100" transition={{
-              duration: 0.8
-            }} />
+                duration: 0.8
+              }} />
               
               <div className="relative z-10">
                 <motion.h3 className="text-3xl font-bold text-white mb-6 bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent" whileHover={{
-                scale: 1.05
-              }}>
+                  scale: 1.05
+                }}>
                   Visionary Creative Leader
                 </motion.h3>
                 
@@ -178,132 +192,184 @@ export const About = () => {
 
                 {/* Decorative Elements */}
                 <motion.div className="absolute top-4 right-4 w-20 h-20 rounded-full bg-gradient-to-r from-violet-400/20 to-cyan-400/20 blur-xl" animate={{
-                scale: [1, 1.2, 1],
-                rotate: [0, 180, 360]
-              }} transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }} />
+                  scale: [1, 1.2, 1],
+                  rotate: [0, 180, 360]
+                }} transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }} />
               </div>
             </motion.div>
 
             {/* Skills Section */}
             <div className="space-y-6">
               {skills.map((skill, index) => {
-              const IconComponent = skill.icon;
-              return;
-            })}
+                const IconComponent = skill.icon;
+                return (
+                  <motion.div
+                    key={skill.name}
+                    initial={{
+                      opacity: 0,
+                      x: -50
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0
+                    }}
+                    transition={{
+                      duration: 0.8,
+                      delay: index * 0.1
+                    }}
+                    viewport={{
+                      once: true
+                    }}
+                    className="relative bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/10 group hover:border-white/20 transition-all duration-500"
+                  >
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className={`p-3 rounded-xl bg-gradient-to-r ${skill.color}`}>
+                        <IconComponent className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-xl font-bold text-white mb-1">{skill.name}</h4>
+                        <p className="text-gray-400 text-sm">{skill.description}</p>
+                      </div>
+                      <div className="text-2xl font-bold text-white">{skill.level}%</div>
+                    </div>
+                    
+                    <div className="relative h-2 bg-white/10 rounded-full overflow-hidden">
+                      <motion.div
+                        className={`absolute inset-y-0 left-0 bg-gradient-to-r ${skill.color} rounded-full`}
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        transition={{ duration: 1.5, delay: index * 0.1 + 0.5 }}
+                        viewport={{ once: true }}
+                      />
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
 
           {/* Achievements Grid */}
           <motion.div initial={{
-          opacity: 0,
-          x: 100
-        }} whileInView={{
-          opacity: 1,
-          x: 0
-        }} transition={{
-          duration: 1.2,
-          type: "spring",
-          stiffness: 80
-        }} viewport={{
-          once: true
-        }} className="grid grid-cols-2 gap-6">
+            opacity: 0,
+            x: 100
+          }} whileInView={{
+            opacity: 1,
+            x: 0
+          }} transition={{
+            duration: 1.2,
+            type: "spring",
+            stiffness: 80
+          }} viewport={{
+            once: true
+          }} className="grid grid-cols-2 gap-6">
             {achievements.map((achievement, index) => {
-            const IconComponent = achievement.icon;
-            return <motion.div key={achievement.label} initial={{
-              opacity: 0,
-              scale: 0.5,
-              rotate: -180
-            }} whileInView={{
-              opacity: 1,
-              scale: 1,
-              rotate: 0
-            }} transition={{
-              duration: 1,
-              delay: index * 0.2,
-              type: "spring",
-              stiffness: 200
-            }} viewport={{
-              once: true
-            }} whileHover={{
-              scale: 1.05,
-              y: -10,
-              rotateY: 10
-            }} className="relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-2xl rounded-3xl p-8 border border-white/20 text-center group overflow-hidden">
+              const IconComponent = achievement.icon;
+              return (
+                <motion.div
+                  key={achievement.label}
+                  initial={{
+                    opacity: 0,
+                    scale: 0.5,
+                    rotate: -180
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    scale: 1,
+                    rotate: 0
+                  }}
+                  transition={{
+                    duration: 1,
+                    delay: index * 0.2,
+                    type: "spring",
+                    stiffness: 200
+                  }}
+                  viewport={{
+                    once: true
+                  }}
+                  whileHover={{
+                    scale: 1.05,
+                    y: -10,
+                    rotateY: 10
+                  }}
+                  className="relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-2xl rounded-3xl p-8 border border-white/20 text-center group overflow-hidden"
+                >
                   <motion.div className={`absolute inset-0 bg-gradient-to-br ${achievement.color} opacity-0 group-hover:opacity-10`} transition={{
-                duration: 0.6
-              }} />
+                    duration: 0.6
+                  }} />
                   
                   <div className="relative z-10">
                     <motion.div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${achievement.color} mb-6 relative`} whileHover={{
-                  rotate: [0, -10, 10, -10, 0],
-                  scale: 1.2
-                }} transition={{
-                  duration: 0.8
-                }}>
+                      rotate: [0, -10, 10, -10, 0],
+                      scale: 1.2
+                    }} transition={{
+                      duration: 0.8
+                    }}>
                       <IconComponent className="w-10 h-10 text-white" />
                       
                       {/* Animated Ring */}
                       <motion.div className="absolute inset-0 rounded-2xl border-2 border-white/30" animate={{
-                    rotate: 360,
-                    scale: [1, 1.1, 1]
-                  }} transition={{
-                    rotate: {
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "linear"
-                    },
-                    scale: {
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }
-                  }} />
+                        rotate: 360,
+                        scale: [1, 1.1, 1]
+                      }} transition={{
+                        rotate: {
+                          duration: 4,
+                          repeat: Infinity,
+                          ease: "linear"
+                        },
+                        scale: {
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }
+                      }} />
                     </motion.div>
                     
                     <motion.h4 className="text-4xl font-black text-white mb-3" initial={{
-                  opacity: 0,
-                  y: 20
-                }} whileInView={{
-                  opacity: 1,
-                  y: 0
-                }} transition={{
-                  delay: index * 0.1 + 0.5
-                }} viewport={{
-                  once: true
-                }}>
+                      opacity: 0,
+                      y: 20
+                    }} whileInView={{
+                      opacity: 1,
+                      y: 0
+                    }} transition={{
+                      delay: index * 0.1 + 0.5
+                    }} viewport={{
+                      once: true
+                    }}>
                       {achievement.number}
                     </motion.h4>
                     
                     <motion.p className="text-gray-300 font-medium" initial={{
-                  opacity: 0
-                }} whileInView={{
-                  opacity: 1
-                }} transition={{
-                  delay: index * 0.1 + 0.7
-                }} viewport={{
-                  once: true
-                }}>
+                      opacity: 0
+                    }} whileInView={{
+                      opacity: 1
+                    }} transition={{
+                      delay: index * 0.1 + 0.7
+                    }} viewport={{
+                      once: true
+                    }}>
                       {achievement.label}
                     </motion.p>
                   </div>
 
                   {/* Particle Effect */}
                   <motion.div className="absolute top-1/2 left-1/2 w-1 h-1 bg-white rounded-full" animate={{
-                scale: [0, 20, 0],
-                opacity: [0, 0.3, 0]
-              }} transition={{
-                duration: 2,
-                repeat: Infinity,
-                delay: index * 0.5
-              }} />
-                </motion.div>;
-          })}
+                    scale: [0, 20, 0],
+                    opacity: [0, 0.3, 0]
+                  }} transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: index * 0.5
+                  }} />
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
