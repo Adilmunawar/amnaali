@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Award, Zap, Target, Users, Palette, TrendingUp, Brain, Rocket, Lightbulb } from "lucide-react";
-
 export const About = () => {
   const skills = [{
     name: "Creative Design",
@@ -190,96 +189,7 @@ export const About = () => {
             </motion.div>
 
             {/* Skills Section */}
-            <div className="space-y-6">
-              {skills.map((skill, index) => {
-                const IconComponent = skill.icon;
-                return (
-                  <motion.div
-                    key={skill.name}
-                    initial={{
-                      opacity: 0,
-                      x: -50
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      x: 0
-                    }}
-                    transition={{
-                      duration: 0.8,
-                      delay: index * 0.1,
-                      type: "spring",
-                      stiffness: 100
-                    }}
-                    viewport={{
-                      once: true
-                    }}
-                    className="relative bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/10 group hover:border-white/20"
-                  >
-                    <div className="flex items-center gap-4 mb-4">
-                      <motion.div
-                        className={`p-3 rounded-xl bg-gradient-to-r ${skill.color} relative overflow-hidden`}
-                        whileHover={{
-                          scale: 1.1,
-                          rotate: [0, -5, 5, 0]
-                        }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <IconComponent className="w-6 h-6 text-white relative z-10" />
-                        
-                        <motion.div
-                          className="absolute inset-0 bg-white/20"
-                          initial={{ scale: 0, opacity: 0 }}
-                          whileHover={{ scale: 1, opacity: 1 }}
-                          transition={{ duration: 0.3 }}
-                        />
-                      </motion.div>
-                      
-                      <div className="flex-1">
-                        <h4 className="text-xl font-bold text-white mb-1">{skill.name}</h4>
-                        <p className="text-sm text-gray-400">{skill.description}</p>
-                      </div>
-                      
-                      <motion.span
-                        className="text-2xl font-black text-white"
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: index * 0.1 + 0.5, duration: 0.5 }}
-                        viewport={{ once: true }}
-                      >
-                        {skill.level}%
-                      </motion.span>
-                    </div>
-                    
-                    <div className="relative h-3 bg-white/10 rounded-full overflow-hidden">
-                      <motion.div
-                        className={`absolute inset-y-0 left-0 bg-gradient-to-r ${skill.color} rounded-full`}
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{
-                          duration: 1.5,
-                          delay: index * 0.1 + 0.7,
-                          ease: "easeOut"
-                        }}
-                        viewport={{ once: true }}
-                      />
-                      
-                      <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                        animate={{
-                          x: ["-100%", "200%"]
-                        }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                          delay: index * 0.2
-                        }}
-                      />
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+            
           </motion.div>
 
           {/* Achievements Grid */}
