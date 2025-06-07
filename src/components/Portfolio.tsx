@@ -11,7 +11,7 @@ export const Portfolio = () => {
       id: 1,
       title: "Luxury Brand Identity Design",
       category: "design",
-      image: "https://images.unsplash.com/photo-1558655146-364adaf25d9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2128&q=80",
+      image: "https://unsplash.com/photos/change-by-design-by-tim-brown-book-beside-smartphone-IyaNci0CyRk",
       description: "Complete visual identity system with sophisticated branding elements and color psychology for luxury fashion brands",
       tags: ["Branding", "Identity", "Luxury"]
     },
