@@ -11,52 +11,20 @@ export const Tools = () => {
       icon: Palette,
       skills: [
         { 
-          name: "Photoshop", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
-        },
-        { 
-          name: "Illustrator", 
+          name: "Adobe Illustrator", 
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg",
         },
         { 
-          name: "InDesign", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg",
+          name: "Adobe Photoshop", 
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
         },
         { 
           name: "Figma", 
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
         },
         { 
-          name: "Sketch", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg",
-        },
-        { 
           name: "Canva", 
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
-        },
-        { 
-          name: "After Effects", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg",
-        },
-        { 
-          name: "Premiere Pro", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg",
-        },
-        { 
-          name: "Blender", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg",
-        },
-        { 
-          name: "CorelDRAW", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/4/4f/CorelDRAW_2021_icon.svg",
-        },
-        { 
-          name: "XD", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg",
-        },
-        { 
-          name: "GIMP", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gimp/gimp-original.svg",
         }
       ]
     },
@@ -67,52 +35,20 @@ export const Tools = () => {
       icon: TrendingUp,
       skills: [
         { 
+          name: "Meta Ads", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg",
+        },
+        { 
           name: "Google Ads", 
           icon: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg",
         },
         { 
-          name: "Facebook Ads", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png",
+          name: "Pinterest Ads", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png",
         },
         { 
-          name: "Instagram", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg",
-        },
-        { 
-          name: "LinkedIn", 
+          name: "LinkedIn Ads", 
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
-        },
-        { 
-          name: "Google Analytics", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/7/77/Google_Analytics_logo.svg",
-        },
-        { 
-          name: "SEO Tools", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/5/53/Google_Search_Console_icon.svg",
-        },
-        { 
-          name: "Mailchimp", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mailchimp/mailchimp-original.svg",
-        },
-        { 
-          name: "WordPress", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
-        },
-        { 
-          name: "HubSpot", 
-          icon: "https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png",
-        },
-        { 
-          name: "Shopify", 
-          icon: "https://cdn.shopify.com/shopifycloud/brochure/assets/brand-assets/shopify-logo-primary-logo-456baa801ee66a0a435671082365958316831c9960c480451dd0330bcdae304f.svg",
-        },
-        { 
-          name: "TikTok", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Ionicons_logo-tiktok.svg/512px-Ionicons_logo-tiktok.svg.png",
-        },
-        { 
-          name: "YouTube", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg",
         }
       ]
     },
@@ -123,52 +59,20 @@ export const Tools = () => {
       icon: Target,
       skills: [
         { 
-          name: "Brand Identity", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg",
+          name: "Kantar", 
+          icon: "https://logo.clearbit.com/kantar.com",
         },
         { 
-          name: "Logo Design", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
+          name: "Brand Index", 
+          icon: "https://logo.clearbit.com/brandindex.com",
         },
         { 
-          name: "Typography", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg",
-        },
-        { 
-          name: "Color Theory", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-        },
-        { 
-          name: "Brand Guidelines", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
-        },
-        { 
-          name: "Market Research", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/7/77/Google_Analytics_logo.svg",
-        },
-        { 
-          name: "Competitor Analysis", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Semrush_company_logo.svg/512px-Semrush_company_logo.svg.png",
-        },
-        { 
-          name: "Brand Positioning", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg",
-        },
-        { 
-          name: "Style Guides", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg",
-        },
-        { 
-          name: "Moodboards", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Pinterest_logo.svg/512px-Pinterest_logo.svg.png",
-        },
-        { 
-          name: "Branding Tools", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg",
-        },
-        { 
-          name: "Brand Strategy", 
+          name: "Miro", 
           icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Miro_Logo.svg/512px-Miro_Logo.svg.png",
+        },
+        { 
+          name: "Google Analytics", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/7/77/Google_Analytics_logo.svg",
         }
       ]
     },
@@ -179,52 +83,20 @@ export const Tools = () => {
       icon: Users,
       skills: [
         { 
-          name: "Content Creation", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
-        },
-        { 
-          name: "Social Strategy", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg",
-        },
-        { 
-          name: "Community Management", 
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
-        },
-        { 
-          name: "Influencer Marketing", 
+          name: "Instagram", 
           icon: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg",
         },
         { 
-          name: "Social Analytics", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/7/77/Google_Analytics_logo.svg",
+          name: "YouTube", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg",
         },
         { 
-          name: "Paid Social", 
+          name: "Threads", 
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Threads_%28app%29_logo.svg/512px-Threads_%28app%29_logo.svg.png",
+        },
+        { 
+          name: "Facebook", 
           icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png",
-        },
-        { 
-          name: "Video Content", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg",
-        },
-        { 
-          name: "Stories & Reels", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg",
-        },
-        { 
-          name: "Twitter/X", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/512px-X_logo_2023.svg.png",
-        },
-        { 
-          name: "Pinterest", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Pinterest_logo.svg/512px-Pinterest_logo.svg.png",
-        },
-        { 
-          name: "Snapchat", 
-          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Snapchat_logo.svg/512px-Snapchat_logo.svg.png",
-        },
-        { 
-          name: "Buffer", 
-          icon: "https://buffer.com/static/icons/buffer-logo.png",
         }
       ]
     }
@@ -372,7 +244,7 @@ export const Tools = () => {
                   </motion.h3>
                 </div>
 
-                <div className="grid grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 gap-6">
                   {category.skills.map((skill, index) => (
                     <motion.div
                       key={skill.name}
@@ -396,7 +268,7 @@ export const Tools = () => {
                       style={{ transformStyle: "preserve-3d" }}
                     >
                       <motion.div 
-                        className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 aspect-square flex items-center justify-center text-white transition-all duration-300 cursor-pointer relative overflow-hidden border border-white/20 hover:border-white/40"
+                        className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 aspect-square flex flex-col items-center justify-center text-white transition-all duration-300 cursor-pointer relative overflow-hidden border border-white/20 hover:border-white/40"
                         whileHover={{
                           boxShadow: "0 25px 50px rgba(0,0,0,0.4)",
                           borderColor: "rgba(255,255,255,0.6)",
@@ -407,7 +279,7 @@ export const Tools = () => {
                         <motion.img
                           src={skill.icon}
                           alt={skill.name}
-                          className="w-12 h-12 object-contain relative z-10 drop-shadow-lg"
+                          className="w-12 h-12 object-contain relative z-10 drop-shadow-lg mb-2"
                           whileHover={{
                             scale: 1.2,
                             rotate: 360
@@ -417,17 +289,22 @@ export const Tools = () => {
                             ease: "easeInOut"
                           }}
                           onError={(e) => {
-                            // Fallback for broken images - hide the image and show icon text
+                            // Fallback for broken images
                             e.currentTarget.style.display = 'none';
                             const parent = e.currentTarget.parentElement;
-                            if (parent) {
+                            if (parent && !parent.querySelector('.fallback-text')) {
                               const fallback = document.createElement('div');
-                              fallback.className = 'text-white font-bold text-xs text-center';
+                              fallback.className = 'text-white font-bold text-xs text-center fallback-text';
                               fallback.textContent = skill.name;
                               parent.appendChild(fallback);
                             }
                           }}
                         />
+                        
+                        {/* Tool Name */}
+                        <div className="text-xs font-semibold text-center text-white/80 relative z-10">
+                          {skill.name}
+                        </div>
                         
                         {/* Background Effects */}
                         <motion.div
@@ -471,17 +348,6 @@ export const Tools = () => {
                             />
                           ))}
                         </motion.div>
-                      </motion.div>
-                      
-                      {/* Tooltip */}
-                      <motion.div
-                        className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black/90 text-white px-3 py-1 rounded-lg text-sm font-medium opacity-0 group-hover/skill:opacity-100 pointer-events-none z-20 backdrop-blur-sm border border-white/20"
-                        initial={{ opacity: 0, y: 10, scale: 0.8 }}
-                        whileHover={{ opacity: 1, y: 0, scale: 1 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        {skill.name}
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/90"></div>
                       </motion.div>
                     </motion.div>
                   ))}
