@@ -21,8 +21,8 @@ export const Tools = () => {
       color: "from-green-500 to-emerald-500",
       tools: [
         { name: "Google Analytics", image: "https://upload.wikimedia.org/wikipedia/commons/7/77/GAnalytics.svg" },
-        { name: "SEMrush", image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/SEMrush_logo.svg" },
-        { name: "Ahrefs", image: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Ahrefs_logo.svg" },
+        { name: "SEMrush", image: "https://upload.wikimedia.org/wikipedia/commons/a/ac/Semrush_logo.svg" },
+        { name: "Ahrefs", image: "https://upload.wikimedia.org/wikipedia/commons/d/de/Ahrefslogo.png" },
         { name: "Search Console", image: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" },
         { name: "Yoast SEO", image: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Yoast_Logo_Small.svg" }
       ]
