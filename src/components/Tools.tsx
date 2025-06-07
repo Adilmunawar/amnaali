@@ -11,7 +11,7 @@ export const Tools = () => {
         { name: "Adobe Photoshop", image: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" },
         { name: "Adobe Illustrator", image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" },
         { name: "Figma", image: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" },
-        { name: "Canva Pro", image: "https://cdn.worldvectorlogo.com/logos/canva-1.svg" },
+        { name: "Canva Pro", image: "https://upload.wikimedia.org/wikipedia/commons/2/27/Canva-Logo.png" },
         { name: "Adobe InDesign", image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg" }
       ]
     },
