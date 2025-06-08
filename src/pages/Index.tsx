@@ -28,52 +28,12 @@ const Index = () => {
         <Navigation />
         <main>
           <Hero />
-          <div className="relative">
-            <Aurora
-              colorStops={["#8B5CF6", "#EC4899", "#06B6D4", "#8B5CF6"]}
-              blend={0.5}
-              amplitude={1.1}
-              speed={0.4}
-            />
-            <div className="relative z-10">
-              <About />
-            </div>
-          </div>
+          <About />
           <Tools />
-          <div className="relative">
-            <Aurora
-              colorStops={["#06B6D4", "#8B5CF6", "#EC4899", "#06B6D4"]}
-              blend={0.6}
-              amplitude={1.2}
-              speed={0.5}
-            />
-            <div className="relative z-10">
-              <Gallery />
-            </div>
-          </div>
-          <div className="relative">
-            <Aurora
-              colorStops={["#EC4899", "#FF69B4", "#8B5CF6", "#EC4899"]}
-              blend={0.6}
-              amplitude={1.0}
-              speed={0.7}
-            />
-            <div className="relative z-10">
-              <Portfolio />
-            </div>
-          </div>
+          <Gallery />
+          <Portfolio />
           <Services />
-          <div className="relative">
-            <Aurora
-              colorStops={["#FF69B4", "#EC4899", "#06B6D4", "#FF69B4"]}
-              blend={0.5}
-              amplitude={1.3}
-              speed={0.6}
-            />
-            <div className="relative z-10">
-              <Contact />
-            </div>
-          </div>
+          <Contact />
         </main>
         <Footer />
       </div>

@@ -1,16 +1,19 @@
 
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
-import GooeyNav from "./GooeyNav";
+import { useState } from "react";
+import { Menu, X, Sparkles } from "lucide-react";
+import ProfileCard from "./ProfileCard";
 
 export const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Tools", href: "#tools" },
-    { label: "Portfolio", href: "#portfolio" },
-    { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" }
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Tools", href: "#tools" },
+    { name: "Portfolio", href: "#portfolio" },
+    { name: "Services", href: "#services" },
+    { name: "Contact", href: "#contact" }
   ];
 
   return (
@@ -45,41 +48,83 @@ export const Navigation = () => {
             <motion.div className="text-2xl font-bold text-white drop-shadow-lg">
               Amna Ali
             </motion.div>
+
+            {/* Profile Card */}
+            <div className="ml-4">
+              <ProfileCard
+                avatarUrl="/lovable-uploads/43fd4e87-d6c9-42fa-a776-492777f17353.png"
+                miniAvatarUrl="/lovable-uploads/43fd4e87-d6c9-42fa-a776-492777f17353.png"
+                name="Amna Ali"
+                title="Creative Marketer"
+                handle="AmnaAli"
+                status="Online"
+                contactText="Contact"
+                showUserInfo={true}
+                enableTilt={true}
+                onContactClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              />
+            </div>
           </motion.div>
 
-          {/* GooeyNav */}
-          <div className="hidden md:block">
-            <GooeyNav
-              items={navItems}
-              particleCount={15}
-              particleDistances={[90, 10]}
-              particleR={100}
-              initialActiveIndex={0}
-              animationTime={600}
-              timeVariance={300}
-              colors={[1, 2, 3, 1, 2, 3, 1, 4]}
-            />
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-2">
+            {navItems.map((item, index) => (
+              <motion.a
+                key={item.name}
+                href={item.href}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -2 }}
+                className="relative group px-6 py-3 text-white/90 hover:text-white transition-colors duration-200 font-medium drop-shadow-md"
+              >
+                <span className="relative z-10">{item.name}</span>
+                <motion.span 
+                  className="absolute bottom-1 left-1/2 w-0 h-0.5 bg-white transition-all duration-200 group-hover:w-3/4 group-hover:left-1/8"
+                />
+                <motion.div
+                  className="absolute inset-0 bg-white/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                />
+              </motion.a>
+            ))}
           </div>
 
-          {/* Mobile Navigation - Simple fallback */}
-          <div className="md:hidden">
-            <select 
-              className="bg-white/20 text-white border border-white/30 rounded-lg px-4 py-2 backdrop-blur-sm"
-              onChange={(e) => {
-                if (e.target.value) {
-                  document.querySelector(e.target.value)?.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              <option value="">Menu</option>
-              {navItems.map((item, index) => (
-                <option key={index} value={item.href} className="text-black">
-                  {item.label}
-                </option>
-              ))}
-            </select>
-          </div>
+          {/* Mobile Menu Button */}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 text-white bg-white/20 border border-white/30 rounded-lg backdrop-blur-sm"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </motion.button>
         </div>
+
+        {/* Mobile Navigation */}
+        <motion.div
+          initial={false}
+          animate={isOpen ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="md:hidden overflow-hidden"
+        >
+          <div className="py-4 space-y-2 bg-white/20 backdrop-blur-sm rounded-lg mt-4 px-4 border border-white/30">
+            {navItems.map((item, index) => (
+              <motion.a
+                key={item.name}
+                href={item.href}
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: index * 0.1 }}
+                onClick={() => setIsOpen(false)}
+                className="block text-white/90 hover:text-white hover:bg-white/20 transition-all py-3 px-4 rounded-lg font-medium"
+              >
+                {item.name}
+              </motion.a>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </motion.nav>
   );

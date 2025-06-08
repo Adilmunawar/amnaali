@@ -1,6 +1,6 @@
+
 import { motion } from "framer-motion";
 import { Heart, ArrowUp, Sparkles, Mail, Phone, MapPin, Star, Zap } from "lucide-react";
-import GooeyNav from "./GooeyNav";
 
 export const Footer = () => {
   const scrollToTop = () => {
@@ -9,15 +9,6 @@ export const Footer = () => {
       behavior: 'smooth'
     });
   };
-
-  const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Tools", href: "#tools" },
-    { label: "Portfolio", href: "#portfolio" },
-    { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" }
-  ];
 
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white py-20 overflow-hidden">
@@ -94,26 +85,6 @@ export const Footer = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Navigation Section with GooeyNav */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="flex justify-center mb-16"
-        >
-          <GooeyNav
-            items={navItems}
-            particleCount={12}
-            particleDistances={[70, 8]}
-            particleR={80}
-            initialActiveIndex={0}
-            animationTime={500}
-            timeVariance={250}
-            colors={[1, 2, 3, 4]}
-          />
-        </motion.div>
-
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-3 gap-16 mb-16">
           {/* Logo and Description */}
@@ -124,7 +95,6 @@ export const Footer = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            {/* ... keep existing code (logo and description section) */}
             <motion.div className="flex items-center space-x-4">
               <motion.div 
                 className="relative"
@@ -215,7 +185,6 @@ export const Footer = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            {/* ... keep existing code (quick links section) */}
             <motion.h3 
               className="text-2xl font-semibold mb-6 text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text flex items-center gap-3"
               whileHover={{ scale: 1.05 }}
@@ -267,7 +236,6 @@ export const Footer = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            {/* ... keep existing code (contact info section) */}
             <motion.h3 
               className="text-2xl font-semibold mb-6 text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text flex items-center gap-3"
               whileHover={{ scale: 1.05 }}
@@ -330,7 +298,6 @@ export const Footer = () => {
           viewport={{ once: true }}
           className="text-center py-8 border-t border-purple-500/30 relative"
         >
-          {/* ... keep existing code (bottom section) */}
           <motion.div
             className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"
             animate={{
