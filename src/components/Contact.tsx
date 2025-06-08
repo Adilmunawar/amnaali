@@ -159,8 +159,7 @@ export const Contact = () => {
             }}
           />
           <motion.img 
-            src="/lovable-uploads/716d8093-d916-47af-ab5a-cc51a036653f.png" 
-            alt="ARS Logo" 
+           
             className="w-24 h-24 object-contain relative z-10 filter drop-shadow-2xl"
             animate={{ 
               y: [0, -5, 0],
