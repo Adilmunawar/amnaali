@@ -37,7 +37,7 @@ export const About = () => {
       color: "from-violet-400 to-purple-600"
     }, {
       icon: Users,
-      number: "100+",
+      number: "50+",
       label: "Global Clients",
       color: "from-cyan-400 to-blue-600"
     }, {
@@ -47,7 +47,7 @@ export const About = () => {
       color: "from-emerald-400 to-green-600"
     }, {
       icon: Brain,
-      number: "7+",
+      number: "4+",
       label: "Years Mastery",
       color: "from-fuchsia-400 to-pink-600"
     }
@@ -164,7 +164,7 @@ export const About = () => {
               transition={{ duration: 1, delay: 0.3 }} 
               viewport={{ once: true }}
             >
-              Pioneering the future of digital experiences through innovative design thinking and strategic excellence
+              "Pioneering the future of digital experiences through innovative design thinking and strategic excellence"
             </motion.p>
           </motion.div>
         </div>
