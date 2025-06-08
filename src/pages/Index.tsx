@@ -8,12 +8,12 @@ import { Portfolio } from "@/components/Portfolio";
 import { Services } from "@/components/Services";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { CreativeCursor } from "@/components/CreativeCursor";
+import SplashCursor from "@/components/SplashCursor";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 relative">
-      <CreativeCursor />
+      <SplashCursor />
       <Navigation />
       <main>
         <Hero />
