@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Sparkles, Code, Palette, TrendingUp, ChevronRight, Star, Zap } from "lucide-react";
 import { useState, useEffect } from "react";
+import ShinyText from "./ShinyText";
 
 export const Hero = () => {
   const [mousePosition, setMousePosition] = useState({
@@ -51,35 +52,7 @@ export const Hero = () => {
   }];
 
   return (
-    <section id="home" className="relative min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 overflow-hidden flex items-center justify-center">
-      {/* Enhanced Background */}
-      <div className="absolute inset-0">
-        {/* Animated gradient orbs */}
-        <motion.div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl" animate={{
-          scale: [1, 1.2, 1],
-          rotate: [0, 180, 360],
-          x: [0, 50, 0],
-          y: [0, -30, 0]
-        }} transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear"
-        }} />
-        <motion.div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-pink-500/20 to-cyan-500/20 rounded-full blur-3xl" animate={{
-          scale: [1.2, 1, 1.2],
-          rotate: [360, 180, 0],
-          x: [0, -40, 0],
-          y: [0, 25, 0]
-        }} transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: "linear"
-        }} />
-        
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30" />
-      </div>
-
+    <section id="home" className="relative min-h-screen overflow-hidden flex items-center justify-center">
       {/* Floating Icons */}
       {floatingIcons.map((item, index) => {
         const IconComponent = item.icon;
@@ -177,7 +150,7 @@ export const Hero = () => {
             }} />
           </motion.h1>
           
-          {/* Enhanced Subtitle with animated background */}
+          {/* Enhanced Subtitle */}
           <motion.div initial={{
             opacity: 0,
             y: 30
@@ -188,7 +161,7 @@ export const Hero = () => {
             duration: 1,
             delay: 0.6
           }} className="mb-8">
-            <div className="inline-block bg-gradient-to-r from-gray-800/80 to-purple-900/80 backdrop-blur-lg border border-purple-500/30 rounded-2xl px-8 py-4 mb-8">
+            <div className="inline-block bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl px-8 py-4 mb-8">
               <h2 className="text-2xl md:text-3xl text-transparent bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text font-semibold">
                 Creative Professional & Brand Strategist
               </h2>
@@ -259,8 +232,46 @@ export const Hero = () => {
             <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text font-semibold"> strategic brilliance</span>
           </motion.p>
 
-          {/* Enhanced CTA Elements */}
-          
+          {/* Enhanced CTA Buttons with ShinyText */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.8 }}
+            className="flex flex-wrap justify-center gap-6 mb-16"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl text-white font-bold text-lg shadow-2xl border border-white/20 backdrop-blur-sm overflow-hidden"
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                initial={{ x: '-100%' }}
+                whileHover={{ x: '100%' }}
+                transition={{ duration: 0.6 }}
+              />
+              <span className="relative z-10 flex items-center gap-2">
+                <ShinyText text="View My Work" speed={3} />
+                <ChevronRight className="w-5 h-5" />
+              </span>
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group relative px-8 py-4 bg-white/10 border-2 border-white/30 rounded-2xl text-white font-bold text-lg shadow-2xl backdrop-blur-sm hover:bg-white/20 transition-all duration-300 overflow-hidden"
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+              <span className="relative z-10 flex items-center gap-2">
+                <ShinyText text="Get In Touch" speed={4} />
+                <Sparkles className="w-5 h-5" />
+              </span>
+            </motion.button>
+          </motion.div>
         </motion.div>
       </div>
 
@@ -273,7 +284,20 @@ export const Hero = () => {
         duration: 1,
         delay: 2.5
       }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="flex flex-col items-center cursor-pointer"
+          onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          <span className="text-white/80 text-sm mb-2 font-medium">Scroll to explore</span>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            className="w-12 h-12 rounded-full bg-white/10 border border-white/30 flex items-center justify-center backdrop-blur-sm"
+          >
+            <ArrowDown className="w-6 h-6 text-white" />
+          </motion.div>
+        </motion.div>
       </motion.div>
     </section>
   );

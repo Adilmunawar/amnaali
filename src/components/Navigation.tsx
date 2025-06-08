@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Menu, X, Sparkles } from "lucide-react";
+import ProfileCard from "./ProfileCard";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,6 +48,24 @@ export const Navigation = () => {
             <motion.div className="text-2xl font-bold text-white drop-shadow-lg">
               Amna Ali
             </motion.div>
+
+            {/* Profile Card */}
+            <div className="ml-4">
+              <ProfileCard
+                avatarUrl="/lovable-uploads/43fd4e87-d6c9-42fa-a776-492777f17353.png"
+                miniAvatarUrl="/lovable-uploads/43fd4e87-d6c9-42fa-a776-492777f17353.png"
+                name="Amna Ali"
+                title="Creative Marketer"
+                handle="AmnaAli"
+                status="Online"
+                contactText="Contact"
+                showUserInfo={true}
+                enableTilt={true}
+                onContactClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              />
+            </div>
           </motion.div>
 
           {/* Desktop Navigation */}
