@@ -87,7 +87,7 @@ export const Portfolio = () => {
           style={{
             backgroundImage: `url("data:image/svg+xml,%3csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cpattern id='grid' width='60' height='60' patternUnits='userSpaceOnUse'%3e%3cpath d='m 60 0 l 0 60 l -60 0 l 0 -60 z' fill='none' stroke='%23ec4899' stroke-width='1'/%3e%3c/pattern%3e%3c/defs%3e%3crect width='100%25' height='100%25' fill='url(%23grid)'/%3e%3c/svg%3e")`,
             backgroundSize: "60px 60px"
-          }} 
+          }}
         />
 
         {/* Pink Floating Orbs */}
@@ -111,7 +111,7 @@ export const Portfolio = () => {
               y: [null, Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800)],
               scale: [1, 1.5, 1],
               rotate: [0, 360]
-            }} 
+            }}
             transition={{
               duration: 15 + i * 3,
               repeat: Infinity,

@@ -83,49 +83,6 @@ export const Tools = () => {
     }]
   }];
   return <section id="tools" className="py-20 relative overflow-hidden">
-      {/* Enhanced Logo Integration - Made Much Larger */}
-      <motion.div initial={{
-      opacity: 0,
-      scale: 0.3,
-      rotate: -180
-    }} whileInView={{
-      opacity: 1,
-      scale: 1,
-      rotate: 0
-    }} transition={{
-      duration: 1.2,
-      type: "spring",
-      stiffness: 100
-    }} viewport={{
-      once: true
-    }} className="absolute top-10 right-10 z-10">
-        <motion.div className="relative" whileHover={{
-        scale: 1.3,
-        rotate: 15
-      }} transition={{
-        type: "spring",
-        stiffness: 300
-      }}>
-          <motion.div className="absolute inset-0 bg-gradient-to-r from-white/30 to-pink-300/30 rounded-full blur-xl" animate={{
-          scale: [1, 1.5, 1],
-          opacity: [0.3, 0.6, 0.3],
-          rotate: [0, 360]
-        }} transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "linear"
-        }} />
-          <motion.img src="/lovable-uploads/716d8093-d916-47af-ab5a-cc51a036653f.png" alt="ARS Logo" className="w-32 h-32 object-contain relative z-10 filter drop-shadow-xl" animate={{
-          y: [0, -8, 0],
-          filter: ["drop-shadow(0 8px 16px rgba(255, 255, 255, 0.4))", "drop-shadow(0 12px 24px rgba(255, 255, 255, 0.6))", "drop-shadow(0 8px 16px rgba(255, 255, 255, 0.4))"]
-        }} transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }} />
-        </motion.div>
-      </motion.div>
-
       <div className="max-w-7xl mx-auto px-6">
         <motion.div initial={{
         opacity: 0,
