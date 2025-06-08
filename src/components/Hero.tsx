@@ -169,19 +169,7 @@ export const Hero = () => {
               icon: TrendingUp
             }].map((role, index) => {
               const IconComponent = role.icon;
-              return <motion.div key={role.text} initial={{
-                opacity: 0,
-                y: 20
-              }} animate={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                duration: 0.5,
-                delay: 0.8 + index * 0.1
-              }} className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${role.gradient} rounded-full text-white text-sm font-medium shadow-lg`}>
-                    <IconComponent className="w-4 h-4" />
-                    <span>{role.text}</span>
-                  </motion.div>;
+              return;
             })}
             </div>
           </motion.div>

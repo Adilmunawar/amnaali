@@ -157,8 +157,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
   const handleContactClick = useCallback(() => {
     onContactClick?.();
   }, [onContactClick]);
-  return <div ref={wrapRef} className={`pc-card-wrapper ${className}`.trim()} style={cardStyle}>
-      <section ref={cardRef} className="pc-card">
+  return <div ref={wrapRef} style={cardStyle} className="mx-[70px]">
+      <section ref={cardRef} className="pc-card rounded-2xl mx-[85px] my-[10px] px-0">
         <div className="pc-inside">
           <div className="pc-shine" />
           <div className="pc-glare" />
