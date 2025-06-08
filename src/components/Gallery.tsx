@@ -7,10 +7,6 @@ import CircularGallery from "./CircularGallery";
 export const Gallery = () => {
   const galleryItems = [
     {
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop&crop=faces",
-      text: "Luxury Brand Identity",
-    },
-    {
       image: "https://picsum.photos/seed/2/800/600?grayscale",
       text: "Desk Setup",
     },
