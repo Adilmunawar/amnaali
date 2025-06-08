@@ -33,9 +33,9 @@ export const Footer = () => {
           count={150}
           gravity={0.5}
           friction={0.99}
-          wallBounce={0.95}
+          wallBounce={0.6}
           followCursor={false}
-          maxVelocity={0.5}
+          maxVelocity={0.8}
         />
       </div>
       {/* Pink Gradient Aura Background */}
