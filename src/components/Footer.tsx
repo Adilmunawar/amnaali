@@ -30,8 +30,8 @@ export const Footer = () => {
       {/* Ballpit Effect Layer */}
       <div className="absolute inset-0 z-0">
         <Ballpit
-          count={60}
-          gravity={0.1}
+          count={150}
+          gravity={0.5}
           friction={0.99}
           wallBounce={0.95}
           followCursor={false}
