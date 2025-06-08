@@ -132,36 +132,6 @@ export const Contact = () => {
         ))}
       </div>
 
-      {/* Enhanced Logo Display */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.5, y: -50 }}
-        whileInView={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 1, type: "spring", stiffness: 100 }}
-        viewport={{ once: true }}
-        className="absolute top-10 left-1/2 transform -translate-x-1/2 z-20"
-      >
-        <motion.div 
-          className="relative"
-          whileHover={{ scale: 1.1, rotate: 5 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-purple-400/30 to-pink-400/30 rounded-full blur-2xl"
-            animate={{ 
-              scale: [1, 1.3, 1],
-              opacity: [0.3, 0.7, 0.3],
-              rotate: [0, 180, 360]
-            }}
-            transition={{ 
-              duration: 4, 
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-       
-        </motion.div>
-      </motion.div>
-
       <div className="max-w-7xl mx-auto px-6 relative z-10 pt-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
