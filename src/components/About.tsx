@@ -117,7 +117,7 @@ export const About = () => {
             viewport={{ once: true }}
             className="flex justify-start lg:justify-start pl-8"
           >
-            <div className="transform scale-[1.8]">
+            <div className="transform scale-[2.2]">
               <ProfileCard
                 avatarUrl="/lovable-uploads/43fd4e87-d6c9-42fa-a776-492777f17353.png"
                 miniAvatarUrl="/lovable-uploads/43fd4e87-d6c9-42fa-a776-492777f17353.png"
