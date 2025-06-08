@@ -598,6 +598,11 @@ export const Contact = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Add Reactive3DBot component here in the empty space near social links */}
+      <div className="hidden lg:block lg:col-span-1">
+        <Reactive3DBot />
+      </div>
     </section>
   );
 };
