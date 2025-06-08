@@ -121,51 +121,6 @@ export const Portfolio = () => {
         ))}
       </div>
 
-      {/* Enhanced Logo */}
-      <motion.div
-        initial={{ opacity: 0, x: -200, rotate: -360 }}
-        whileInView={{ opacity: 1, x: 0, rotate: 0 }}
-        transition={{ duration: 1.5, type: "spring", stiffness: 80 }}
-        viewport={{ once: true }}
-        className="absolute top-16 left-16 z-10"
-      >
-        <motion.div 
-          className="relative"
-          whileHover={{ scale: 1.4, rotate: -15 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-cyan-400/30 to-purple-400/30 rounded-full blur-2xl"
-            animate={{ 
-              scale: [1, 1.4, 1],
-              opacity: [0.3, 0.6, 0.3],
-              rotate: [0, -180, -360]
-            }}
-            transition={{ 
-              duration: 8, 
-              repeat: Infinity,
-              ease: "linear"
-            }}
-          />
-          <motion.img 
-            
-            className="w-40 h-40 object-contain relative z-10 filter brightness-0 invert drop-shadow-2xl"
-            animate={{ 
-              y: [0, -10, 0],
-              filter: [
-                "brightness(0) invert(1) drop-shadow(0 10px 20px rgba(34, 211, 238, 0.4))",
-                "brightness(0) invert(1) drop-shadow(0 15px 30px rgba(168, 85, 247, 0.6))",
-                "brightness(0) invert(1) drop-shadow(0 10px 20px rgba(34, 211, 238, 0.4))"
-              ]
-            }}
-            transition={{ 
-              duration: 5, 
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-        </motion.div>
-      </motion.div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
