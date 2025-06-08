@@ -115,9 +115,9 @@ export const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, type: "spring", stiffness: 80 }}
             viewport={{ once: true }}
-            className="flex justify-start lg:justify-start pl-8"
+            className="flex justify-center lg:justify-center"
           >
-            <div className="transform scale-[2.2]">
+            <div className="transform scale-[2]">
               <ProfileCard
                 avatarUrl="/lovable-uploads/43fd4e87-d6c9-42fa-a776-492777f17353.png"
                 miniAvatarUrl="/lovable-uploads/43fd4e87-d6c9-42fa-a776-492777f17353.png"
