@@ -507,51 +507,51 @@ class App {
     const defaultItems = [
       {
         image: `https://picsum.photos/seed/1/800/600?grayscale`,
-        text: "Bridge",
+        text: "Adil Munawar test run one",
       },
       {
         image: `https://picsum.photos/seed/2/800/600?grayscale`,
-        text: "Desk Setup",
+        text: "Adil Munawar test run two",
       },
       {
         image: `https://picsum.photos/seed/3/800/600?grayscale`,
-        text: "Waterfall",
+        text: "Adil Munawar test run three",
       },
       {
         image: `https://picsum.photos/seed/4/800/600?grayscale`,
-        text: "Strawberries",
+        text: "Adil Munawar test run",
       },
       {
         image: `https://picsum.photos/seed/5/800/600?grayscale`,
-        text: "Deep Diving",
+        text: "Adil Munawar test run",
       },
       {
         image: `https://picsum.photos/seed/16/800/600?grayscale`,
-        text: "Train Track",
+        text: "Adil Munawar test run",
       },
       {
         image: `https://picsum.photos/seed/17/800/600?grayscale`,
-        text: "Santorini",
+        text: "Adil Munawar test run",
       },
       {
         image: `https://picsum.photos/seed/8/800/600?grayscale`,
-        text: "Blurry Lights",
+        text: "Adil Munawar test run",
       },
       {
         image: `https://picsum.photos/seed/9/800/600?grayscale`,
-        text: "New York",
+        text: "Adil Munawar test run",
       },
       {
         image: `https://picsum.photos/seed/10/800/600?grayscale`,
-        text: "Good Boy",
+        text: "Adil Munawar test run",
       },
       {
         image: `https://picsum.photos/seed/21/800/600?grayscale`,
-        text: "Coastline",
+        text: "Adil Munawar test run",
       },
       {
         image: `https://picsum.photos/seed/12/800/600?grayscale`,
-        text: "Palm Trees",
+        text: "Adil Munawar test run",
       },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
