@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Palette, Search, TrendingUp, Zap } from "lucide-react";
 
@@ -6,7 +7,7 @@ export const Tools = () => {
     {
       category: "Design Tools",
       icon: Palette,
-      color: "from-pink-500 to-rose-500",
+      color: "from-pink-600 to-rose-600",
       tools: [
         { name: "Adobe Photoshop", image: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" },
         { name: "Adobe Illustrator", image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" },
@@ -18,7 +19,7 @@ export const Tools = () => {
     {
       category: "SEO & Analytics",
       icon: Search,
-      color: "from-green-500 to-emerald-500",
+      color: "from-emerald-500 to-teal-500",
       tools: [
         { name: "Google Analytics", image: "https://upload.wikimedia.org/wikipedia/commons/7/77/GAnalytics.svg" },
         { name: "SEMrush", image: "https://upload.wikimedia.org/wikipedia/commons/a/ac/Semrush_logo.svg" },
@@ -42,7 +43,7 @@ export const Tools = () => {
     {
       category: "Productivity",
       icon: Zap,
-      color: "from-cyan-500 to-teal-500",
+      color: "from-cyan-500 to-blue-500",
       tools: [
         { name: "Notion", image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" },
         { name: "Slack", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg" },
@@ -54,7 +55,7 @@ export const Tools = () => {
   ];
 
   return (
-    <section id="tools" className="py-20 bg-gradient-to-br from-white via-purple-50 to-pink-50 relative overflow-hidden">
+    <section id="tools" className="py-20 relative overflow-hidden">
       {/* Enhanced Logo Integration - Made Much Larger */}
       <motion.div
         initial={{ opacity: 0, scale: 0.3, rotate: -180 }}
@@ -69,10 +70,10 @@ export const Tools = () => {
           transition={{ type: "spring", stiffness: 300 }}
         >
           <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl"
+            className="absolute inset-0 bg-gradient-to-r from-white/30 to-pink-300/30 rounded-full blur-xl"
             animate={{ 
               scale: [1, 1.5, 1],
-              opacity: [0.2, 0.5, 0.2],
+              opacity: [0.3, 0.6, 0.3],
               rotate: [0, 360]
             }}
             transition={{ 
@@ -88,9 +89,9 @@ export const Tools = () => {
             animate={{ 
               y: [0, -8, 0],
               filter: [
-                "drop-shadow(0 8px 16px rgba(168, 85, 247, 0.3))",
-                "drop-shadow(0 12px 24px rgba(236, 72, 153, 0.5))",
-                "drop-shadow(0 8px 16px rgba(168, 85, 247, 0.3))"
+                "drop-shadow(0 8px 16px rgba(255, 255, 255, 0.4))",
+                "drop-shadow(0 12px 24px rgba(255, 255, 255, 0.6))",
+                "drop-shadow(0 8px 16px rgba(255, 255, 255, 0.4))"
               ]
             }}
             transition={{ 
@@ -111,7 +112,7 @@ export const Tools = () => {
           className="text-center mb-16"
         >
           <motion.h2 
-            className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-500 bg-clip-text text-transparent"
+            className="text-5xl font-bold mb-6 text-white drop-shadow-lg"
             whileInView={{ scale: [0.9, 1.05, 1] }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -119,7 +120,7 @@ export const Tools = () => {
             My Professional Toolkit
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-xl text-white/90 max-w-3xl mx-auto drop-shadow-md"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -147,13 +148,13 @@ export const Tools = () => {
                 whileHover={{ 
                   y: -10, 
                   scale: 1.02,
-                  boxShadow: "0 25px 50px rgba(168, 85, 247, 0.3)"
+                  boxShadow: "0 25px 50px rgba(255, 255, 255, 0.3)"
                 }}
-                className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-purple-200/50 shadow-lg shadow-purple-500/10 group relative overflow-hidden"
+                className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 shadow-lg shadow-white/10 group relative overflow-hidden"
               >
                 {/* Animated Background */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-pink-50/50 opacity-0 group-hover:opacity-100"
+                  className="absolute inset-0 bg-gradient-to-br from-white/10 to-pink-300/10 opacity-0 group-hover:opacity-100"
                   transition={{ duration: 0.3 }}
                 />
                 
@@ -165,7 +166,7 @@ export const Tools = () => {
                   <IconComponent className="w-8 h-8 text-white" />
                 </motion.div>
                 
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 group-hover:text-purple-600 transition-colors relative z-10">
+                <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-pink-200 transition-colors relative z-10 drop-shadow-md">
                   {category.category}
                 </h3>
                 
@@ -185,14 +186,14 @@ export const Tools = () => {
                         scale: 1.1, 
                         y: -5,
                         rotate: [0, -5, 5, 0],
-                        boxShadow: "0 10px 25px rgba(168, 85, 247, 0.3)"
+                        boxShadow: "0 10px 25px rgba(255, 255, 255, 0.3)"
                       }}
                       className="group/tool relative"
                     >
                       <motion.div
-                        className="bg-gradient-to-br from-white to-purple-50 rounded-xl p-4 border border-purple-100 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden"
+                        className="bg-white/30 rounded-xl p-4 border border-white/40 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden backdrop-blur-sm"
                         whileHover={{ 
-                          background: "linear-gradient(135deg, #ffffff, #f3e8ff, #fce7f3)" 
+                          background: "rgba(255, 255, 255, 0.4)" 
                         }}
                       >
                         <motion.div
@@ -212,18 +213,17 @@ export const Tools = () => {
                             className="w-12 h-12 mx-auto mb-3 object-contain filter drop-shadow-lg"
                             whileHover={{ 
                               rotate: [0, 360],
-                              filter: "drop-shadow(0 8px 16px rgba(168, 85, 247, 0.4))"
+                              filter: "drop-shadow(0 8px 16px rgba(255, 255, 255, 0.5))"
                             }}
                             transition={{ duration: 0.6 }}
                             onError={(e) => {
                               console.log(`Failed to load image for ${tool.name}:`, e.currentTarget.src);
-                              // Fallback to a generic icon
                               e.currentTarget.style.display = 'none';
                               e.currentTarget.nextElementSibling?.classList.add('mt-6');
                             }}
                           />
                           <motion.p 
-                            className="text-xs font-semibold text-gray-700 text-center leading-tight group-hover/tool:text-purple-600 transition-colors"
+                            className="text-xs font-semibold text-white text-center leading-tight group-hover/tool:text-pink-200 transition-colors drop-shadow-sm"
                             whileHover={{ scale: 1.05 }}
                           >
                             {tool.name}
@@ -233,7 +233,7 @@ export const Tools = () => {
                         <motion.div
                           className="absolute inset-0 rounded-xl opacity-0 group-hover/tool:opacity-100 transition-opacity duration-300"
                           style={{
-                            background: "radial-gradient(circle at center, rgba(168, 85, 247, 0.1) 0%, transparent 70%)"
+                            background: "radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 0%, transparent 70%)"
                           }}
                         />
                       </motion.div>

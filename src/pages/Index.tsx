@@ -9,22 +9,34 @@ import { Services } from "@/components/Services";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import SplashCursor from "@/components/SplashCursor";
+import Aurora from "@/components/Aurora";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 relative">
-      <SplashCursor />
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <Tools />
-        <Gallery />
-        <Portfolio />
-        <Services />
-        <Contact />
-      </main>
-      <Footer />
+    <div className="min-h-screen relative overflow-x-hidden">
+      {/* Aurora Background - Fixed and covering entire viewport */}
+      <Aurora
+        colorStops={["#FF69B4", "#FF1493", "#FFB6C1", "#FF69B4"]}
+        blend={0.7}
+        amplitude={1.3}
+        speed={0.6}
+      />
+      
+      {/* Content overlay */}
+      <div className="relative z-10">
+        <SplashCursor />
+        <Navigation />
+        <main>
+          <Hero />
+          <About />
+          <Tools />
+          <Gallery />
+          <Portfolio />
+          <Services />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 };
