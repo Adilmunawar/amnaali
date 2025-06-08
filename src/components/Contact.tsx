@@ -158,23 +158,7 @@ export const Contact = () => {
               ease: "easeInOut"
             }}
           />
-          <motion.img 
-           
-            className="w-24 h-24 object-contain relative z-10 filter drop-shadow-2xl"
-            animate={{ 
-              y: [0, -5, 0],
-              filter: [
-                "drop-shadow(0 10px 20px rgba(168, 85, 247, 0.4))",
-                "drop-shadow(0 15px 30px rgba(236, 72, 153, 0.6))",
-                "drop-shadow(0 10px 20px rgba(168, 85, 247, 0.4))"
-              ]
-            }}
-            transition={{ 
-              duration: 3, 
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
+       
         </motion.div>
       </motion.div>
 
