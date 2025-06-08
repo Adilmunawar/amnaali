@@ -8,47 +8,47 @@ export const Gallery = () => {
   const galleryItems = [
     {
       image: "https://picsum.photos/seed/2/800/600?grayscale",
-      text: "Desk Setup",
+      text: "Adil test run",
     },
     {
       image: "https://picsum.photos/seed/3/800/600?grayscale",
-      text: "Waterfall",
+      text: "Adil test run",
     },
     {
       image: "https://picsum.photos/seed/4/800/600?grayscale",
-      text: "Strawberries",
+      text: "Adil test run",
     },
     {
       image: "https://picsum.photos/seed/5/800/600?grayscale",
-      text: "Deep Diving",
+      text: "Adil test run",
     },
     {
       image: "https://picsum.photos/seed/16/800/600?grayscale",
-      text: "Train Track",
+      text: "Adil test run",
     },
     {
       image: "https://picsum.photos/seed/17/800/600?grayscale",
-      text: "Santorini",
+      text: "Adil test run",
     },
     {
       image: "https://picsum.photos/seed/8/800/600?grayscale",
-      text: "Blurry Lights",
+      text: "Adil test run",
     },
     {
       image: "https://picsum.photos/seed/9/800/600?grayscale",
-      text: "New York",
+      text: "Adil test run",
     },
     {
       image: "https://picsum.photos/seed/10/800/600?grayscale",
-      text: "Good Boy",
+      text: "Adil test run",
     },
     {
       image: "https://picsum.photos/seed/21/800/600?grayscale",
-      text: "Coastline",
+      text: "Adil test run",
     },
     {
       image: "https://picsum.photos/seed/12/800/600?grayscale",
-      text: "Palm Trees",
+      text: "Adil test run",
     },
   ];
 
