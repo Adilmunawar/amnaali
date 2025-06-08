@@ -25,8 +25,8 @@
   transform: translate3d(0, 0, 0.1px);
   position: relative;
   touch-action: none;
-  width: 220px;
-  height: 293px;
+  width: 200px;
+  height: 267px;
 }
 
 .pc-card-wrapper::before {
@@ -55,8 +55,8 @@
 }
 
 .pc-card {
-  height: 293px;
-  width: 220px;
+  height: 267px;
+  width: 200px;
   display: grid;
   aspect-ratio: 0.75;
   border-radius: var(--card-radius);
