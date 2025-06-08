@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ExternalLink, Eye, Github, Star } from "lucide-react";
 import { useState } from "react";
@@ -11,7 +10,7 @@ export const Portfolio = () => {
       id: 1,
       title: "Luxury Brand Identity Design",
       category: "design",
-      image: "https://unsplash.com/photos/change-by-design-by-tim-brown-book-beside-smartphone-IyaNci0CyRk",
+      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop&crop=faces",
       description: "Complete visual identity system with sophisticated branding elements and color psychology for luxury fashion brands",
       tags: ["Branding", "Identity", "Luxury"]
     },
@@ -69,35 +68,57 @@ export const Portfolio = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="portfolio" className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      {/* Enhanced floating elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-full blur-3xl"
+    <section id="portfolio" className="py-20 bg-gradient-to-br from-pink-900/20 via-purple-950/30 to-pink-900/20 relative overflow-hidden">
+      {/* Pink Gradient Aura Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-pink-900/30 via-purple-900/20 to-pink-900/30" />
+        
+        {/* Animated Mesh Pattern */}
+        <motion.div 
+          className="absolute inset-0 opacity-10" 
           animate={{
-            x: [0, 50, -50, 0],
-            y: [0, -30, 30, 0],
-            scale: [1, 1.2, 0.8, 1],
-          }}
+            backgroundPosition: ["0% 0%", "100% 100%"]
+          }} 
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "easeInOut"
-          }}
+            ease: "linear"
+          }} 
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cpattern id='grid' width='60' height='60' patternUnits='userSpaceOnUse'%3e%3cpath d='m 60 0 l 0 60 l -60 0 l 0 -60 z' fill='none' stroke='%23ec4899' stroke-width='1'/%3e%3c/pattern%3e%3c/defs%3e%3crect width='100%25' height='100%25' fill='url(%23grid)'/%3e%3c/svg%3e")`,
+            backgroundSize: "60px 60px"
+          }} 
         />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-full blur-3xl"
-          animate={{
-            x: [0, -40, 40, 0],
-            y: [0, 25, -25, 0],
-            scale: [1, 0.9, 1.1, 1],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
+
+        {/* Pink Floating Orbs */}
+        {[...Array(8)].map((_, i) => (
+          <motion.div 
+            key={`portfolio-orb-${i}`} 
+            className="absolute rounded-full blur-2xl" 
+            style={{
+              background: `linear-gradient(45deg, 
+                ${i % 2 === 0 ? '#ec4899, #f97316' : '#db2777, #e11d48'})`,
+              width: `${150 + i * 50}px`,
+              height: `${150 + i * 50}px`,
+              opacity: 0.15
+            }} 
+            initial={{
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800)
+            }} 
+            animate={{
+              x: [null, Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200)],
+              y: [null, Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800)],
+              scale: [1, 1.5, 1],
+              rotate: [0, 360]
+            }} 
+            transition={{
+              duration: 15 + i * 3,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }} 
+          />
+        ))}
       </div>
 
       {/* Enhanced Logo */}

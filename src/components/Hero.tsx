@@ -169,7 +169,19 @@ export const Hero = () => {
               icon: TrendingUp
             }].map((role, index) => {
               const IconComponent = role.icon;
-              return;
+              return <motion.div key={role.text} initial={{
+                opacity: 0,
+                y: 20
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.5,
+                delay: 0.8 + index * 0.1
+              }} className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${role.gradient} rounded-full text-white text-sm font-medium shadow-lg`}>
+                    <IconComponent className="w-4 h-4" />
+                    <span>{role.text}</span>
+                  </motion.div>;
             })}
             </div>
           </motion.div>
@@ -257,12 +269,8 @@ export const Hero = () => {
       }} className="flex flex-col items-center cursor-pointer" onClick={() => document.getElementById('about')?.scrollIntoView({
         behavior: 'smooth'
       })}>
-          <span className="text-white/80 text-sm mb-2 font-medium">Scroll to explore</span>
-          <motion.div whileHover={{
-          scale: 1.1
-        }} className="w-12 h-12 rounded-full bg-white/10 border border-white/30 flex items-center justify-center backdrop-blur-sm">
-            <ArrowDown className="w-6 h-6 text-white" />
-          </motion.div>
+          
+          
         </motion.div>
       </motion.div>
     </section>;
