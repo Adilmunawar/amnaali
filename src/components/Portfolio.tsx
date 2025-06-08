@@ -148,8 +148,7 @@ export const Portfolio = () => {
             }}
           />
           <motion.img 
-            src="/lovable-uploads/716d8093-d916-47af-ab5a-cc51a036653f.png" 
-            alt="ARS Logo" 
+            
             className="w-40 h-40 object-contain relative z-10 filter brightness-0 invert drop-shadow-2xl"
             animate={{ 
               y: [0, -10, 0],
