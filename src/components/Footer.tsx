@@ -1,6 +1,8 @@
 
+
 import { motion } from "framer-motion";
 import { Sparkles, Heart, ArrowUp, Linkedin, Instagram, Facebook, Users, Phone, Mail, MapPin } from "lucide-react";
+import Ballpit from "./Ballpit";
 
 export const Footer = () => {
   const socialLinks = [
@@ -24,7 +26,17 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-pink-900/20 via-purple-950/30 to-pink-900/20 overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-pink-900/20 via-purple-950/30 to-pink-900/20 overflow-hidden min-h-[500px]">
+      {/* Ballpit Effect Layer */}
+      <div className="absolute inset-0 z-0">
+        <Ballpit
+          count={60}
+          gravity={0.1}
+          friction={0.99}
+          wallBounce={0.95}
+          followCursor={false}
+        />
+      </div>
       {/* Pink Gradient Aura Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-pink-900/30 via-purple-900/20 to-pink-900/30" />
@@ -76,7 +88,7 @@ export const Footer = () => {
         ))}
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-20">
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
