@@ -1,127 +1,26 @@
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Environment } from '@react-three/drei';
+import { OrbitControls, Environment, useGLTF } from '@react-three/drei';
 import { motion } from 'framer-motion';
-import { Mesh } from 'three';
+import { Group } from 'three';
 
-// Custom 3D Scene Component
-function CustomScene() {
-  const groupRef = useRef<Mesh>(null);
-  const sphere1Ref = useRef<Mesh>(null);
-  const sphere2Ref = useRef<Mesh>(null);
-  const sphere3Ref = useRef<Mesh>(null);
-  const [hovered, setHovered] = useState(false);
+// GLB Model Component
+function AngryGLBModel() {
+  const modelRef = useRef<Group>(null);
+  const { scene } = useGLTF('/angry.glb');
 
   useFrame((state) => {
-    const time = state.clock.getElapsedTime();
-    
-    if (groupRef.current) {
-      groupRef.current.rotation.y = time * 0.3;
-    }
-    
-    if (sphere1Ref.current) {
-      sphere1Ref.current.position.y = Math.sin(time * 2) * 0.3;
-      sphere1Ref.current.rotation.x = time;
-    }
-    
-    if (sphere2Ref.current) {
-      sphere2Ref.current.position.y = Math.sin(time * 2 + Math.PI * 0.5) * 0.3;
-      sphere2Ref.current.rotation.z = time * 0.8;
-    }
-    
-    if (sphere3Ref.current) {
-      sphere3Ref.current.position.y = Math.sin(time * 2 + Math.PI) * 0.3;
-      sphere3Ref.current.rotation.y = time * 1.2;
+    if (modelRef.current) {
+      const time = state.clock.getElapsedTime();
+      modelRef.current.rotation.y = time * 0.3;
+      modelRef.current.position.y = Math.sin(time * 2) * 0.1;
     }
   });
 
   return (
-    <group 
-      ref={groupRef}
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
-      scale={hovered ? 1.1 : 1}
-    >
-      {/* Central Torus */}
-      <mesh position={[0, 0, 0]}>
-        <torusGeometry args={[1.2, 0.4, 16, 100]} />
-        <meshStandardMaterial 
-          color="#ec4899" 
-          metalness={0.8}
-          roughness={0.2}
-          emissive="#ec4899"
-          emissiveIntensity={0.1}
-        />
-      </mesh>
-
-      {/* Floating Spheres */}
-      <mesh ref={sphere1Ref} position={[2, 0, 0]}>
-        <sphereGeometry args={[0.3, 32, 32]} />
-        <meshStandardMaterial 
-          color="#a855f7" 
-          metalness={0.9}
-          roughness={0.1}
-          emissive="#a855f7"
-          emissiveIntensity={0.2}
-        />
-      </mesh>
-
-      <mesh ref={sphere2Ref} position={[-2, 0, 0]}>
-        <sphereGeometry args={[0.25, 32, 32]} />
-        <meshStandardMaterial 
-          color="#06b6d4" 
-          metalness={0.9}
-          roughness={0.1}
-          emissive="#06b6d4"
-          emissiveIntensity={0.2}
-        />
-      </mesh>
-
-      <mesh ref={sphere3Ref} position={[0, 2, 0]}>
-        <sphereGeometry args={[0.2, 32, 32]} />
-        <meshStandardMaterial 
-          color="#f97316" 
-          metalness={0.9}
-          roughness={0.1}
-          emissive="#f97316"
-          emissiveIntensity={0.2}
-        />
-      </mesh>
-
-      {/* Wireframe Icosahedron */}
-      <mesh position={[0, -1.5, 0]} rotation={[0, 0, 0]}>
-        <icosahedronGeometry args={[0.8, 1]} />
-        <meshStandardMaterial 
-          color="#db2777" 
-          wireframe={true}
-          emissive="#db2777"
-          emissiveIntensity={0.3}
-        />
-      </mesh>
-
-      {/* Floating Rings */}
-      <mesh position={[1.5, 1.5, 1.5]} rotation={[Math.PI / 4, 0, Math.PI / 4]}>
-        <torusGeometry args={[0.5, 0.1, 8, 100]} />
-        <meshStandardMaterial 
-          color="#8b5cf6" 
-          metalness={0.8}
-          roughness={0.2}
-          emissive="#8b5cf6"
-          emissiveIntensity={0.1}
-        />
-      </mesh>
-
-      <mesh position={[-1.5, -1.5, -1.5]} rotation={[-Math.PI / 4, 0, -Math.PI / 4]}>
-        <torusGeometry args={[0.4, 0.08, 8, 100]} />
-        <meshStandardMaterial 
-          color="#ec4899" 
-          metalness={0.8}
-          roughness={0.2}
-          emissive="#ec4899"
-          emissiveIntensity={0.1}
-        />
-      </mesh>
+    <group ref={modelRef} scale={[2, 2, 2]} position={[0, 0, 0]}>
+      <primitive object={scene} />
     </group>
   );
 }
@@ -134,7 +33,17 @@ const ModelLoader = () => (
       transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
       className="w-12 h-12 border-4 border-purple-400 border-t-transparent rounded-full"
     />
-    <span className="ml-4 text-white">Loading 3D Scene...</span>
+    <span className="ml-4 text-white">Loading 3D Model...</span>
+  </div>
+);
+
+// Error fallback component
+const ModelError = () => (
+  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-red-500/10 to-orange-500/10 rounded-2xl">
+    <div className="text-center">
+      <div className="text-red-400 text-4xl mb-4">⚠️</div>
+      <span className="text-white">Failed to load 3D model</span>
+    </div>
   </div>
 );
 
@@ -165,7 +74,7 @@ export const AngryModel = () => {
       <div className="relative bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-xl rounded-3xl p-4 border border-white/20 shadow-2xl overflow-hidden h-full">
         <Canvas
           camera={{ 
-            position: [0, 0, 6], 
+            position: [0, 0, 5], 
             fov: 45
           }}
           gl={{ 
@@ -175,10 +84,10 @@ export const AngryModel = () => {
           className="w-full h-full"
         >
           {/* Enhanced Lighting setup */}
-          <ambientLight intensity={0.4} />
+          <ambientLight intensity={0.6} />
           <directionalLight 
             position={[5, 5, 5]} 
-            intensity={1.5}
+            intensity={1.2}
             color="#ffffff"
           />
           <pointLight position={[-5, 5, 5]} intensity={0.8} color="#ff69b4" />
@@ -188,12 +97,14 @@ export const AngryModel = () => {
           {/* Environment for realistic lighting */}
           <Environment preset="sunset" />
           
-          {/* Custom 3D Scene */}
-          <CustomScene />
+          {/* Suspense wrapper for GLB model loading */}
+          <Suspense fallback={null}>
+            <AngryGLBModel />
+          </Suspense>
           
           {/* Interactive controls */}
           <OrbitControls
-            enableZoom={false}
+            enableZoom={true}
             enablePan={false}
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 4}
@@ -202,6 +113,8 @@ export const AngryModel = () => {
             enableDamping
             dampingFactor={0.05}
             autoRotate={false}
+            maxDistance={8}
+            minDistance={3}
           />
         </Canvas>
         
@@ -236,3 +149,6 @@ export const AngryModel = () => {
     </motion.div>
   );
 };
+
+// Preload the GLB model
+useGLTF.preload('/angry.glb');
