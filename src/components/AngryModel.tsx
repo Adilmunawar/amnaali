@@ -90,15 +90,7 @@ export const AngryModel = () => {
             <Environment preset="city" />
             
             {/* 3D Model */}
-            <motion.group
-              whileHover={{ 
-                rotateY: 0.3,
-                scale: 1.1
-              }}
-              transition={{ type: "spring", stiffness: 200 }}
-            >
-              <AngryModelMesh />
-            </motion.group>
+            <AngryModelMesh />
             
             {/* Interactive controls (desktop only) */}
             <OrbitControls
