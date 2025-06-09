@@ -8,14 +8,15 @@ import * as THREE from 'three';
 // 3D Model Component
 const AngryModelMesh = () => {
   const meshRef = useRef<THREE.Group>(null);
-  const { scene } = useGLTF('/src/components/angry.glb');
+  // Updated path to use public folder
+  const { scene } = useGLTF('/angry.glb');
   
   return (
     <group ref={meshRef}>
       <primitive 
         object={scene} 
-        scale={2.5}
-        position={[0, -1, 0]}
+        scale={1.5}
+        position={[0, -0.5, 0]}
         rotation={[0, 0.3, 0]}
       />
     </group>
@@ -30,6 +31,7 @@ const ModelLoader = () => (
       transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
       className="w-12 h-12 border-4 border-purple-400 border-t-transparent rounded-full"
     />
+    <span className="ml-4 text-white">Loading 3D Model...</span>
   </div>
 );
 
@@ -41,7 +43,7 @@ export const AngryModel = () => {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, type: "spring", stiffness: 80 }}
       viewport={{ once: true }}
-      className="w-full h-[400px] md:h-[500px] relative"
+      className="w-full h-[300px] md:h-[400px] relative"
     >
       {/* Glowing container */}
       <motion.div 
@@ -57,11 +59,11 @@ export const AngryModel = () => {
         }}
       />
       
-      <div className="relative bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-xl rounded-3xl p-4 border border-white/20 shadow-2xl overflow-hidden">
+      <div className="relative bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-xl rounded-3xl p-4 border border-white/20 shadow-2xl overflow-hidden h-full">
         <Suspense fallback={<ModelLoader />}>
           <Canvas
             camera={{ 
-              position: [0, 0, 5], 
+              position: [0, 0, 4], 
               fov: 45,
               near: 0.1,
               far: 1000
@@ -75,16 +77,16 @@ export const AngryModel = () => {
             style={{ background: 'transparent' }}
           >
             {/* Lighting setup */}
-            <ambientLight intensity={0.4} />
+            <ambientLight intensity={0.6} />
             <directionalLight 
               position={[5, 5, 5]} 
-              intensity={0.8}
+              intensity={1}
               castShadow
               shadow-mapSize-width={1024}
               shadow-mapSize-height={1024}
             />
-            <pointLight position={[-5, 5, 5]} intensity={0.3} color="#ff69b4" />
-            <pointLight position={[5, -5, -5]} intensity={0.3} color="#8b5cf6" />
+            <pointLight position={[-5, 5, 5]} intensity={0.4} color="#ff69b4" />
+            <pointLight position={[5, -5, -5]} intensity={0.4} color="#8b5cf6" />
             
             {/* Environment for reflections */}
             <Environment preset="city" />
@@ -94,14 +96,16 @@ export const AngryModel = () => {
             
             {/* Interactive controls (desktop only) */}
             <OrbitControls
-              enableZoom={false}
+              enableZoom={true}
               enablePan={false}
               maxPolarAngle={Math.PI / 2}
-              minPolarAngle={Math.PI / 3}
-              maxAzimuthAngle={Math.PI / 4}
-              minAzimuthAngle={-Math.PI / 4}
+              minPolarAngle={Math.PI / 4}
+              maxAzimuthAngle={Math.PI / 3}
+              minAzimuthAngle={-Math.PI / 3}
               enableDamping
               dampingFactor={0.05}
+              maxDistance={8}
+              minDistance={2}
             />
           </Canvas>
         </Suspense>
@@ -138,5 +142,5 @@ export const AngryModel = () => {
   );
 };
 
-// Preload the model
-useGLTF.preload('/src/components/angry.glb');
+// Preload the model with updated path
+useGLTF.preload('/angry.glb');

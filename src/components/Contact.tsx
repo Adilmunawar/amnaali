@@ -1,7 +1,7 @@
-
 import { motion } from "framer-motion";
 import { useState, Suspense, lazy } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle, ExternalLink, Linkedin, Instagram, Facebook, Users, Star, Sparkles, Heart } from "lucide-react";
+import { AngryModel } from "./AngryModel";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -164,14 +164,26 @@ export const Contact = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Ultra Advanced Contact Form */}
+        {/* Updated grid layout to include 3D model */}
+        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          {/* 3D Model Section */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, type: "spring", stiffness: 80 }}
             viewport={{ once: true }}
-            className="relative"
+            className="lg:col-span-1"
+          >
+            <AngryModel />
+          </motion.div>
+
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, type: "spring", stiffness: 80 }}
+            viewport={{ once: true }}
+            className="lg:col-span-2 relative"
           >
             {/* Glowing Container */}
             <motion.div 
@@ -342,259 +354,263 @@ export const Contact = () => {
               </form>
             </div>
           </motion.div>
+        </div>
 
-          {/* Contact Info & Ultra Advanced Social Links */}
+        {/* Contact Info & Social Links */}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Advanced Contact Info */}
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, type: "spring", stiffness: 80 }}
+            viewport={{ once: true }}
+            className="relative bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl"
+          >
+            {/* ... keep existing code (contact info section) */}
+            <h3 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+              <motion.div
+                className="p-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl"
+                animate={{ rotate: [0, 10, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity }}
+              >
+                <Phone className="w-6 h-6 text-white" />
+              </motion.div>
+              Contact Information
+            </h3>
+            <div className="space-y-6">
+              {contactInfo.map((info, index) => {
+                const IconComponent = info.icon;
+                return (
+                  <motion.div
+                    key={info.label}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ x: 10, scale: 1.05 }}
+                    className="flex items-center gap-6 p-6 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10 rounded-2xl hover:from-purple-500/20 hover:via-pink-500/20 hover:to-cyan-500/20 transition-all duration-300 border border-white/10"
+                  >
+                    <motion.div 
+                      className="relative p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl"
+                      whileHover={{ rotate: 360, scale: 1.2 }}
+                      transition={{ duration: 0.8 }}
+                    >
+                      <IconComponent className="w-6 h-6 text-white" />
+                      <motion.div
+                        className="absolute inset-0 bg-white/20 rounded-2xl"
+                        animate={{ scale: [1, 1.3, 1], opacity: [0.5, 0, 0.5] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      />
+                    </motion.div>
+                    <div>
+                      <p className="text-gray-300 text-sm font-medium mb-1">{info.label}</p>
+                      <p className="text-white font-bold text-lg">{info.value}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+
+          {/* Ultra Advanced Social Links */}
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, type: "spring", stiffness: 80 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="relative bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl"
           >
-            {/* Advanced Contact Info */}
-            <motion.div
-              className="relative bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl"
-            >
-              <h3 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-                <motion.div
-                  className="p-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl"
-                  animate={{ rotate: [0, 10, -10, 0] }}
-                  transition={{ duration: 4, repeat: Infinity }}
-                >
-                  <Phone className="w-6 h-6 text-white" />
-                </motion.div>
-                Contact Information
-              </h3>
-              <div className="space-y-6">
-                {contactInfo.map((info, index) => {
-                  const IconComponent = info.icon;
-                  return (
-                    <motion.div
-                      key={info.label}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      whileHover={{ x: 10, scale: 1.05 }}
-                      className="flex items-center gap-6 p-6 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10 rounded-2xl hover:from-purple-500/20 hover:via-pink-500/20 hover:to-cyan-500/20 transition-all duration-300 border border-white/10"
-                    >
-                      <motion.div 
-                        className="relative p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl"
-                        whileHover={{ rotate: 360, scale: 1.2 }}
-                        transition={{ duration: 0.8 }}
-                      >
-                        <IconComponent className="w-6 h-6 text-white" />
+            {/* ... keep existing code (social links section) */}
+            <h3 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+              <motion.div
+                className="p-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl"
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                <Heart className="w-6 h-6 text-white" />
+              </motion.div>
+              Connect With Me
+            </h3>
+            <div className="grid grid-cols-1 gap-6">
+              {socialLinks.map((social, index) => {
+                const IconComponent = social.icon;
+                return (
+                  <motion.a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ 
+                      scale: 1.08, 
+                      y: -8,
+                      rotateY: 10,
+                      boxShadow: "0 30px 60px rgba(168, 85, 247, 0.4)"
+                    }}
+                    className="relative group overflow-hidden rounded-3xl p-6 text-white transition-all duration-500 cursor-pointer"
+                    style={{
+                      background: `linear-gradient(135deg, ${social.gradient.replace('bg-gradient-to-br', '').split(' ').join(', ')})`
+                    }}
+                  >
+                    {/* ... keep existing code (social link animations and content) */}
+                    <motion.div 
+                      className="absolute inset-0 opacity-0 group-hover:opacity-100"
+                      animate={{
+                        background: [
+                          "linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%)",
+                          "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%)",
+                          "linear-gradient(225deg, rgba(255,255,255,0.1) 0%, transparent 50%)",
+                          "linear-gradient(315deg, rgba(255,255,255,0.1) 0%, transparent 50%)",
+                          "linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%)"
+                        ]
+                      }}
+                      transition={{ 
+                        duration: 3, 
+                        repeat: Infinity,
+                        ease: "linear"
+                      }}
+                    />
+                    
+                    {/* Floating Particles */}
+                    <div className="absolute inset-0 pointer-events-none">
+                      {[...Array(12)].map((_, i) => (
                         <motion.div
-                          className="absolute inset-0 bg-white/20 rounded-2xl"
-                          animate={{ scale: [1, 1.3, 1], opacity: [0.5, 0, 0.5] }}
-                          transition={{ duration: 2, repeat: Infinity }}
+                          key={i}
+                          className="absolute w-1 h-1 bg-white/40 rounded-full"
+                          initial={{ 
+                            x: Math.random() * 300,
+                            y: Math.random() * 80,
+                            opacity: 0
+                          }}
+                          animate={{
+                            y: [null, -30, 100],
+                            opacity: [0, 1, 0],
+                            scale: [0, 1.5, 0],
+                            rotate: [0, 360]
+                          }}
+                          transition={{
+                            duration: Math.random() * 4 + 2,
+                            repeat: Infinity,
+                            delay: Math.random() * 3,
+                            ease: "easeInOut"
+                          }}
+                        />
+                      ))}
+                    </div>
+
+                    {/* Ripple Effect */}
+                    <motion.div
+                      className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 rounded-3xl"
+                      animate={{
+                        scale: [1, 1.5, 2],
+                        opacity: [0, 0.3, 0]
+                      }}
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        ease: "easeOut"
+                      }}
+                    />
+
+                    <div className="relative z-10 flex items-center gap-6">
+                      {/* Ultra Advanced Icon with Multiple Animations */}
+                      <motion.div
+                        className="relative"
+                        whileHover={{ 
+                          rotate: [0, -15, 15, -10, 10, 0],
+                          scale: [1, 1.3, 1.2, 1.3, 1.1]
+                        }}
+                        transition={{ duration: 1 }}
+                      >
+                        {/* Glowing Ring */}
+                        <motion.div
+                          className="absolute inset-0 bg-white/20 rounded-2xl blur-lg"
+                          animate={{ 
+                            scale: [1, 1.4, 1],
+                            opacity: [0.3, 0.8, 0.3],
+                            rotate: [0, 180, 360]
+                          }}
+                          transition={{ 
+                            duration: 3, 
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }}
+                        />
+                        
+                        {/* Icon Container */}
+                        <motion.div 
+                          className="relative p-4 bg-white/15 backdrop-blur-sm rounded-2xl border border-white/30"
+                          animate={{
+                            boxShadow: [
+                              "0 0 20px rgba(255,255,255,0.3)",
+                              "0 0 40px rgba(255,255,255,0.6)",
+                              "0 0 20px rgba(255,255,255,0.3)"
+                            ],
+                            borderColor: [
+                              "rgba(255,255,255,0.3)",
+                              "rgba(255,255,255,0.7)",
+                              "rgba(255,255,255,0.3)"
+                            ]
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }}
+                        >
+                          <IconComponent className="w-8 h-8 text-white" />
+                        </motion.div>
+                      </motion.div>
+
+                      <div className="flex-1">
+                        <motion.h4 
+                          className="font-bold text-xl mb-1"
+                          whileHover={{ x: 8, scale: 1.05 }}
+                          transition={{ type: "spring", stiffness: 300 }}
+                        >
+                          {social.name}
+                        </motion.h4>
+                        <motion.p 
+                          className="text-sm opacity-90"
+                          initial={{ opacity: 0.7 }}
+                          whileHover={{ opacity: 1, x: 5 }}
+                        >
+                          {social.description}
+                        </motion.p>
+                      </div>
+
+                      <motion.div
+                        whileHover={{ 
+                          rotate: 45, 
+                          scale: 1.4,
+                          x: 8,
+                          y: -4
+                        }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                        className="relative"
+                      >
+                        <ExternalLink className="w-6 h-6 opacity-70" />
+                        <motion.div
+                          className="absolute inset-0 bg-white/20 rounded-full blur-md"
+                          animate={{
+                            scale: [1, 1.5, 1],
+                            opacity: [0, 0.5, 0]
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }}
                         />
                       </motion.div>
-                      <div>
-                        <p className="text-gray-300 text-sm font-medium mb-1">{info.label}</p>
-                        <p className="text-white font-bold text-lg">{info.value}</p>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </motion.div>
-
-            {/* Ultra Advanced Curved Social Media Icons */}
-            <motion.div
-              className="relative bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl"
-            >
-              <h3 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-                <motion.div
-                  className="p-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl"
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  <Heart className="w-6 h-6 text-white" />
-                </motion.div>
-                Connect With Me
-              </h3>
-              <div className="grid grid-cols-1 gap-6">
-                {socialLinks.map((social, index) => {
-                  const IconComponent = social.icon;
-                  return (
-                    <motion.a
-                      key={social.name}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                      whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      whileHover={{ 
-                        scale: 1.08, 
-                        y: -8,
-                        rotateY: 10,
-                        boxShadow: "0 30px 60px rgba(168, 85, 247, 0.4)"
-                      }}
-                      className="relative group overflow-hidden rounded-3xl p-6 text-white transition-all duration-500 cursor-pointer"
-                      style={{
-                        background: `linear-gradient(135deg, ${social.gradient.replace('bg-gradient-to-br', '').split(' ').join(', ')})`
-                      }}
-                    >
-                      {/* Ultra Dynamic Background Animation */}
-                      <motion.div 
-                        className="absolute inset-0 opacity-0 group-hover:opacity-100"
-                        animate={{
-                          background: [
-                            "linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%)",
-                            "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%)",
-                            "linear-gradient(225deg, rgba(255,255,255,0.1) 0%, transparent 50%)",
-                            "linear-gradient(315deg, rgba(255,255,255,0.1) 0%, transparent 50%)",
-                            "linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%)"
-                          ]
-                        }}
-                        transition={{ 
-                          duration: 3, 
-                          repeat: Infinity,
-                          ease: "linear"
-                        }}
-                      />
-                      
-                      {/* Floating Particles */}
-                      <div className="absolute inset-0 pointer-events-none">
-                        {[...Array(12)].map((_, i) => (
-                          <motion.div
-                            key={i}
-                            className="absolute w-1 h-1 bg-white/40 rounded-full"
-                            initial={{ 
-                              x: Math.random() * 300,
-                              y: Math.random() * 80,
-                              opacity: 0
-                            }}
-                            animate={{
-                              y: [null, -30, 100],
-                              opacity: [0, 1, 0],
-                              scale: [0, 1.5, 0],
-                              rotate: [0, 360]
-                            }}
-                            transition={{
-                              duration: Math.random() * 4 + 2,
-                              repeat: Infinity,
-                              delay: Math.random() * 3,
-                              ease: "easeInOut"
-                            }}
-                          />
-                        ))}
-                      </div>
-
-                      {/* Ripple Effect */}
-                      <motion.div
-                        className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 rounded-3xl"
-                        animate={{
-                          scale: [1, 1.5, 2],
-                          opacity: [0, 0.3, 0]
-                        }}
-                        transition={{
-                          duration: 1.5,
-                          repeat: Infinity,
-                          ease: "easeOut"
-                        }}
-                      />
-
-                      <div className="relative z-10 flex items-center gap-6">
-                        {/* Ultra Advanced Icon with Multiple Animations */}
-                        <motion.div
-                          className="relative"
-                          whileHover={{ 
-                            rotate: [0, -15, 15, -10, 10, 0],
-                            scale: [1, 1.3, 1.2, 1.3, 1.1]
-                          }}
-                          transition={{ duration: 1 }}
-                        >
-                          {/* Glowing Ring */}
-                          <motion.div
-                            className="absolute inset-0 bg-white/20 rounded-2xl blur-lg"
-                            animate={{ 
-                              scale: [1, 1.4, 1],
-                              opacity: [0.3, 0.8, 0.3],
-                              rotate: [0, 180, 360]
-                            }}
-                            transition={{ 
-                              duration: 3, 
-                              repeat: Infinity,
-                              ease: "easeInOut"
-                            }}
-                          />
-                          
-                          {/* Icon Container */}
-                          <motion.div 
-                            className="relative p-4 bg-white/15 backdrop-blur-sm rounded-2xl border border-white/30"
-                            animate={{
-                              boxShadow: [
-                                "0 0 20px rgba(255,255,255,0.3)",
-                                "0 0 40px rgba(255,255,255,0.6)",
-                                "0 0 20px rgba(255,255,255,0.3)"
-                              ],
-                              borderColor: [
-                                "rgba(255,255,255,0.3)",
-                                "rgba(255,255,255,0.7)",
-                                "rgba(255,255,255,0.3)"
-                              ]
-                            }}
-                            transition={{
-                              duration: 2,
-                              repeat: Infinity,
-                              ease: "easeInOut"
-                            }}
-                          >
-                            <IconComponent className="w-8 h-8 text-white" />
-                          </motion.div>
-                        </motion.div>
-
-                        <div className="flex-1">
-                          <motion.h4 
-                            className="font-bold text-xl mb-1"
-                            whileHover={{ x: 8, scale: 1.05 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                          >
-                            {social.name}
-                          </motion.h4>
-                          <motion.p 
-                            className="text-sm opacity-90"
-                            initial={{ opacity: 0.7 }}
-                            whileHover={{ opacity: 1, x: 5 }}
-                          >
-                            {social.description}
-                          </motion.p>
-                        </div>
-
-                        <motion.div
-                          whileHover={{ 
-                            rotate: 45, 
-                            scale: 1.4,
-                            x: 8,
-                            y: -4
-                          }}
-                          transition={{ type: "spring", stiffness: 300 }}
-                          className="relative"
-                        >
-                          <ExternalLink className="w-6 h-6 opacity-70" />
-                          <motion.div
-                            className="absolute inset-0 bg-white/20 rounded-full blur-md"
-                            animate={{
-                              scale: [1, 1.5, 1],
-                              opacity: [0, 0.5, 0]
-                            }}
-                            transition={{
-                              duration: 2,
-                              repeat: Infinity,
-                              ease: "easeInOut"
-                            }}
-                          />
-                        </motion.div>
-                      </div>
-                    </motion.a>
-                  );
-                })}
-              </div>
-            </motion.div>
+                    </div>
+                  </motion.a>
+                );
+              })}
+            </div>
           </motion.div>
         </div>
       </div>
