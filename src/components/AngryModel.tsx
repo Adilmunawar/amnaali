@@ -1,36 +1,34 @@
 
-import { Suspense, useRef, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import React, { useRef, useState, Suspense } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { useGLTF, OrbitControls, Environment } from '@react-three/drei';
 import { motion } from 'framer-motion';
-import * as THREE from 'three';
+import { Mesh } from 'three';
 
-// Simple 3D Scene Component
-const Simple3DScene = () => {
-  const groupRef = useRef<THREE.Group>(null);
-  
+// GLB Model Component
+function AngryModelMesh({ scale = 1 }) {
+  const modelRef = useRef<Mesh>(null);
+  const [hovered, setHovered] = useState(false);
+  const { scene } = useGLTF('/angry.glb');
+
+  // Rotate model slowly
+  useFrame(() => {
+    if (modelRef.current) {
+      modelRef.current.rotation.y += 0.002;
+    }
+  });
+
   return (
-    <group ref={groupRef}>
-      {/* Simple cube */}
-      <mesh position={[0, 0, 0]}>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="#8b5cf6" />
-      </mesh>
-      
-      {/* Simple sphere */}
-      <mesh position={[1.5, 0.5, 0]}>
-        <sphereGeometry args={[0.5, 32, 32]} />
-        <meshStandardMaterial color="#ec4899" />
-      </mesh>
-      
-      {/* Simple cone */}
-      <mesh position={[-1, 0, 0.5]}>
-        <coneGeometry args={[0.4, 1, 32]} />
-        <meshStandardMaterial color="#06b6d4" />
-      </mesh>
-    </group>
+    <primitive
+      object={scene}
+      ref={modelRef}
+      scale={hovered ? scale * 1.05 : scale}
+      onPointerOver={() => setHovered(true)}
+      onPointerOut={() => setHovered(false)}
+      position={[0, -1, 0]}
+    />
   );
-};
+}
 
 // Loading fallback component
 const ModelLoader = () => (
@@ -40,9 +38,29 @@ const ModelLoader = () => (
       transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
       className="w-12 h-12 border-4 border-purple-400 border-t-transparent rounded-full"
     />
-    <span className="ml-4 text-white">Loading 3D Scene...</span>
+    <span className="ml-4 text-white">Loading 3D Model...</span>
   </div>
 );
+
+// Simple fallback scene in case GLB fails to load
+const FallbackScene = () => {
+  const groupRef = useRef<Mesh>(null);
+  
+  useFrame(() => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.002;
+    }
+  });
+  
+  return (
+    <group>
+      <mesh ref={groupRef} position={[0, 0, 0]}>
+        <boxGeometry args={[1, 1, 1]} />
+        <meshStandardMaterial color="#8b5cf6" />
+      </mesh>
+    </group>
+  );
+};
 
 // Main AngryModel component
 export const AngryModel = () => {
@@ -85,22 +103,35 @@ export const AngryModel = () => {
             onCreated={() => {
               console.log('Canvas created successfully');
             }}
+            onError={() => {
+              console.log('Canvas error, showing fallback');
+              setHasError(true);
+            }}
           >
             {/* Lighting setup */}
-            <ambientLight intensity={0.6} />
+            <ambientLight intensity={1} />
             <directionalLight 
-              position={[5, 5, 5]} 
-              intensity={1}
+              position={[0, 2, 2]} 
+              intensity={2}
             />
             <pointLight position={[-5, 5, 5]} intensity={0.4} color="#ff69b4" />
             <pointLight position={[5, -5, -5]} intensity={0.4} color="#8b5cf6" />
             
-            {/* Simple 3D Scene */}
-            <Simple3DScene />
+            {/* Environment for better lighting */}
+            <Environment preset="sunset" />
+            
+            {/* Try to load the GLB model, fallback to simple scene if it fails */}
+            {!hasError ? (
+              <Suspense fallback={<FallbackScene />}>
+                <AngryModelMesh scale={1.2} />
+              </Suspense>
+            ) : (
+              <FallbackScene />
+            )}
             
             {/* Interactive controls */}
             <OrbitControls
-              enableZoom={true}
+              enableZoom={false}
               enablePan={false}
               maxPolarAngle={Math.PI / 2}
               minPolarAngle={Math.PI / 4}
@@ -108,8 +139,6 @@ export const AngryModel = () => {
               minAzimuthAngle={-Math.PI / 3}
               enableDamping
               dampingFactor={0.05}
-              maxDistance={8}
-              minDistance={2}
             />
           </Canvas>
         </Suspense>
@@ -145,3 +174,6 @@ export const AngryModel = () => {
     </motion.div>
   );
 };
+
+// Preload the GLB file
+useGLTF.preload('/angry.glb');
