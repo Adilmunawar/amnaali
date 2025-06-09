@@ -43,7 +43,7 @@ const UFOWatermarkHider = () => {
         <img 
           src="/lovable-uploads/735abcc8-6cb4-432c-9ec1-5f0433ff5e19.png"
           alt="UFO"
-          className="w-36 h-36 md:w-44 md:h-44 object-contain"
+          className="w-44 h-44 md:w-44 md:h-44 object-contain"
           style={{
             filter: 'drop-shadow(0 0 20px rgba(236,72,153,0.4))',
           }}
