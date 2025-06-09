@@ -24,7 +24,7 @@ const UFOWatermarkHider = () => {
         stiffness: 80,
         damping: 20
       }}
-      className="absolute -bottom-4 -right-2 z-50 pointer-events-none"
+      className="absolute -bottom-4 -right-4 z-50 pointer-events-none"
     >
       {/* UFO Container with hover animation */}
       <motion.div
