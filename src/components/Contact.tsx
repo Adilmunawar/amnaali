@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, Suspense, lazy } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle, ExternalLink, Linkedin, Instagram, Facebook, Users, Star, Sparkles, Heart } from "lucide-react";
 
 export const Contact = () => {
