@@ -24,7 +24,7 @@ const UFOWatermarkHider = () => {
         stiffness: 80,
         damping: 20
       }}
-      className="absolute -bottom-6 -right-6 z-50 pointer-events-none"
+      className="absolute -bottom-7 -right-7 z-50 pointer-events-none"
     >
       {/* UFO Container with hover animation */}
       <motion.div
@@ -43,7 +43,7 @@ const UFOWatermarkHider = () => {
         <img 
           src="/lovable-uploads/735abcc8-6cb4-432c-9ec1-5f0433ff5e19.png"
           alt="UFO"
-          className="w-70 h-70 md:w-74 md:h-74 object-contain"
+          className="w-60 h-60 md:w-64 md:h-64 object-contain"
           style={{
             filter: 'drop-shadow(0 0 20px rgba(236,72,153,0.4))',
           }}
