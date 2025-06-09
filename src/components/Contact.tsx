@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { useState, Suspense, lazy } from "react";
+import { useState, Suspense } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle, ExternalLink, Linkedin, Instagram, Facebook, Users, Star, Sparkles, Heart } from "lucide-react";
-import { AngryModel } from "./AngryModel";
+import { SplineRobotModel } from "./SplineRobotModel";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -164,9 +164,9 @@ export const Contact = () => {
           </motion.p>
         </motion.div>
 
-        {/* Updated grid layout to include 3D model */}
+        {/* Updated grid layout with Spline robotic model */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {/* 3D Model Section */}
+          {/* Spline Robot Model Section */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -174,7 +174,7 @@ export const Contact = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <AngryModel />
+            <SplineRobotModel />
           </motion.div>
 
           {/* Contact Form */}
@@ -366,7 +366,6 @@ export const Contact = () => {
             viewport={{ once: true }}
             className="relative bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl"
           >
-            {/* ... keep existing code (contact info section) */}
             <h3 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
               <motion.div
                 className="p-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl"
@@ -420,7 +419,6 @@ export const Contact = () => {
             viewport={{ once: true }}
             className="relative bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl"
           >
-            {/* ... keep existing code (social links section) */}
             <h3 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
               <motion.div
                 className="p-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl"
@@ -455,7 +453,6 @@ export const Contact = () => {
                       background: `linear-gradient(135deg, ${social.gradient.replace('bg-gradient-to-br', '').split(' ').join(', ')})`
                     }}
                   >
-                    {/* ... keep existing code (social link animations and content) */}
                     <motion.div 
                       className="absolute inset-0 opacity-0 group-hover:opacity-100"
                       animate={{

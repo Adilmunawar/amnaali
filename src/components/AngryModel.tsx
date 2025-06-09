@@ -1,13 +1,12 @@
-
 import React, { useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import { motion } from 'framer-motion';
-import { Mesh } from 'three';
+import { Mesh, Group } from 'three';
 
 // Custom 3D Scene Component
 function CustomScene() {
-  const groupRef = useRef<Mesh>(null);
+  const groupRef = useRef<Group>(null);
   const sphere1Ref = useRef<Mesh>(null);
   const sphere2Ref = useRef<Mesh>(null);
   const sphere3Ref = useRef<Mesh>(null);
