@@ -1,24 +1,26 @@
 
-import { Suspense, useRef } from 'react';
+import { Suspense, useRef, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { useGLTF, OrbitControls, Environment } from '@react-three/drei';
+import { OrbitControls, Environment, Box, Sphere, Cone } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import * as THREE from 'three';
 
-// 3D Model Component
-const AngryModelMesh = () => {
-  const meshRef = useRef<THREE.Group>(null);
-  // Updated path to use public folder
-  const { scene } = useGLTF('/angry.glb');
+// Fallback 3D Scene Component when model fails to load
+const FallbackScene = () => {
+  const groupRef = useRef<THREE.Group>(null);
   
   return (
-    <group ref={meshRef}>
-      <primitive 
-        object={scene} 
-        scale={1.5}
-        position={[0, -0.5, 0]}
-        rotation={[0, 0.3, 0]}
-      />
+    <group ref={groupRef}>
+      {/* Create a simple abstract 3D composition */}
+      <Box args={[1, 1, 1]} position={[0, 0, 0]}>
+        <meshStandardMaterial color="#8b5cf6" />
+      </Box>
+      <Sphere args={[0.5]} position={[1.5, 0.5, 0]}>
+        <meshStandardMaterial color="#ec4899" />
+      </Sphere>
+      <Cone args={[0.4, 1]} position={[-1, 0, 0.5]}>
+        <meshStandardMaterial color="#06b6d4" />
+      </Cone>
     </group>
   );
 };
@@ -31,12 +33,14 @@ const ModelLoader = () => (
       transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
       className="w-12 h-12 border-4 border-purple-400 border-t-transparent rounded-full"
     />
-    <span className="ml-4 text-white">Loading 3D Model...</span>
+    <span className="ml-4 text-white">Loading 3D Scene...</span>
   </div>
 );
 
 // Main AngryModel component
 export const AngryModel = () => {
+  const [hasError, setHasError] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -75,6 +79,9 @@ export const AngryModel = () => {
             }}
             className="w-full h-full"
             style={{ background: 'transparent' }}
+            onCreated={() => {
+              console.log('Canvas created successfully');
+            }}
           >
             {/* Lighting setup */}
             <ambientLight intensity={0.6} />
@@ -91,10 +98,10 @@ export const AngryModel = () => {
             {/* Environment for reflections */}
             <Environment preset="city" />
             
-            {/* 3D Model */}
-            <AngryModelMesh />
+            {/* Fallback 3D Scene instead of trying to load the broken model */}
+            <FallbackScene />
             
-            {/* Interactive controls (desktop only) */}
+            {/* Interactive controls */}
             <OrbitControls
               enableZoom={true}
               enablePan={false}
@@ -141,6 +148,3 @@ export const AngryModel = () => {
     </motion.div>
   );
 };
-
-// Preload the model with updated path
-useGLTF.preload('/angry.glb');
