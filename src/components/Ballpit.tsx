@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect } from "react";
 import {
   Clock,
@@ -498,8 +499,8 @@ class Y extends MeshPhysicalMaterial {
         void main() {
         `
       );
-      const lightsChunk = ShaderChunk.lights_fragment_begin.replaceAll(
-        "RE_Direct( directLight, geometryPosition, geometryNormal, geometryViewDir, geometryClearcoatNormal, material, reflectedLight );",
+      const lightsChunk = ShaderChunk.lights_fragment_begin.replace(
+        /RE_Direct\( directLight, geometryPosition, geometryNormal, geometryViewDir, geometryClearcoatNormal, material, reflectedLight \);/g,
         `
           RE_Direct( directLight, geometryPosition, geometryNormal, geometryViewDir, geometryClearcoatNormal, material, reflectedLight );
           RE_Direct_Scattering(directLight, vUv, geometryPosition, geometryNormal, geometryViewDir, geometryClearcoatNormal, reflectedLight);
