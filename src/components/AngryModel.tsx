@@ -1,26 +1,33 @@
 
 import { Suspense, useRef, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Environment, Box, Sphere, Cone } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import * as THREE from 'three';
 
-// Fallback 3D Scene Component when model fails to load
-const FallbackScene = () => {
+// Simple 3D Scene Component
+const Simple3DScene = () => {
   const groupRef = useRef<THREE.Group>(null);
   
   return (
     <group ref={groupRef}>
-      {/* Create a simple abstract 3D composition */}
-      <Box args={[1, 1, 1]} position={[0, 0, 0]}>
+      {/* Simple cube */}
+      <mesh position={[0, 0, 0]}>
+        <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color="#8b5cf6" />
-      </Box>
-      <Sphere args={[0.5]} position={[1.5, 0.5, 0]}>
+      </mesh>
+      
+      {/* Simple sphere */}
+      <mesh position={[1.5, 0.5, 0]}>
+        <sphereGeometry args={[0.5, 32, 32]} />
         <meshStandardMaterial color="#ec4899" />
-      </Sphere>
-      <Cone args={[0.4, 1]} position={[-1, 0, 0.5]}>
+      </mesh>
+      
+      {/* Simple cone */}
+      <mesh position={[-1, 0, 0.5]}>
+        <coneGeometry args={[0.4, 1, 32]} />
         <meshStandardMaterial color="#06b6d4" />
-      </Cone>
+      </mesh>
     </group>
   );
 };
@@ -68,17 +75,13 @@ export const AngryModel = () => {
           <Canvas
             camera={{ 
               position: [0, 0, 4], 
-              fov: 45,
-              near: 0.1,
-              far: 1000
+              fov: 45
             }}
             gl={{ 
               antialias: true, 
-              alpha: true,
-              powerPreference: "high-performance"
+              alpha: true
             }}
             className="w-full h-full"
-            style={{ background: 'transparent' }}
             onCreated={() => {
               console.log('Canvas created successfully');
             }}
@@ -88,18 +91,12 @@ export const AngryModel = () => {
             <directionalLight 
               position={[5, 5, 5]} 
               intensity={1}
-              castShadow
-              shadow-mapSize-width={1024}
-              shadow-mapSize-height={1024}
             />
             <pointLight position={[-5, 5, 5]} intensity={0.4} color="#ff69b4" />
             <pointLight position={[5, -5, -5]} intensity={0.4} color="#8b5cf6" />
             
-            {/* Environment for reflections */}
-            <Environment preset="city" />
-            
-            {/* Fallback 3D Scene instead of trying to load the broken model */}
-            <FallbackScene />
+            {/* Simple 3D Scene */}
+            <Simple3DScene />
             
             {/* Interactive controls */}
             <OrbitControls
