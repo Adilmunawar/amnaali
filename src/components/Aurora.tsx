@@ -118,7 +118,7 @@ interface AuroraProps {
 
 export default function Aurora(props: AuroraProps) {
   const {
-    colorStops = ["#FF69B4", "#FF1493", "#FFB6C1"],
+    colorStops = ["#1e3a8a", "#1e40af", "#3b82f6"],
     amplitude = 1.2,
     blend = 0.6,
   } = props;
@@ -215,7 +215,7 @@ export default function Aurora(props: AuroraProps) {
       ref={ctnDom} 
       className="fixed inset-0 w-full h-full z-0"
       style={{ 
-        background: 'linear-gradient(135deg, #FF69B4 0%, #FF1493 50%, #FFB6C1 100%)'
+        background: 'linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3b82f6 100%)'
       }}
     />
   );

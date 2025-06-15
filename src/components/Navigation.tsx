@@ -31,7 +31,7 @@ export const Navigation = () => {
         >
           {/* Gradient Background Effect */}
           <motion.div 
-            className="absolute inset-0 bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-blue-500/20 opacity-0 hover:opacity-100"
+            className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 via-blue-500/20 to-slate-500/20 opacity-0 hover:opacity-100"
             transition={{ duration: 0.6 }}
           />
           
@@ -44,7 +44,7 @@ export const Navigation = () => {
               <motion.div className="relative">
                 <Sparkles className="w-8 h-8 text-white drop-shadow-lg" />
                 <motion.div
-                  className="absolute inset-0 w-8 h-8 bg-pink-400 rounded-full blur-lg opacity-40"
+                  className="absolute inset-0 w-8 h-8 bg-blue-400 rounded-full blur-lg opacity-40"
                   animate={{
                     scale: [1, 1.3, 1],
                   }}
@@ -77,7 +77,7 @@ export const Navigation = () => {
                   >
                     {/* Hover Background */}
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-pink-500/30 via-purple-500/30 to-blue-500/30 rounded-full opacity-0 group-hover:opacity-100"
+                      className="absolute inset-0 bg-gradient-to-r from-indigo-500/30 via-blue-500/30 to-slate-500/30 rounded-full opacity-0 group-hover:opacity-100"
                       transition={{ duration: 0.3 }}
                     />
                     
@@ -91,7 +91,7 @@ export const Navigation = () => {
                     
                     {/* Centered Active Indicator */}
                     <motion.div
-                      className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-pink-400 to-blue-400 group-hover:w-3/4"
+                      className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-indigo-400 to-blue-400 group-hover:w-3/4"
                       transition={{ duration: 0.3 }}
                     />
                   </motion.a>
