@@ -14,9 +14,9 @@ import Aurora from "@/components/Aurora";
 const Index = () => {
   return (
     <div className="min-h-screen relative overflow-x-hidden">
-      {/* Aurora Background - Fixed and covering entire viewport */}
+      {/* Aurora Background - Updated to bluish purple */}
       <Aurora
-        colorStops={["#FF69B4", "#FF1493", "#FFB6C1", "#FF69B4"]}
+        colorStops={["#4338ca", "#5b21b6", "#6366f1", "#3730a3"]}
         blend={0.7}
         amplitude={1.3}
         speed={0.6}

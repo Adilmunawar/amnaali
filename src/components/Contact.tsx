@@ -25,10 +25,10 @@ export const Contact = () => {
       name: "Instagram",
       url: "https://instagram.com/kashf.e.haal",
       icon: Instagram,
-      color: "from-pink-500 to-purple-600",
-      hoverColor: "hover:from-pink-600 hover:to-purple-700",
+      color: "from-purple-600 to-indigo-700",
+      hoverColor: "hover:from-purple-700 hover:to-indigo-800",
       description: "Creative Showcase",
-      gradient: "bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-600"
+      gradient: "bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-700"
     },
     {
       name: "Facebook",
@@ -79,10 +79,10 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-32 bg-gradient-to-br from-pink-900/20 via-purple-950/30 to-pink-900/20 relative overflow-hidden">
-      {/* Advanced Pink Gradient Background Effects */}
+    <section id="contact" className="py-32 bg-gradient-to-br from-indigo-950/40 via-purple-950/50 to-slate-900/60 relative overflow-hidden">
+      {/* Advanced Bluish Purple Gradient Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-pink-900/30 via-purple-900/20 to-pink-900/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900/40 via-purple-950/30 to-slate-900/40" />
         
         {/* Animated Mesh Pattern */}
         <motion.div 
@@ -96,19 +96,19 @@ export const Contact = () => {
             ease: "linear"
           }} 
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cpattern id='grid' width='40' height='40' patternUnits='userSpaceOnUse'%3e%3cpath d='m 40 0 l 0 40 l -40 0 l 0 -40 z' fill='none' stroke='%23ec4899' stroke-width='0.5'/%3e%3c/pattern%3e%3c/defs%3e%3crect width='100%25' height='100%25' fill='url(%23grid)'/%3e%3c/svg%3e")`,
+            backgroundImage: `url("data:image/svg+xml,%3csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cpattern id='grid' width='40' height='40' patternUnits='userSpaceOnUse'%3e%3cpath d='m 40 0 l 0 40 l -40 0 l 0 -40 z' fill='none' stroke='%236366f1' stroke-width='0.5'/%3e%3c/pattern%3e%3c/defs%3e%3crect width='100%25' height='100%25' fill='url(%23grid)'/%3e%3c/svg%3e")`,
             backgroundSize: "40px 40px"
           }} 
         />
 
-        {/* Pink Floating Orbs */}
+        {/* Bluish Purple Floating Orbs */}
         {[...Array(8)].map((_, i) => (
           <motion.div 
             key={`contact-orb-${i}`} 
             className="absolute rounded-full blur-2xl" 
             style={{
               background: `linear-gradient(45deg, 
-                ${i % 2 === 0 ? '#ec4899, #f97316' : '#db2777, #e11d48'})`,
+                ${i % 2 === 0 ? '#4338ca, #5b21b6' : '#6366f1, #3730a3'})`,
               width: `${150 + i * 50}px`,
               height: `${150 + i * 50}px`,
               opacity: 0.1
@@ -141,7 +141,7 @@ export const Contact = () => {
           className="text-center mb-16"
         >
           <motion.h2 
-            className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent"
+            className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-400 bg-clip-text text-transparent"
             animate={{ 
               backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
             }}
@@ -187,7 +187,7 @@ export const Contact = () => {
           >
             {/* Glowing Container */}
             <motion.div 
-              className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-cyan-500/20 rounded-3xl blur-xl"
+              className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-blue-500/20 rounded-3xl blur-xl"
               animate={{
                 scale: [1, 1.05, 1],
                 opacity: [0.3, 0.6, 0.3]
@@ -202,7 +202,7 @@ export const Contact = () => {
             <div className="relative bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
               {/* Floating Decorative Elements */}
               <motion.div
-                className="absolute top-4 right-4 w-6 h-6 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full"
+                className="absolute top-4 right-4 w-6 h-6 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full"
                 animate={{
                   scale: [1, 1.3, 1],
                   rotate: [0, 180, 360]
@@ -216,7 +216,7 @@ export const Contact = () => {
               
               <div className="flex items-center gap-3 mb-8">
                 <motion.div
-                  className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl"
+                  className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl"
                   whileHover={{ scale: 1.1, rotate: 10 }}
                 >
                   <Send className="w-6 h-6 text-white" />
@@ -241,11 +241,11 @@ export const Contact = () => {
                     onChange={handleInputChange}
                     whileFocus={{ 
                       scale: 1.02, 
-                      boxShadow: "0 0 30px rgba(168, 85, 247, 0.4)",
-                      borderColor: "rgba(168, 85, 247, 0.6)"
+                      boxShadow: "0 0 30px rgba(99, 102, 241, 0.4)",
+                      borderColor: "rgba(99, 102, 241, 0.6)"
                     }}
                     type="text"
-                    className="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/30 transition-all duration-300 backdrop-blur-sm"
+                    className="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400/30 transition-all duration-300 backdrop-blur-sm"
                     placeholder="Your amazing name..."
                     required
                   />
@@ -284,7 +284,7 @@ export const Contact = () => {
                   viewport={{ once: true }}
                 >
                   <label className="block text-white mb-3 font-semibold flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-pink-400" />
+                    <Sparkles className="w-4 h-4 text-blue-400" />
                     Subject
                   </label>
                   <motion.input
@@ -293,11 +293,11 @@ export const Contact = () => {
                     onChange={handleInputChange}
                     whileFocus={{ 
                       scale: 1.02, 
-                      boxShadow: "0 0 30px rgba(236, 72, 153, 0.4)",
-                      borderColor: "rgba(236, 72, 153, 0.6)"
+                      boxShadow: "0 0 30px rgba(59, 130, 246, 0.4)",
+                      borderColor: "rgba(59, 130, 246, 0.6)"
                     }}
                     type="text"
-                    className="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:border-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-400/30 transition-all duration-300 backdrop-blur-sm"
+                    className="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/30 transition-all duration-300 backdrop-blur-sm"
                     placeholder="What's your project about?"
                     required
                   />
@@ -310,7 +310,7 @@ export const Contact = () => {
                   viewport={{ once: true }}
                 >
                   <label className="block text-white mb-3 font-semibold flex items-center gap-2">
-                    <Heart className="w-4 h-4 text-red-400" />
+                    <Heart className="w-4 h-4 text-purple-400" />
                     Message
                   </label>
                   <motion.textarea
@@ -319,11 +319,11 @@ export const Contact = () => {
                     onChange={handleInputChange}
                     whileFocus={{ 
                       scale: 1.02, 
-                      boxShadow: "0 0 30px rgba(239, 68, 68, 0.4)",
-                      borderColor: "rgba(239, 68, 68, 0.6)"
+                      boxShadow: "0 0 30px rgba(168, 85, 247, 0.4)",
+                      borderColor: "rgba(168, 85, 247, 0.6)"
                     }}
                     rows={5}
-                    className="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:border-red-400 focus:outline-none focus:ring-2 focus:ring-red-400/30 transition-all duration-300 backdrop-blur-sm resize-none"
+                    className="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/30 transition-all duration-300 backdrop-blur-sm resize-none"
                     placeholder="Tell me about your amazing project ideas..."
                     required
                   />
@@ -338,13 +338,13 @@ export const Contact = () => {
                   whileHover={{ 
                     scale: 1.05, 
                     y: -3,
-                    boxShadow: "0 25px 50px rgba(168, 85, 247, 0.5)"
+                    boxShadow: "0 25px 50px rgba(99, 102, 241, 0.5)"
                   }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white py-4 rounded-2xl font-bold text-lg transition-all duration-300 group"
+                  className="w-full relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white py-4 rounded-2xl font-bold text-lg transition-all duration-300 group"
                 >
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   />
                   <span className="relative z-10 flex items-center justify-center gap-3">
                     <Send className="w-5 h-5" />
@@ -368,7 +368,7 @@ export const Contact = () => {
           >
             <h3 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
               <motion.div
-                className="p-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl"
+                className="p-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl"
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
               >
@@ -387,10 +387,10 @@ export const Contact = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ x: 10, scale: 1.05 }}
-                    className="flex items-center gap-6 p-6 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10 rounded-2xl hover:from-purple-500/20 hover:via-pink-500/20 hover:to-cyan-500/20 transition-all duration-300 border border-white/10"
+                    className="flex items-center gap-6 p-6 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-blue-500/10 rounded-2xl hover:from-indigo-500/20 hover:via-purple-500/20 hover:to-blue-500/20 transition-all duration-300 border border-white/10"
                   >
                     <motion.div 
-                      className="relative p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl"
+                      className="relative p-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl"
                       whileHover={{ rotate: 360, scale: 1.2 }}
                       transition={{ duration: 0.8 }}
                     >
@@ -421,7 +421,7 @@ export const Contact = () => {
           >
             <h3 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
               <motion.div
-                className="p-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl"
+                className="p-2 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl"
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
@@ -446,7 +446,7 @@ export const Contact = () => {
                       scale: 1.08, 
                       y: -8,
                       rotateY: 10,
-                      boxShadow: "0 30px 60px rgba(168, 85, 247, 0.4)"
+                      boxShadow: "0 30px 60px rgba(99, 102, 241, 0.4)"
                     }}
                     className="relative group overflow-hidden rounded-3xl p-6 text-white transition-all duration-500 cursor-pointer"
                     style={{
