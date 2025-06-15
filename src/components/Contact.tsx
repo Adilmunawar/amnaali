@@ -166,7 +166,7 @@ export const Contact = () => {
 
         {/* Updated grid layout with Spline robotic model */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {/* Spline Robot Model Section */}
+          {/* Spline Robot Model Section with Updated UFO */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -174,7 +174,80 @@ export const Contact = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <SplineRobotModel />
+            <div className="relative w-full h-[450px] md:h-[550px]">
+              {/* Updated UFO with blue effects instead of pink */}
+              <motion.div
+                initial={{ opacity: 0, y: 50, scale: 0.8 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ 
+                  duration: 1.2, 
+                  delay: 1,
+                  type: "spring",
+                  stiffness: 80,
+                  damping: 20
+                }}
+                className="absolute -bottom-14 -right-6 z-50 pointer-events-none"
+              >
+                {/* UFO Container with hover animation */}
+                <motion.div
+                  animate={{ 
+                    y: [0, -8, 0],
+                    rotate: [0, 2, -2, 0]
+                  }}
+                  transition={{ 
+                    duration: 4, 
+                    repeat: Infinity, 
+                    ease: "easeInOut" 
+                  }}
+                  className="relative"
+                >
+                  {/* Main UFO Image */}
+                  <img 
+                    src="/lovable-uploads/735abcc8-6cb4-432c-9ec1-5f0433ff5e19.png"
+                    alt="UFO"
+                    className="w-60 h-60 md:w-64 md:h-64 object-contain"
+                    style={{
+                      filter: 'drop-shadow(0 0 20px rgba(59,130,246,0.4))',
+                    }}
+                  />
+                  
+                  {/* Updated glowing ring effect with blue colors */}
+                  <motion.div
+                    className="absolute inset-0 rounded-full opacity-30"
+                    style={{
+                      background: 'radial-gradient(circle, rgba(59,130,246,0.6) 0%, transparent 70%)',
+                      filter: 'blur(10px)'
+                    }}
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      opacity: [0.3, 0.6, 0.3]
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  />
+                  
+                  {/* Updated pulsing light beam effect with blue color */}
+                  <motion.div
+                    className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-400/80 to-transparent"
+                    style={{ height: '60px' }}
+                    animate={{
+                      opacity: [0.4, 0.8, 0.4],
+                      scaleX: [1, 1.5, 1]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  />
+                </motion.div>
+              </motion.div>
+
+              <SplineRobotModel />
+            </div>
           </motion.div>
 
           {/* Contact Form */}

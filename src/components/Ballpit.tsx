@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from "react";
 import {
   Clock,
@@ -521,7 +520,7 @@ class Y extends MeshPhysicalMaterial {
    ========================================================= */
 const XConfig = {
   count: 60,
-  colors: [0xec4899, 0xdb2777, 0x9333ea], // Pink and purple colors to match footer theme
+  colors: [0x1e40af, 0x3b82f6, 0x6366f1], // Dark blue colors to match theme
   ambientColor: 0xffffff,
   ambientIntensity: 0.5,
   lightIntensity: 100,
